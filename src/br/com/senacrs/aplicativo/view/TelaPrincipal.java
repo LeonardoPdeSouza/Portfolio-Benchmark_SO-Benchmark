@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.senac.aplicativo;
+package br.com.senacrs.aplicativo.view;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Level;
@@ -11,11 +11,15 @@ import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
 
 /**
- *
+ * Classe TelaPrincipal extends javax.swing.JFrame
  * @author Leonardo P Souza
  */
 public class TelaPrincipal extends javax.swing.JFrame {
-
+    
+    /** 
+     * 
+     * Método construtor padrão da classe TelaPrincipal.
+     */
     public TelaPrincipal() {
         initComponents();
         
@@ -58,7 +62,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         txtScore = new javax.swing.JTextField();
-        btnCalcular = new javax.swing.JButton();
+        btnExecutar = new javax.swing.JButton();
         pgbCalibracao = new javax.swing.JProgressBar();
         pgbPrincipal = new javax.swing.JProgressBar();
         calibragem1 = new javax.swing.JLabel();
@@ -140,10 +144,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel26.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel26.setText("SCORE:");
 
-        btnCalcular.setText("Executar");
-        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+        btnExecutar.setText("Executar");
+        btnExecutar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcularActionPerformed(evt);
+                btnExecutarActionPerformed(evt);
             }
         });
 
@@ -292,7 +296,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(137, 137, 137)
-                .addComponent(btnCalcular)
+                .addComponent(btnExecutar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel26)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -413,18 +417,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
                     .addComponent(txtScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCalcular))
+                    .addComponent(btnExecutar))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
-        
-    }//GEN-LAST:event_btnCalcularActionPerformed
-
     /**
+     * Método do botão btnExecutar para executar o Benchmark.
+     * @param evt 
+     */
+    private void btnExecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecutarActionPerformed
+        
+    }//GEN-LAST:event_btnExecutarActionPerformed
+
+    /** Método estático void main.
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -455,6 +462,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            /**
+             * Método público void run que serve para chamar a tela principal e torná-la visível.
+             */
             public void run() {
                 new TelaPrincipal().setVisible(true);
             }
@@ -462,7 +472,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCalcular;
+    private javax.swing.JButton btnExecutar;
     private javax.swing.JLabel calibragem1;
     private javax.swing.JLabel calibragem10;
     private javax.swing.JLabel calibragem2;
