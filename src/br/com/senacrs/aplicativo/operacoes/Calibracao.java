@@ -6,19 +6,20 @@ package br.com.senacrs.aplicativo.operacoes;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Aluno
  */
-public class Calibracao extends Thread {
-    static long lacosSegundoTotal;
-    static long tempoFinalCalibracao;
-    static long lacosSendoExecutados;
-    static long tempoInicial;
-    static long tempoFinal;
-    static long tamanhoLacoCalibracao;
-    static long calcularFinal;
+public class Calibracao implements Runnable{
+    long lacosSegundoTotal;
+    long tempoFinalCalibracao;
+    long lacosSendoExecutados;
+    long tempoInicial;
+    long tempoFinal;
+    long tamanhoLacoCalibracao;
+    long calcularFinal;
 
     public Calibracao() {
         tempoFinalCalibracao = 0;
@@ -39,8 +40,8 @@ public class Calibracao extends Thread {
     public void calculoCalibracao() {
         // armazena o tempo antes de iniciar o laço de calibração
         tempoInicial = System.currentTimeMillis();
-        tamanhoLacoCalibracao = 412000000;   
-        for (int i = 0; i < tamanhoLacoCalibracao; i++) {
+        tamanhoLacoCalibracao = 412000000L;   //412000000
+        for (long i = 0; i < tamanhoLacoCalibracao; i++) {
 
             Math.log10(37.61);
             Math.sin(2.45);
@@ -57,19 +58,20 @@ long dif = (tempoFinal - tempoInicial);
 
   
 System.out.println(String.format("%02d segundos  e %02d milisegundos", dif/1000, dif%60)); 
+//        JOptionPane.showMessageDialog(null, dif/1000);
     }
     public static void main(String args[]) {
-        Calibracao c1 = new Calibracao();
+//        Calibracao c1 = new Calibracao();
 //        Calibracao c2 = new Calibracao();
-//        Calibracao c3 = new Calibracao();
-//        Calibracao c4 = new Calibracao();
-//        Calibracao c5 = new Calibracao();
-//        Calibracao c6 = new Calibracao();
-//        Calibracao c7 = new Calibracao();
-//        Calibracao c8 = new Calibracao();
-//        Calibracao c9 = new Calibracao();
-//        Calibracao c10 = new Calibracao();
-        c1.start();
+////        Calibracao c3 = new Calibracao();
+////        Calibracao c4 = new Calibracao();
+////        Calibracao c5 = new Calibracao();
+////        Calibracao c6 = new Calibracao();
+////        Calibracao c7 = new Calibracao();
+////        Calibracao c8 = new Calibracao();
+////        Calibracao c9 = new Calibracao();
+////        Calibracao c10 = new Calibracao();
+//        c1.start();
 //        c2.start();
 //        c3.start();
 //        c4.start();
@@ -82,41 +84,5 @@ System.out.println(String.format("%02d segundos  e %02d milisegundos", dif/1000,
        }
 
 
-    public static void setLacosSegundoTotal(long lacosSegundoTotal) {
-        Calibracao.lacosSegundoTotal = lacosSegundoTotal;
-    }
-
-    public static long getLacosSegundoTotal() {
-        return lacosSegundoTotal;
-    }
-
-    public static long getTempoFinalCalibracao() {
-        return tempoFinalCalibracao;
-    }
-
-    public static void setTempoFinalCalibracao(int tempoFinalCalibracao) {
-        Calibracao.tempoFinalCalibracao = tempoFinalCalibracao;
-    }
-
-    public static long getLacosSendoExecutados() {
-        return lacosSendoExecutados;
-    }
-
-    public static void setLacosSendoExecutados(long lacosSendoExecutados) {
-        Calibracao.lacosSendoExecutados = lacosSendoExecutados;
-    }
-    public static long getTamanhoLacoCalibracao() {
-        return tamanhoLacoCalibracao;
-    }
-
-    public static void setTamanhoLacoCalibracao(long tamanhoLacoCalibracao) {
-        Calibracao.tamanhoLacoCalibracao = tamanhoLacoCalibracao;
-    }
-    public static long getCalcularFinal() {
-        return calcularFinal;
-    }
-
-    public static void setCalcularFinal(long calcularFinal) {
-        Calibracao.calcularFinal = calcularFinal;
-    }
+    
 }
