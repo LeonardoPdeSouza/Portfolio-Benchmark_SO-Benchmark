@@ -18,6 +18,7 @@ public class Calibracao extends Thread {
     static long tempoFinalCalibracao;
     static long lacosSendoExecutados;
     static long tempoInicial;
+    static long tempoFinal;
     static long tamanhoLacoCalibracao;
     static long calcularFinal;
 
@@ -25,6 +26,7 @@ public class Calibracao extends Thread {
         setName(nomeThread);
         tempoFinalCalibracao = 0;
         tempoInicial = 0;
+        tempoFinal = 0;
         calcularFinal = 0;
     }
 
@@ -40,7 +42,7 @@ public class Calibracao extends Thread {
     public void calculoCalibracao() {
         // armazena o tempo antes de iniciar o laço de calibração
         tempoInicial = System.currentTimeMillis();
-        tamanhoLacoCalibracao = 20500000;   
+        tamanhoLacoCalibracao = 24600000;   
         for (int i = 0; i < tamanhoLacoCalibracao; i++) {
 
             Math.log10(37.61);
@@ -49,11 +51,12 @@ public class Calibracao extends Thread {
             Math.sqrt(7.33);
             double pf = 2.57 / 7.77;
             Math.exp(3.95);
+            
         }
+        tempoFinal = System.currentTimeMillis();  
         
-        long tempFinal = System.currentTimeMillis();  
   
-long dif = (tempFinal - tempoInicial);  
+long dif = (tempoFinal - tempoInicial);  
   
 System.out.println(String.format("%02d segundos  e %02d milisegundos", dif/60, dif%60)); 
         status = "Terminado";
