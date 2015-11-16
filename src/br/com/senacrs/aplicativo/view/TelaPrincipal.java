@@ -5,6 +5,7 @@
  */
 package br.com.senacrs.aplicativo.view;
 
+import br.com.senacrs.aplicativo.operacoes.Calibracao;
 import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,6 +16,19 @@ import javax.swing.SwingUtilities;
  * @author Leonardo P Souza
  */
 public class TelaPrincipal extends javax.swing.JFrame {
+    Thread threadRodaCalibracao;
+    Thread threadRodaLacoPrincipal;
+    int count;
+    Calibracao c1 = new Calibracao("thread1");
+    Calibracao c2 = new Calibracao("thread2");
+    Calibracao c3 = new Calibracao("thread3");
+    Calibracao c4 = new Calibracao("thread4");
+    Calibracao c5 = new Calibracao("thread5");
+    Calibracao c6 = new Calibracao("thread6");
+    Calibracao c7 = new Calibracao("thread7");
+    Calibracao c8 = new Calibracao("thread8");
+    Calibracao c9 = new Calibracao("thread9");
+    Calibracao c10 = new Calibracao("thread10");
     
     /** 
      * 
