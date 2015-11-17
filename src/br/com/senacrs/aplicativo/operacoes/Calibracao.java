@@ -9,29 +9,32 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Aluno
+ * Classe Calibracao implements Runnable{.
+ * @author Leonardo Fabio
  */
 public class Calibracao implements Runnable{
-    long lacosSegundoTotal;
-    long tempoFinalCalibracao;
-    long lacosSendoExecutados;
-    long tempoInicial;
-    long tempoFinal;
-    long tamanhoLacoCalibracao;
-    long calcularFinal;
+    long lacosSegundoTotal; // Váriavel long lacosSegundoTotal; 
+    long tempoFinalCalibracao; // Váriavel long tempoFinalCalibracao; 
+    long lacosSendoExecutados; // Váriavel long lacosSendoExecutados; 
+    long tempoInicial; // Váriavel long tempoInicial;
+    long tempoFinal; // Váriavel long tempoFinal;
+    long tamanhoLacoCalibracao; // Váriavel long tamanhoLacoCalibracao; 
+    long calcularFinal; // Váriavel long calcularFinal;
 
+    /**
+     * Construtor padrão da classe Calibracao
+     */
     public Calibracao() {
-        tempoFinalCalibracao = 0;
-        tempoInicial = 0;
-        tempoFinal = 0;
-        calcularFinal = 0;
+        tempoFinalCalibracao = 0; // Inicializa tempoFinalCalibracao = 0
+        tempoInicial = 0; // Inicializa tempoInicial = 0
+        tempoFinal = 0; // Inicializa tempoFinal = 0
+        calcularFinal = 0; // Inicializa calcularFinal = 0
     }
 
     @Override
     public void run() {
 
-        calculoCalibracao();
+        calculoCalibracao(); // Chama o método calculoCalibracao();
     }
 
     /**
@@ -39,10 +42,11 @@ public class Calibracao implements Runnable{
      */
     public void calculoCalibracao() {
         // armazena o tempo antes de iniciar o laço de calibração
-        tempoInicial = System.currentTimeMillis();
-        tamanhoLacoCalibracao = 412000000L;   //412000000
-        for (long i = 0; i < tamanhoLacoCalibracao; i++) {
-
+        tempoInicial = System.currentTimeMillis(); // tempoInicial = System.currentTimeMillis().
+        tamanhoLacoCalibracao = 412000000L; // tamanhoLacoCalibracao = 412000000L;
+        for (long i = 0; i < tamanhoLacoCalibracao; i++) { //for de long i = o até o tamanhoLacoCalibracao
+        // Parâmetros de cálculo passados pelo professor.
+            
             Math.log10(37.61);
             Math.sin(2.45);
             Math.cos(0.26);
@@ -51,13 +55,13 @@ public class Calibracao implements Runnable{
             Math.exp(3.95);
             
         }
-        tempoFinal = System.currentTimeMillis();  
+        tempoFinal = System.currentTimeMillis();  // Diz que tempoFinal = System.currentTimeMillis(); 
         
   
 long dif = (tempoFinal - tempoInicial);
 
   
-System.out.println(String.format("%02d segundos  e %02d milisegundos", dif/1000, dif%60)); 
+System.out.println(String.format("%02d segundos  e %02d milisegundos", dif/1000, dif%60)); // Imprime o tempo formatado em segundos e milisegundos
 //        JOptionPane.showMessageDialog(null, dif/1000);
     }
     public static void main(String args[]) {
