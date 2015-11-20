@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  *
  * @author Leonardo Fabio
  */
-public class Calibracao implements Runnable {
+public class LacoPrincipal implements Runnable {
 
     long lacosSegundoTotal; // Váriavel long lacosSegundoTotal; 
     long tempoFinalCalibracao; // Váriavel long tempoFinalCalibracao; 
@@ -28,7 +28,7 @@ public class Calibracao implements Runnable {
     /**
      * Construtor padrão da classe Calibracao
      */
-    public Calibracao() {
+    public LacoPrincipal() {
         tempoFinalCalibracao = 0; // Inicializa tempoFinalCalibracao = 0
         tempoInicial = 0; // Inicializa tempoInicial = 0
         tempoFinal = 0; // Inicializa tempoFinal = 0
@@ -41,23 +41,22 @@ public class Calibracao implements Runnable {
     @Override
     public void run() {
 
-        calculoCalibracao(); // Chama o método calculoCalibracao();
-        while (contadorThreadsEncerradas > 3) {
-//            try {
-                new LacoPrincipal().calculoLacoPrincipal();
-                
+        calculoLacoPrincipal(); // Chama o método calculoCalibracao();
+//        while (contadorThreadsEncerradas > 3) {
+////            try {
+//                System.out.println("Terminou"+ contadorThreadsEncerradas);
 //                break;
 //                Thread.sleep(5000);
 //            } catch (InterruptedException ex) {
 //                Logger.getLogger(Calibracao.class.getName()).log(Level.SEVERE, null, ex);
 //            }
-        }
+//        }
     }
 
     /**
      * Metodo responsavel por efetuar os calculos do laço de calibração
      */
-    public void calculoCalibracao() {
+    public void calculoLacoPrincipal() {
         // armazena o tempo antes de iniciar o laço de calibração
         tempoInicial = System.currentTimeMillis(); // tempoInicial = System.currentTimeMillis().
         tamanhoLacoCalibracao = 412000000L; // tamanhoLacoCalibracao = 412000000L;
@@ -107,7 +106,7 @@ public class Calibracao implements Runnable {
     }
 
     public static void setContadorThreadsEncerradas(long contadorThreadsEncerradas) {
-        Calibracao.contadorThreadsEncerradas = contadorThreadsEncerradas;
+        LacoPrincipal.contadorThreadsEncerradas = contadorThreadsEncerradas;
     }
 
 }

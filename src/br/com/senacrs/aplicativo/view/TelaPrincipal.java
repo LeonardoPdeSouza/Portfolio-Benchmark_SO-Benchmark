@@ -6,37 +6,46 @@
 package br.com.senacrs.aplicativo.view;
 
 import br.com.senacrs.aplicativo.operacoes.Calibracao;
-import java.lang.reflect.InvocationTargetException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.SwingUtilities;
+import br.com.senacrs.aplicativo.operacoes.LacoPrincipal;
 
 /**
  * Classe TelaPrincipal extends javax.swing.JFrame
+ *
  * @author Leonardo P Souza
  */
 public class TelaPrincipal extends javax.swing.JFrame {
-    Thread threadRodaCalibracao;
-    Thread threadRodaLacoPrincipal;
-    int count;
-    Calibracao c1 = new Calibracao();
-    Calibracao c2 = new Calibracao();
-    Calibracao c3 = new Calibracao();
-    Calibracao c4 = new Calibracao();
-    Calibracao c5 = new Calibracao();
-    Calibracao c6 = new Calibracao();
-    Calibracao c7 = new Calibracao();
-    Calibracao c8 = new Calibracao();
-    Calibracao c9 = new Calibracao();
-    Calibracao c10 = new Calibracao();
-    
-    /** 
-     * 
+//    Thread threadRodaCalibracao;
+//    Thread threadRodaLacoPrincipal;
+//    int count;
+//    Calibracao c1 = new Calibracao();
+//    Calibracao c2 = new Calibracao();
+//    Calibracao c3 = new Calibracao();
+//    Calibracao c4 = new Calibracao();
+//    Calibracao c5 = new Calibracao();
+//    Calibracao c6 = new Calibracao();
+//    Calibracao c7 = new Calibracao();
+//    Calibracao c8 = new Calibracao();
+//    Calibracao c9 = new Calibracao();
+//    Calibracao c10 = new Calibracao();
+
+    int threadAtivas = 0;
+    Thread t1 = new Thread(new Calibracao()); // Instancia a Thread t1
+    Thread t2 = new Thread(new Calibracao());
+    Thread t3 = new Thread(new Calibracao());
+    Thread t4 = new Thread(new Calibracao());
+    Thread tp1 = new Thread(new LacoPrincipal()); // Instancia a Thread t1
+    Thread tp2 = new Thread(new LacoPrincipal());
+    Thread tp3 = new Thread(new LacoPrincipal());
+    Thread tp4 = new Thread(new LacoPrincipal());
+
+//       
+    /**
+     *
      * Método construtor padrão da classe TelaPrincipal.
      */
     public TelaPrincipal() {
         initComponents();
-        
+
     }
 
     /**
@@ -110,6 +119,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel3.setText("Laço Principal:");
 
         jButton1.setText("Sair");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Estado Threads de Calibragem");
 
@@ -439,18 +453,61 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     /**
      * Método do botão btnExecutar para executar o Benchmark.
-     * @param evt 
+     *
+     * @param evt
      */
     private void btnExecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecutarActionPerformed
-        
+//        long tempoCalibragemInicial = System.currentTimeMillis();
+//        do {
+            
+//            t1.getState().RUNNABLE
+            t1.start(); // Starta a thread t1
+            calibragem1.setText("executando");
+            t2.start();
+            calibragem2.setText("executando");
+            t3.start();
+            calibragem3.setText("executando");
+            t4.start();
+            calibragem4.setText("executando");
+            
+//        } while (t4.getState().equals("RUNNABLE"));
+//        {
+//            Thread tp1 = new Thread(new LacoPrincipal()); // Instancia a Thread t1
+//            Thread tp2 = new Thread(new LacoPrincipal());
+//            Thread tp3 = new Thread(new LacoPrincipal());
+//            Thread tp4 = new Thread(new LacoPrincipal());
+            if (t1.getState().equals(t1.getState().TERMINATED)&&t1.getState().equals(t2.getState().TERMINATED)&&
+                    t1.getState().equals(t3.getState().TERMINATED)&&t1.getState().equals(t4.getState().TERMINATED)
+                    ) {
+                System.err.println("teste");
+            tp1.start(); // Starta a thread t1
+//            principal1.setText("executando");
+            tp2.start();
+//            principal2.setText("executando");
+            tp3.start();
+//            principal3.setText("executando");
+            tp4.start();
+            }
+//            principal4.setText("executando");
+//        }
+
+//        long tempoCalibragemFinal = System.currentTimeMillis();
+//        int diferenca = tempoCalibragemFinal - tempoCalibragemInicial;
+//        
+//    pgbCalibracao.validate(diferenca);
     }//GEN-LAST:event_btnExecutarActionPerformed
 
-    /** Método estático void main.
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    /**
+     * Método estático void main.
+     *
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-        
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -477,7 +534,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             /**
-             * Método público void run que serve para chamar a tela principal e torná-la visível.
+             * Método público void run que serve para chamar a tela principal e
+             * torná-la visível.
              */
             public void run() {
                 new TelaPrincipal().setVisible(true);
