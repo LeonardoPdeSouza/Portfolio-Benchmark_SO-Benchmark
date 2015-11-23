@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
- * Classe Calibracao implements Runnable{.
+ * Classe LacoPrincipal implements Runnable{.
  *
  * @author Leonardo Fabio
  */
@@ -26,7 +26,7 @@ public class LacoPrincipal implements Runnable {
     long numerosCores;
 
     /**
-     * Construtor padrão da classe Calibracao
+     * Construtor padrão da classe LacoPrincipal
      */
     public LacoPrincipal() {
         tempoFinalCalibracao = 0; // Inicializa tempoFinalCalibracao = 0

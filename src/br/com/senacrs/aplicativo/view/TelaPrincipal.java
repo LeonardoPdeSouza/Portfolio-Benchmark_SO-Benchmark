@@ -60,7 +60,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -118,10 +118,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jLabel3.setText("Laço Principal:");
 
-        jButton1.setText("Sair");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSair.setText("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSairActionPerformed(evt);
             }
         });
 
@@ -320,7 +320,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(159, 159, 159))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnSair)
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(137, 137, 137)
@@ -345,7 +345,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1)
+                                .addComponent(btnSair)
                                 .addGap(42, 42, 42))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(39, 39, 39)
@@ -485,7 +485,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             tp2.start();
 //            principal2.setText("executando");
             tp3.start();
-//            principal3.setText("executando");
+//   8         principal3.setText("executando");
             tp4.start();
             }
 //            principal4.setText("executando");
@@ -496,10 +496,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
 //        
 //    pgbCalibracao.validate(diferenca);
     }//GEN-LAST:event_btnExecutarActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    /**
+     * Método 
+     * @param evt 
+     */
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnSairActionPerformed
 
     /**
      * Método estático void main.
@@ -545,6 +548,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExecutar;
+    private javax.swing.JButton btnSair;
     private javax.swing.JLabel calibragem1;
     private javax.swing.JLabel calibragem10;
     private javax.swing.JLabel calibragem2;
@@ -555,7 +559,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel calibragem7;
     private javax.swing.JLabel calibragem8;
     private javax.swing.JLabel calibragem9;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

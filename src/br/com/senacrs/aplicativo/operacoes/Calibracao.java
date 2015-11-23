@@ -4,10 +4,6 @@
  */
 package br.com.senacrs.aplicativo.operacoes;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-
 /**
  * Classe Calibracao implements Runnable{.
  *
@@ -55,7 +51,7 @@ public class Calibracao implements Runnable {
     }
 
     /**
-     * Metodo responsavel por efetuar os calculos do laço de calibração
+     * Metodo calculoCalibracao() responsável por efetuar os cálculos do laço de calibração
      */
     public void calculoCalibracao() {
         // armazena o tempo antes de iniciar o laço de calibração
@@ -83,14 +79,14 @@ public class Calibracao implements Runnable {
 //    public static void main(String args[]) {
 ////        Calibracao c1 = new Calibracao();
 ////        Calibracao c2 = new Calibracao();
-//////        Calibracao c3 = new Calibracao();
-//////        Calibracao c4 = new Calibracao();
-//////        Calibracao c5 = new Calibracao();
-//////        Calibracao c6 = new Calibracao();
-//////        Calibracao c7 = new Calibracao();
-//////        Calibracao c8 = new Calibracao();
-//////        Calibracao c9 = new Calibracao();
-//////        Calibracao c10 = new Calibracao();
+////        Calibracao c3 = new Calibracao();
+////        Calibracao c4 = new Calibracao();
+////        Calibracao c5 = new Calibracao();
+////        Calibracao c6 = new Calibracao();
+////        Calibracao c7 = new Calibracao();
+////        Calibracao c8 = new Calibracao();
+////        Calibracao c9 = new Calibracao();
+////        Calibracao c10 = new Calibracao();
 ////        c1.start();
 ////        c2.start();
 ////        c3.start();
@@ -102,10 +98,18 @@ public class Calibracao implements Runnable {
 ////        c9.start();
 ////        c10.start();
 //    }
+    /**
+     * Método estático long getContadorThreadsEncerradas().
+     * @return o contador de ThreadsEncerradas.
+     */
     public static long getContadorThreadsEncerradas() {
         return contadorThreadsEncerradas;
     }
 
+    /**
+     * Método estático long setContadorThreadsEncerradas() 
+     * @return o contador de ThreadsEncerradas.
+     */
     public static void setContadorThreadsEncerradas(long contadorThreadsEncerradas) {
         Calibracao.contadorThreadsEncerradas = contadorThreadsEncerradas;
     }

@@ -17,7 +17,7 @@ public class ThreadCalibragem {
      */
     public static void main(String[] args) {
         
-        Thread t1 = new Thread(new Calibracao()); // Instancia a Thread t1
+        Thread t1 = new Thread(new Calibracao()); // Instância a Thread t1
         Thread t2 = new Thread(new Calibracao());
         Thread t3 = new Thread(new Calibracao());
         Thread t4 = new Thread(new Calibracao());
