@@ -27,16 +27,25 @@ public class TelaPrincipal extends javax.swing.JFrame {
 //    Calibracao c8 = new Calibracao();
 //    Calibracao c9 = new Calibracao();
 //    Calibracao c10 = new Calibracao();
-
-    int threadAtivas = 0;
-    Thread t1 = new Thread(new Calibracao()); // Instancia a Thread t1
-    Thread t2 = new Thread(new Calibracao());
-    Thread t3 = new Thread(new Calibracao());
-    Thread t4 = new Thread(new Calibracao());
-    Thread tp1 = new Thread(new LacoPrincipal()); // Instancia a Thread t1
-    Thread tp2 = new Thread(new LacoPrincipal());
-    Thread tp3 = new Thread(new LacoPrincipal());
-    Thread tp4 = new Thread(new LacoPrincipal());
+    Runtime run = Runtime.getRuntime();
+    Thread c1 = new Thread(new Calibracao());
+    Thread c2 = new Thread(new Calibracao());
+    Thread c3 = new Thread(new Calibracao());
+    Thread c4 = new Thread(new Calibracao());
+    Thread c5 = new Thread(new Calibracao());
+    Thread c6 = new Thread(new Calibracao());
+    Thread c7 = new Thread(new Calibracao());
+    Thread c8 = new Thread(new Calibracao());
+    Thread c9 = new Thread(new Calibracao());
+    Thread c10 = new Thread(new Calibracao());
+//    Thread c1 = new Thread(new Calibracao()); // Instancia a Thread c1
+//    Thread c2 = new Thread(new Calibracao());
+//    Thread c3 = new Thread(new Calibracao());
+//    Thread c4 = new Thread(new Calibracao());
+//    Thread tp1 = new Thread(new LacoPrincipal()); // Instancia a Thread c1
+//    Thread tp2 = new Thread(new LacoPrincipal());
+//    Thread tp3 = new Thread(new LacoPrincipal());
+//    Thread tp4 = new Thread(new LacoPrincipal());
 
 //       
     /**
@@ -46,6 +55,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public TelaPrincipal() {
         initComponents();
 
+    }
+    
+    public int numeroThread() {
+        return run.availableProcessors();
     }
 
     /**
@@ -457,46 +470,107 @@ public class TelaPrincipal extends javax.swing.JFrame {
      * @param evt
      */
     private void btnExecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecutarActionPerformed
-//        long tempoCalibragemInicial = System.currentTimeMillis();
-//        do {
-            
-//            t1.getState().RUNNABLE
-            t1.start(); // Starta a thread t1
-            calibragem1.setText("executando");
-            t2.start();
-            calibragem2.setText("executando");
-            t3.start();
-            calibragem3.setText("executando");
-            t4.start();
-            calibragem4.setText("executando");
-            
-//        } while (t4.getState().equals("RUNNABLE"));
-//        {
-//            Thread tp1 = new Thread(new LacoPrincipal()); // Instancia a Thread t1
-//            Thread tp2 = new Thread(new LacoPrincipal());
-//            Thread tp3 = new Thread(new LacoPrincipal());
-//            Thread tp4 = new Thread(new LacoPrincipal());
-            if (t1.getState().equals(t1.getState().TERMINATED)&&t1.getState().equals(t2.getState().TERMINATED)&&
-                    t1.getState().equals(t3.getState().TERMINATED)&&t1.getState().equals(t4.getState().TERMINATED)
-                    ) {
-                System.err.println("teste");
-            tp1.start(); // Starta a thread t1
-//            principal1.setText("executando");
-            tp2.start();
-//            principal2.setText("executando");
-            tp3.start();
-//   8         principal3.setText("executando");
-            tp4.start();
-            }
-//            principal4.setText("executando");
-//        }
 
-//        long tempoCalibragemFinal = System.currentTimeMillis();
-//        int diferenca = tempoCalibragemFinal - tempoCalibragemInicial;
-//        
-//    pgbCalibracao.validate(diferenca);
+        System.err.println(numeroThread());
+        switch (numeroThread()) {
+            
+
+            case 2:
+
+                c1 = new Thread(new Calibracao());
+                calibragem1.setText("Executando");
+                c1.start();
+                c2 = new Thread(new Calibracao());
+                calibragem2.setText("Executando");
+                c2.start();
+                break;
+
+            case 4:
+
+                c1 = new Thread(new Calibracao());
+                calibragem1.setText("Executando");
+                c1.start();
+                c2 = new Thread(new Calibracao());
+                calibragem2.setText("Executando");
+                c2.start();
+                c3 = new Thread(new Calibracao());
+                calibragem3.setText("Executando");
+                c3.start();
+                c4 = new Thread(new Calibracao());
+                calibragem4.setText("Executando");
+                c4.start();
+                break;
+
+            case 8:
+
+                c1 = new Thread(new Calibracao());
+                calibragem1.setText("Executando");
+                c1.start();
+                c2 = new Thread(new Calibracao());
+                calibragem2.setText("Executando");
+                c2.start();
+                c3 = new Thread(new Calibracao());
+                calibragem3.setText("Executando");
+                c3.start();
+                c4 = new Thread(new Calibracao());
+                calibragem4.setText("Executando");
+                c4.start();
+                c5 = new Thread(new Calibracao());
+                calibragem5.setText("Executando");
+                c5.start();
+                c6 = new Thread(new Calibracao());
+                calibragem6.setText("Executando");
+                c6.start();
+                c7 = new Thread(new Calibracao());
+                calibragem7.setText("Executando");
+                c7.start();
+                c8 = new Thread(new Calibracao());
+                calibragem8.setText("Executando");
+                c8.start();
+                break;
+                
+                case 10:
+
+                c1 = new Thread(new Calibracao());
+                calibragem1.setText("Executando");
+                c1.start();
+                c2 = new Thread(new Calibracao());
+                calibragem2.setText("Executando");
+                c2.start();
+                c3 = new Thread(new Calibracao());
+                calibragem3.setText("Executando");
+                c3.start();
+                c4 = new Thread(new Calibracao());
+                calibragem4.setText("Executando");
+                c4.start();
+                c5 = new Thread(new Calibracao());
+                calibragem5.setText("Executando");
+                c5.start();
+                c6 = new Thread(new Calibracao());
+                calibragem6.setText("Executando");
+                c6.start();
+                c7 = new Thread(new Calibracao());
+                calibragem7.setText("Executando");
+                c7.start();
+                c8 = new Thread(new Calibracao());
+                calibragem8.setText("Executando");
+                c8.start();
+                c9 = new Thread(new Calibracao());
+                calibragem9.setText("Executando");
+                c9.start();
+                c10 = new Thread(new Calibracao());
+                calibragem10.setText("Executando");
+                c10.start();
+                break;
+        }
     }//GEN-LAST:event_btnExecutarActionPerformed
     /**
+     */    /**
+     * Método 
+     * @param evt 
+     */    /**
+     * @param evt 
+     */    /**
      * Método 
      * @param evt 
      */
