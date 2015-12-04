@@ -7,16 +7,18 @@ package br.com.senacrs.aplicativo.operacoes;
 
 /**
  * Classe ThreadCalibragem {
+ *
  * @author Leonardo P Souza
  */
 public class ThreadCalibragem {
-    
 
-    /** Metódo static void main
+    /**
+     * Metódo static void main
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         Thread t1 = new Thread(new Calibracao()); // Instância a Thread t1
         Thread t2 = new Thread(new Calibracao());
         Thread t3 = new Thread(new Calibracao());
@@ -26,5 +28,5 @@ public class ThreadCalibragem {
         t3.start();
         t4.start();
     }
-    
+
 }
