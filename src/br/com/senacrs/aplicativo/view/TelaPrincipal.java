@@ -1,12 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.senacrs.aplicativo.view;
 
 import br.com.senacrs.aplicativo.operacoes.Calibracao;
+import br.com.senacrs.aplicativo.operacoes.TrataThread;
 import br.com.senacrs.aplicativo.operacoes.LacoPrincipal;
+import static java.lang.Thread.sleep;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 
 /**
  * Classe TelaPrincipal extends javax.swing.JFrame
@@ -14,51 +16,187 @@ import br.com.senacrs.aplicativo.operacoes.LacoPrincipal;
  * @author Leonardo P Souza
  */
 public class TelaPrincipal extends javax.swing.JFrame {
-//    Thread threadRodaCalibracao;
-//    Thread threadRodaLacoPrincipal;
-//    int count;
-//    Calibracao c1 = new Calibracao();
-//    Calibracao c2 = new Calibracao();
-//    Calibracao c3 = new Calibracao();
-//    Calibracao c4 = new Calibracao();
-//    Calibracao c5 = new Calibracao();
-//    Calibracao c6 = new Calibracao();
-//    Calibracao c7 = new Calibracao();
-//    Calibracao c8 = new Calibracao();
-//    Calibracao c9 = new Calibracao();
-//    Calibracao c10 = new Calibracao();
-    Runtime run = Runtime.getRuntime();
-    Thread c1 = new Thread(new Calibracao());
-    Thread c2 = new Thread(new Calibracao());
-    Thread c3 = new Thread(new Calibracao());
-    Thread c4 = new Thread(new Calibracao());
-    Thread c5 = new Thread(new Calibracao());
-    Thread c6 = new Thread(new Calibracao());
-    Thread c7 = new Thread(new Calibracao());
-    Thread c8 = new Thread(new Calibracao());
-    Thread c9 = new Thread(new Calibracao());
-    Thread c10 = new Thread(new Calibracao());
-//    Thread c1 = new Thread(new Calibracao()); // Instancia a Thread c1
-//    Thread c2 = new Thread(new Calibracao());
-//    Thread c3 = new Thread(new Calibracao());
-//    Thread c4 = new Thread(new Calibracao());
-//    Thread tp1 = new Thread(new LacoPrincipal()); // Instancia a Thread c1
-//    Thread tp2 = new Thread(new LacoPrincipal());
-//    Thread tp3 = new Thread(new LacoPrincipal());
-//    Thread tp4 = new Thread(new LacoPrincipal());
 
-//       
-    /**
-     *
-     * Método construtor padrão da classe TelaPrincipal.
-     */
+    TrataThread carrega = new TrataThread();
+    Calibracao calibragem = new Calibracao();
+    LacoPrincipal lacoPrincipal;
+    
+    Runtime run = Runtime.getRuntime();
+    public int numeroThread() {
+        return run.availableProcessors();
+    }
     public TelaPrincipal() {
         initComponents();
 
     }
-    
-    public int numeroThread() {
-        return run.availableProcessors();
+    /**
+     * Atuliza as label das thread referentes ao laço de calibração
+     */
+    public void atualizaLabel() {
+
+        switch (numeroThread()) {
+
+            case 1:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                break;
+            case 2:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                jLEstadoThread2.setText("" + carrega.c2.getState());
+                break;
+            case 3:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                jLEstadoThread2.setText("" + carrega.c2.getState());
+                jLEstadoThread3.setText("" + carrega.c3.getState());
+                break;
+            case 4:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                jLEstadoThread2.setText("" + carrega.c2.getState());
+                jLEstadoThread3.setText("" + carrega.c3.getState());
+                jLEstadoThread4.setText("" + carrega.c4.getState());
+                break;
+            case 5:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                jLEstadoThread2.setText("" + carrega.c2.getState());
+                jLEstadoThread3.setText("" + carrega.c3.getState());
+                jLEstadoThread4.setText("" + carrega.c4.getState());
+                jLEstadoThread5.setText("" + carrega.c5.getState());
+                break;
+            case 6:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                jLEstadoThread2.setText("" + carrega.c2.getState());
+                jLEstadoThread3.setText("" + carrega.c3.getState());
+                jLEstadoThread4.setText("" + carrega.c4.getState());
+                jLEstadoThread5.setText("" + carrega.c5.getState());
+                jLEstadoThread6.setText("" + carrega.c6.getState());
+                break;
+            case 7:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                jLEstadoThread2.setText("" + carrega.c2.getState());
+                jLEstadoThread3.setText("" + carrega.c3.getState());
+                jLEstadoThread4.setText("" + carrega.c4.getState());
+                jLEstadoThread5.setText("" + carrega.c5.getState());
+                jLEstadoThread6.setText("" + carrega.c6.getState());
+                jLEstadoThread7.setText("" + carrega.c7.getState());
+                break;
+            case 8:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                jLEstadoThread2.setText("" + carrega.c2.getState());
+                jLEstadoThread3.setText("" + carrega.c3.getState());
+                jLEstadoThread4.setText("" + carrega.c4.getState());
+                jLEstadoThread5.setText("" + carrega.c5.getState());
+                jLEstadoThread6.setText("" + carrega.c6.getState());
+                jLEstadoThread7.setText("" + carrega.c7.getState());
+                jLEstadoThread8.setText("" + carrega.c8.getState());
+                break;
+            case 9:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                jLEstadoThread2.setText("" + carrega.c2.getState());
+                jLEstadoThread3.setText("" + carrega.c3.getState());
+                jLEstadoThread4.setText("" + carrega.c4.getState());
+                jLEstadoThread5.setText("" + carrega.c5.getState());
+                jLEstadoThread6.setText("" + carrega.c6.getState());
+                jLEstadoThread7.setText("" + carrega.c7.getState());
+                jLEstadoThread8.setText("" + carrega.c8.getState());
+                jLEstadoThread9.setText("" + carrega.c9.getState());
+                break;
+            case 10:
+                jLEstadoThread1.setText("" + carrega.c1.getState());
+                jLEstadoThread2.setText("" + carrega.c2.getState());
+                jLEstadoThread3.setText("" + carrega.c3.getState());
+                jLEstadoThread4.setText("" + carrega.c4.getState());
+                jLEstadoThread5.setText("" + carrega.c5.getState());
+                jLEstadoThread6.setText("" + carrega.c6.getState());
+                jLEstadoThread7.setText("" + carrega.c7.getState());
+                jLEstadoThread8.setText("" + carrega.c8.getState());
+                jLEstadoThread9.setText("" + carrega.c9.getState());
+                jLEstadoThread10.setText("" + carrega.c10.getState());
+                break;
+        }
+
+    }
+
+    /**
+     * atuliza nome e estado das label referente as thread de lacoPrincipal
+     */
+    public void atualizaLabelPrincipal() {
+        switch (numeroThread()) {
+
+            case 1:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                break;
+            case 2:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                break;
+            case 3:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                break;
+            case 4:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                break;
+            case 5:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                break;
+            case 6:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                break;
+            case 7:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                jLEstadoThreadStress7.setText("" + carrega.p7.getState());
+                break;
+            case 8:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                jLEstadoThreadStress7.setText("" + carrega.p7.getState());
+                jLEstadoThreadStress8.setText("" + carrega.p8.getState());
+                break;
+            case 9:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                jLEstadoThreadStress7.setText("" + carrega.p7.getState());
+                jLEstadoThreadStress8.setText("" + carrega.p8.getState());
+                jLEstadoThreadStress9.setText("" + carrega.p9.getState());
+                break;
+            case 10:
+                jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                jLEstadoThreadStress7.setText("" + carrega.p7.getState());
+                jLEstadoThreadStress8.setText("" + carrega.p8.getState());
+                jLEstadoThreadStress9.setText("" + carrega.p9.getState());
+                jLEstadoThreadStress10.setText("" + carrega.p10.getState());
+                break;
+        }
     }
 
     /**
@@ -70,120 +208,356 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jLabelTitulo = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLEstadoThread1 = new javax.swing.JLabel();
+        jLEstadoThread2 = new javax.swing.JLabel();
+        jLEstadoThread3 = new javax.swing.JLabel();
+        jLEstadoThread4 = new javax.swing.JLabel();
+        jLEstadoThread5 = new javax.swing.JLabel();
+        jLEstadoThread6 = new javax.swing.JLabel();
+        jLEstadoThread7 = new javax.swing.JLabel();
+        jLEstadoThread8 = new javax.swing.JLabel();
+        jLThread1 = new javax.swing.JLabel();
+        jLThread2 = new javax.swing.JLabel();
+        jLThread3 = new javax.swing.JLabel();
+        jLThread4 = new javax.swing.JLabel();
+        jLThread5 = new javax.swing.JLabel();
+        jLThread6 = new javax.swing.JLabel();
+        jLabelTituloCalibracao = new javax.swing.JLabel();
+        jLThread7 = new javax.swing.JLabel();
+        jLThread8 = new javax.swing.JLabel();
+        jLThread9 = new javax.swing.JLabel();
+        jLThread10 = new javax.swing.JLabel();
+        jLabelTituloStress = new javax.swing.JLabel();
+        lblPrincipal1 = new javax.swing.JLabel();
+        jLEstadoThreadStress1 = new javax.swing.JLabel();
+        jLEstadoThreadStress2 = new javax.swing.JLabel();
+        lblPrincipal2 = new javax.swing.JLabel();
+        lblPrincipal3 = new javax.swing.JLabel();
+        jLEstadoThreadStress3 = new javax.swing.JLabel();
+        jLEstadoThreadStress4 = new javax.swing.JLabel();
+        lblPrincipal4 = new javax.swing.JLabel();
+        lblPrincipal5 = new javax.swing.JLabel();
+        lblPrincipal6 = new javax.swing.JLabel();
+        jLEstadoThreadStress5 = new javax.swing.JLabel();
+        jLEstadoThreadStress6 = new javax.swing.JLabel();
+        jLEstadoThreadStress7 = new javax.swing.JLabel();
+        lblPrincipal7 = new javax.swing.JLabel();
+        lblPrincipal8 = new javax.swing.JLabel();
+        jLEstadoThreadStress8 = new javax.swing.JLabel();
+        jLEstadoThread9 = new javax.swing.JLabel();
+        jLEstadoThread10 = new javax.swing.JLabel();
+        lblPrincipal9 = new javax.swing.JLabel();
+        jLEstadoThreadStress9 = new javax.swing.JLabel();
+        lblPrincipal10 = new javax.swing.JLabel();
+        jLEstadoThreadStress10 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        lblScore = new javax.swing.JLabel();
+        txtPontuacao = new javax.swing.JTextField();
+        btnExecutar = new javax.swing.JToggleButton();
+        jPanel4 = new javax.swing.JPanel();
+        bdpCalibragem = new javax.swing.JProgressBar();
+        bdpPrincipal = new javax.swing.JProgressBar();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabelEstadoCalib = new javax.swing.JLabel();
+        jLabelEstadoPrincipal = new javax.swing.JLabel();
         btnSair = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        txtScore = new javax.swing.JTextField();
-        btnExecutar = new javax.swing.JButton();
-        pgbCalibracao = new javax.swing.JProgressBar();
-        pgbPrincipal = new javax.swing.JProgressBar();
-        calibragem1 = new javax.swing.JLabel();
-        calibragem2 = new javax.swing.JLabel();
-        calibragem3 = new javax.swing.JLabel();
-        calibragem4 = new javax.swing.JLabel();
-        calibragem5 = new javax.swing.JLabel();
-        calibragem6 = new javax.swing.JLabel();
-        calibragem7 = new javax.swing.JLabel();
-        calibragem8 = new javax.swing.JLabel();
-        calibragem9 = new javax.swing.JLabel();
-        calibragem10 = new javax.swing.JLabel();
-        principal2 = new javax.swing.JLabel();
-        principal3 = new javax.swing.JLabel();
-        principal4 = new javax.swing.JLabel();
-        principal5 = new javax.swing.JLabel();
-        principal6 = new javax.swing.JLabel();
-        principal7 = new javax.swing.JLabel();
-        principal8 = new javax.swing.JLabel();
-        principal9 = new javax.swing.JLabel();
-        principal10 = new javax.swing.JLabel();
-        principal1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel1.setText("BenchMark de Processador Multithread");
+        jLabelTitulo.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabelTitulo.setText("BenchMark de Processador Multithread");
 
-        jLabel2.setText("Laço de calibragem:");
+        jLEstadoThread1.setText("Parado");
+        jLEstadoThread1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel3.setText("Laço Principal:");
+        jLEstadoThread2.setText("Parado");
+        jLEstadoThread2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        btnSair.setText("Sair");
-        btnSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSairActionPerformed(evt);
-            }
-        });
+        jLEstadoThread3.setText("Parado");
+        jLEstadoThread3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel4.setText("Estado Threads de Calibragem");
+        jLEstadoThread4.setText("Parado");
+        jLEstadoThread4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel5.setText("Estado Threads Laço Principal");
+        jLEstadoThread5.setText("Parado");
+        jLEstadoThread5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel6.setText("Thread 1:");
+        jLEstadoThread6.setText("Parado");
+        jLEstadoThread6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel7.setText("Thread 2:");
+        jLEstadoThread7.setText("Parado");
+        jLEstadoThread7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel8.setText("Thread 3:");
+        jLEstadoThread8.setText("Parado");
+        jLEstadoThread8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel9.setText("Thread 4:");
+        jLThread1.setText("Thread 1:");
+        jLThread1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel10.setText("Thread 5:");
+        jLThread2.setText("Thread 2:");
+        jLThread2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel11.setText("Thread 6:");
+        jLThread3.setText("Thread 3:");
+        jLThread3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel12.setText("Thread 7:");
+        jLThread4.setText("Thread 4:");
+        jLThread4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel13.setText("Thread 8:");
+        jLThread5.setText("Thread 5:");
+        jLThread5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel14.setText("Thread 9:");
+        jLThread6.setText("Thread 6:");
+        jLThread6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel15.setText("Thread 10:");
+        jLabelTituloCalibracao.setText("Estado Threads de Calibragem");
+        jLabelTituloCalibracao.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel16.setText("Thread 4:");
+        jLThread7.setText("Thread 7:");
+        jLThread7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel17.setText("Thread 5:");
+        jLThread8.setText("Thread 8:");
+        jLThread8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel18.setText("Thread 6:");
+        jLThread9.setText("Thread 9:");
+        jLThread9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel19.setText("Thread 7:");
+        jLThread10.setText("Thread 10:");
+        jLThread10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel20.setText("Thread 8:");
+        jLabelTituloStress.setText("Estado Threads Laço Principal");
+        jLabelTituloStress.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel21.setText("Thread 9:");
+        lblPrincipal1.setText("Thread 1:");
+        lblPrincipal1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel22.setText("Thread 10:");
+        jLEstadoThreadStress1.setText("Parado");
+        jLEstadoThreadStress1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel23.setText("Thread 1:");
+        jLEstadoThreadStress2.setText("Parado");
+        jLEstadoThreadStress2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel24.setText("Thread 2:");
+        lblPrincipal2.setText("Thread 2:");
+        lblPrincipal2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel25.setText("Thread 3:");
+        lblPrincipal3.setText("Thread 3:");
+        lblPrincipal3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel26.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel26.setText("SCORE:");
+        jLEstadoThreadStress3.setText("Parado");
+        jLEstadoThreadStress3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLEstadoThreadStress4.setText("Parado");
+        jLEstadoThreadStress4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        lblPrincipal4.setText("Thread 4:");
+        lblPrincipal4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        lblPrincipal5.setText("Thread 5:");
+        lblPrincipal5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        lblPrincipal6.setText("Thread 6:");
+        lblPrincipal6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLEstadoThreadStress5.setText("Parado");
+        jLEstadoThreadStress5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLEstadoThreadStress6.setText("Parado");
+        jLEstadoThreadStress6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLEstadoThreadStress7.setText("Parado");
+        jLEstadoThreadStress7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        lblPrincipal7.setText("Thread 7:");
+        lblPrincipal7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        lblPrincipal8.setText("Thread 8:");
+        lblPrincipal8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLEstadoThreadStress8.setText("Parado");
+        jLEstadoThreadStress8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLEstadoThread9.setText("Parado");
+        jLEstadoThread9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLEstadoThread10.setText("Parado");
+        jLEstadoThread10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        lblPrincipal9.setText("Thread 9:");
+        lblPrincipal9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLEstadoThreadStress9.setText("Parado");
+        jLEstadoThreadStress9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        lblPrincipal10.setText("Thread 10:");
+        lblPrincipal10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLEstadoThreadStress10.setText("Parado");
+        jLEstadoThreadStress10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelTituloCalibracao)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLThread1)
+                            .addComponent(jLThread2)
+                            .addComponent(jLThread3)
+                            .addComponent(jLThread4)
+                            .addComponent(jLThread5)
+                            .addComponent(jLThread6)
+                            .addComponent(jLThread7)
+                            .addComponent(jLThread8))
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLEstadoThread8)
+                            .addComponent(jLEstadoThread7)
+                            .addComponent(jLEstadoThread6)
+                            .addComponent(jLEstadoThread5)
+                            .addComponent(jLEstadoThread4)
+                            .addComponent(jLEstadoThread3)
+                            .addComponent(jLEstadoThread2)
+                            .addComponent(jLEstadoThread1)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLThread9)
+                            .addComponent(jLThread10))
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLEstadoThread9)
+                            .addComponent(jLEstadoThread10))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelTituloStress)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblPrincipal1)
+                            .addComponent(lblPrincipal2)
+                            .addComponent(lblPrincipal3)
+                            .addComponent(lblPrincipal4)
+                            .addComponent(lblPrincipal5)
+                            .addComponent(lblPrincipal6)
+                            .addComponent(lblPrincipal7)
+                            .addComponent(lblPrincipal8)
+                            .addComponent(lblPrincipal9)
+                            .addComponent(lblPrincipal10))
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLEstadoThreadStress10)
+                            .addComponent(jLEstadoThreadStress9)
+                            .addComponent(jLEstadoThreadStress8)
+                            .addComponent(jLEstadoThreadStress7)
+                            .addComponent(jLEstadoThreadStress6)
+                            .addComponent(jLEstadoThreadStress5)
+                            .addComponent(jLEstadoThreadStress4)
+                            .addComponent(jLEstadoThreadStress3)
+                            .addComponent(jLEstadoThreadStress2)
+                            .addComponent(jLEstadoThreadStress1))))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabelTituloStress)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal1)
+                            .addComponent(jLEstadoThreadStress1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal2)
+                            .addComponent(jLEstadoThreadStress2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal3)
+                            .addComponent(jLEstadoThreadStress3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal4)
+                            .addComponent(jLEstadoThreadStress4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal5)
+                            .addComponent(jLEstadoThreadStress5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal6)
+                            .addComponent(jLEstadoThreadStress6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal7)
+                            .addComponent(jLEstadoThreadStress7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal8)
+                            .addComponent(jLEstadoThreadStress8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal9)
+                            .addComponent(jLEstadoThreadStress9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPrincipal10)
+                            .addComponent(jLEstadoThreadStress10)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabelTituloCalibracao)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread1)
+                            .addComponent(jLEstadoThread1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread2)
+                            .addComponent(jLEstadoThread2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread3)
+                            .addComponent(jLEstadoThread3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread4)
+                            .addComponent(jLEstadoThread4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread5)
+                            .addComponent(jLEstadoThread5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread6)
+                            .addComponent(jLEstadoThread6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread7)
+                            .addComponent(jLEstadoThread7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread8)
+                            .addComponent(jLEstadoThread8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread9)
+                            .addComponent(jLEstadoThread9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLThread10)
+                            .addComponent(jLEstadoThread10))))
+                .addGap(0, 6, Short.MAX_VALUE))
+        );
+
+        lblScore.setText("SCORE:");
+
+        txtPontuacao.setEditable(false);
+        txtPontuacao.setBackground(new java.awt.Color(255, 255, 255));
+        txtPontuacao.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
         btnExecutar.setText("Executar");
         btnExecutar.addActionListener(new java.awt.event.ActionListener() {
@@ -192,388 +566,207 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        calibragem1.setText("Parado");
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnExecutar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblScore)
+                .addGap(18, 18, 18)
+                .addComponent(txtPontuacao, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPontuacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblScore)
+                    .addComponent(btnExecutar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        calibragem2.setText("Parado");
+        bdpCalibragem.setStringPainted(true);
 
-        calibragem3.setText("Parado");
+        bdpPrincipal.setStringPainted(true);
 
-        calibragem4.setText("Parado");
+        jLabel2.setText("Laço Principal:");
 
-        calibragem5.setText("Parado");
+        jLabel1.setText("Laço de calibragem:");
 
-        calibragem6.setText("Parado");
+        jLabelEstadoCalib.setText("Estado");
 
-        calibragem7.setText("Parado");
+        jLabelEstadoPrincipal.setText("Estado");
 
-        calibragem8.setText("Parado");
+        btnSair.setText("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
 
-        calibragem9.setText("Parado");
-
-        calibragem10.setText("Parado");
-
-        principal2.setText("Parado");
-
-        principal3.setText("Parado");
-
-        principal4.setText("Parado");
-
-        principal5.setText("Parado");
-
-        principal6.setText("Parado");
-
-        principal7.setText("Parado");
-
-        principal8.setText("Parado");
-
-        principal9.setText("Parado");
-
-        principal10.setText("Parado");
-
-        principal1.setText("Parado");
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(bdpCalibragem, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelEstadoCalib)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSair))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(bdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelEstadoPrincipal)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(bdpCalibragem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelEstadoCalib)
+                    .addComponent(btnSair))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(bdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelEstadoPrincipal))
+                    .addComponent(jLabel2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(148, 148, 148))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(pgbCalibracao, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(45, 45, 45)
-                        .addComponent(pgbPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel14)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(calibragem9))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel13)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(calibragem8))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel12)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(calibragem7))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel11)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(calibragem6))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel10)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(calibragem5))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(calibragem4))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(calibragem3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(calibragem2))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(calibragem1)))
-                                .addGap(245, 245, 245)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel22)
-                                    .addComponent(jLabel21)
-                                    .addComponent(jLabel20)
-                                    .addComponent(jLabel19)
-                                    .addComponent(jLabel18)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jLabel16)
-                                    .addComponent(jLabel25)
-                                    .addComponent(jLabel24)
-                                    .addComponent(jLabel23))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(principal10)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(2, 2, 2)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(principal9)
-                                            .addComponent(principal8)
-                                            .addComponent(principal7)
-                                            .addComponent(principal6)
-                                            .addComponent(principal5)
-                                            .addComponent(principal4)
-                                            .addComponent(principal3)
-                                            .addComponent(principal2)
-                                            .addComponent(principal1)))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(calibragem10)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(173, 173, 173))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(83, Short.MAX_VALUE)
+                .addComponent(jLabelTitulo)
+                .addGap(109, 109, 109))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(159, 159, 159))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnSair)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(137, 137, 137)
-                .addComponent(btnExecutar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtScore, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSair)
-                                .addGap(42, 42, 42))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addComponent(pgbCalibracao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pgbPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel6)
-                                .addComponent(calibragem1))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel7)
-                                .addComponent(calibragem2))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel8)
-                                .addComponent(calibragem3))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel9)
-                                .addComponent(calibragem4))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel10)
-                                .addComponent(calibragem5))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel11)
-                                .addComponent(calibragem6))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel12)
-                                .addComponent(calibragem7))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel13)
-                                .addComponent(calibragem8))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel14)
-                                .addComponent(calibragem9))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel15)
-                                .addComponent(calibragem10)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel23)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel24)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel25)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel16)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel17)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel18)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel19)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel20)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel21)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel22)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(principal1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(principal2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(principal3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(principal4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(principal5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(principal6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(principal7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(principal8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(principal9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(principal10)))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(txtScore, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnExecutar))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(16, 16, 16)
+                .addComponent(jLabelTitulo)
+                .addGap(20, 20, 20)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    /**
-     * Método do botão btnExecutar para executar o Benchmark.
-     *
-     * @param evt
-     */
+
     private void btnExecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecutarActionPerformed
+// Inicia laço de calibração
+        carrega.carregaCalibracao();
 
-        System.err.println(numeroThread());
-        switch (numeroThread()) {
-            
+        new Thread() {
 
-            case 2:
+            public void run() {
 
-                c1 = new Thread(new Calibracao());
-                calibragem1.setText("Executando");
-                c1.start();
-                c2 = new Thread(new Calibracao());
-                calibragem2.setText("Executando");
-                c2.start();
-                break;
+                /**
+                 * COntrola barra de progresso e atualizações, primeiro for
+                 * barra de calibração
+                 */
+                for (int i = 0; i < (carrega.threadCalibracao1.lacoCalibracao); i = (int)carrega.threadCalibracao1.l1) {
 
-            case 4:
+                    try {
+                        atualizaLabel();
 
-                c1 = new Thread(new Calibracao());
-                calibragem1.setText("Executando");
-                c1.start();
-                c2 = new Thread(new Calibracao());
-                calibragem2.setText("Executando");
-                c2.start();
-                c3 = new Thread(new Calibracao());
-                calibragem3.setText("Executando");
-                c3.start();
-                c4 = new Thread(new Calibracao());
-                calibragem4.setText("Executando");
-                c4.start();
-                break;
+                        sleep(100);
+                        bdpCalibragem.setValue((int) (carrega.threadCalibracao1.l1 * 100 / carrega.threadCalibracao1.lacoCalibracao));
+                        if (bdpCalibragem.getValue() < 100) {
+                            jLabelEstadoCalib.setText("Carregando...");
+                        } else {
+                            if (bdpCalibragem.getValue() == 100) {
+                                jLabelEstadoCalib.setText("Concluido !");
+//                                carrega.finalizaCalibracao();
+                                double tempo = carrega.retornaCalibracao();
+                                carrega.carregaLacoPrincipal(tempo);
+                                atualizaLabel();
 
-            case 8:
+                                /**
+                                 * Controla barra de prograsso Stress
+                                 */
+                                for (int j = 0; j < carrega.threadPrincipal1.lacoPrincipal; j=(int)carrega.threadPrincipal1.l2) {
 
-                c1 = new Thread(new Calibracao());
-                calibragem1.setText("Executando");
-                c1.start();
-                c2 = new Thread(new Calibracao());
-                calibragem2.setText("Executando");
-                c2.start();
-                c3 = new Thread(new Calibracao());
-                calibragem3.setText("Executando");
-                c3.start();
-                c4 = new Thread(new Calibracao());
-                calibragem4.setText("Executando");
-                c4.start();
-                c5 = new Thread(new Calibracao());
-                calibragem5.setText("Executando");
-                c5.start();
-                c6 = new Thread(new Calibracao());
-                calibragem6.setText("Executando");
-                c6.start();
-                c7 = new Thread(new Calibracao());
-                calibragem7.setText("Executando");
-                c7.start();
-                c8 = new Thread(new Calibracao());
-                calibragem8.setText("Executando");
-                c8.start();
-                break;
-                
-                case 10:
+                                    if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
+                                         atualizaLabel();
+                                    }
+                                    try {
+                                       
+                                        atualizaLabelPrincipal();
+                                        sleep(100);
 
-                c1 = new Thread(new Calibracao());
-                calibragem1.setText("Executando");
-                c1.start();
-                c2 = new Thread(new Calibracao());
-                calibragem2.setText("Executando");
-                c2.start();
-                c3 = new Thread(new Calibracao());
-                calibragem3.setText("Executando");
-                c3.start();
-                c4 = new Thread(new Calibracao());
-                calibragem4.setText("Executando");
-                c4.start();
-                c5 = new Thread(new Calibracao());
-                calibragem5.setText("Executando");
-                c5.start();
-                c6 = new Thread(new Calibracao());
-                calibragem6.setText("Executando");
-                c6.start();
-                c7 = new Thread(new Calibracao());
-                calibragem7.setText("Executando");
-                c7.start();
-                c8 = new Thread(new Calibracao());
-                calibragem8.setText("Executando");
-                c8.start();
-                c9 = new Thread(new Calibracao());
-                calibragem9.setText("Executando");
-                c9.start();
-                c10 = new Thread(new Calibracao());
-                calibragem10.setText("Executando");
-                c10.start();
-                break;
-        }
+                                        bdpPrincipal.setValue((int) (carrega.threadPrincipal1.l2 * 100 / carrega.threadPrincipal1.lacoPrincipal));
+                                        if (bdpPrincipal.getValue() < 100) {
+                                            jLabelEstadoPrincipal.setText("Carregando...");
+                                        }
+                                        if (bdpPrincipal.getValue() == 100) {
+                                            jLabelEstadoPrincipal.setText("Concluido !");
+                                            
+    
+        run.availableProcessors();
+        while(numeroThread() == run.availableProcessors()){
+        
+
+                                            NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+//                                            double valor = 78945;
+                                            //System.out.println("" + nf.format(carrega.pontuacao()));
+                                            txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                           atualizaLabel();
+                                      atualizaLabelPrincipal();
+                                      }
+                                        }
+
+                                    } catch (Exception e) {
+                                        System.out.println(e);
+                                    }
+                                }                                
+                            }
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                }
+
+            }
+        }.start();
     }//GEN-LAST:event_btnExecutarActionPerformed
-    /**
-     */    /**
-     * Método 
-     * @param evt 
-     */    /**
-     * @param evt 
-     */    /**
-     * Método 
-     * @param evt 
-     */
+
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
@@ -621,57 +814,62 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnExecutar;
+    private javax.swing.JProgressBar bdpCalibragem;
+    private javax.swing.JProgressBar bdpPrincipal;
+    private javax.swing.JToggleButton btnExecutar;
     private javax.swing.JButton btnSair;
-    private javax.swing.JLabel calibragem1;
-    private javax.swing.JLabel calibragem10;
-    private javax.swing.JLabel calibragem2;
-    private javax.swing.JLabel calibragem3;
-    private javax.swing.JLabel calibragem4;
-    private javax.swing.JLabel calibragem5;
-    private javax.swing.JLabel calibragem6;
-    private javax.swing.JLabel calibragem7;
-    private javax.swing.JLabel calibragem8;
-    private javax.swing.JLabel calibragem9;
+    private javax.swing.JLabel jLEstadoThread1;
+    private javax.swing.JLabel jLEstadoThread10;
+    private javax.swing.JLabel jLEstadoThread2;
+    private javax.swing.JLabel jLEstadoThread3;
+    private javax.swing.JLabel jLEstadoThread4;
+    private javax.swing.JLabel jLEstadoThread5;
+    private javax.swing.JLabel jLEstadoThread6;
+    private javax.swing.JLabel jLEstadoThread7;
+    private javax.swing.JLabel jLEstadoThread8;
+    private javax.swing.JLabel jLEstadoThread9;
+    private javax.swing.JLabel jLEstadoThreadStress1;
+    private javax.swing.JLabel jLEstadoThreadStress10;
+    private javax.swing.JLabel jLEstadoThreadStress2;
+    private javax.swing.JLabel jLEstadoThreadStress3;
+    private javax.swing.JLabel jLEstadoThreadStress4;
+    private javax.swing.JLabel jLEstadoThreadStress5;
+    private javax.swing.JLabel jLEstadoThreadStress6;
+    private javax.swing.JLabel jLEstadoThreadStress7;
+    private javax.swing.JLabel jLEstadoThreadStress8;
+    private javax.swing.JLabel jLEstadoThreadStress9;
+    private javax.swing.JLabel jLThread1;
+    private javax.swing.JLabel jLThread10;
+    private javax.swing.JLabel jLThread2;
+    private javax.swing.JLabel jLThread3;
+    private javax.swing.JLabel jLThread4;
+    private javax.swing.JLabel jLThread5;
+    private javax.swing.JLabel jLThread6;
+    private javax.swing.JLabel jLThread7;
+    private javax.swing.JLabel jLThread8;
+    private javax.swing.JLabel jLThread9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JProgressBar pgbCalibracao;
-    private javax.swing.JProgressBar pgbPrincipal;
-    private javax.swing.JLabel principal1;
-    private javax.swing.JLabel principal10;
-    private javax.swing.JLabel principal2;
-    private javax.swing.JLabel principal3;
-    private javax.swing.JLabel principal4;
-    private javax.swing.JLabel principal5;
-    private javax.swing.JLabel principal6;
-    private javax.swing.JLabel principal7;
-    private javax.swing.JLabel principal8;
-    private javax.swing.JLabel principal9;
-    private javax.swing.JTextField txtScore;
+    private javax.swing.JLabel jLabelEstadoCalib;
+    private javax.swing.JLabel jLabelEstadoPrincipal;
+    private javax.swing.JLabel jLabelTitulo;
+    private javax.swing.JLabel jLabelTituloCalibracao;
+    private javax.swing.JLabel jLabelTituloStress;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblPrincipal1;
+    private javax.swing.JLabel lblPrincipal10;
+    private javax.swing.JLabel lblPrincipal2;
+    private javax.swing.JLabel lblPrincipal3;
+    private javax.swing.JLabel lblPrincipal4;
+    private javax.swing.JLabel lblPrincipal5;
+    private javax.swing.JLabel lblPrincipal6;
+    private javax.swing.JLabel lblPrincipal7;
+    private javax.swing.JLabel lblPrincipal8;
+    private javax.swing.JLabel lblPrincipal9;
+    private javax.swing.JLabel lblScore;
+    private javax.swing.JTextField txtPontuacao;
     // End of variables declaration//GEN-END:variables
 
 }

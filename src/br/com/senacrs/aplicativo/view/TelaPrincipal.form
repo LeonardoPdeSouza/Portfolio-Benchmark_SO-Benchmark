@@ -23,545 +23,652 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="83" max="32767" attributes="0"/>
+              <Component id="jLabelTitulo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="pgbCalibracao" pref="454" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="pgbPrincipal" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="calibragem9" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="calibragem8" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="calibragem7" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="calibragem6" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="calibragem5" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="calibragem4" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="calibragem3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="calibragem2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="calibragem1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="245" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel23" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="principal10" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="principal9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="principal8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="principal7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="principal6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="principal5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="principal4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="principal3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="principal2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="principal1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="calibragem10" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="173" max="-2" attributes="0"/>
+              <Component id="jPanel4" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="btnSair" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
               </Group>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
-              <Component id="btnExecutar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="txtScore" min="-2" pref="250" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnSair" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="pgbCalibracao" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-              </Group>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="pgbPrincipal" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jLabel3" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="calibragem10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="principal1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="principal2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="principal3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="principal4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="principal5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="principal6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="principal7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="principal8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="principal9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="principal10" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtScore" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnExecutar" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <Component id="jLabelTitulo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabelTitulo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial Black" size="18" style="1"/>
+          <Font name="Verdana" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="BenchMark de Processador Multithread"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="La&#xe7;o de calibragem:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="La&#xe7;o Principal:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnSair">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sair"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Estado Threads de Calibragem"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Estado Threads La&#xe7;o Principal"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 1:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 2:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 3:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 4:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 5:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel11">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 6:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel12">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 7:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel13">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 8:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel14">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 9:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel15">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 10:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel16">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 4:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel17">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 5:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel18">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 6:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel19">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 7:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel20">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 8:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel21">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 9:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel22">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 10:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel23">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 1:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel24">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 2:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel25">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Thread 3:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel26">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="14" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="SCORE:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtScore">
-    </Component>
-    <Component class="javax.swing.JButton" name="btnExecutar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Executar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExecutarActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="pgbCalibracao">
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="pgbPrincipal">
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem9">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="calibragem10">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal9">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal10">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="principal1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Parado"/>
-      </Properties>
-    </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabelTituloCalibracao" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLThread1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLThread2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLThread3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLThread4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLThread5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLThread6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLThread7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLThread8" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLEstadoThread8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLThread9" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLThread10" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLEstadoThread9" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread10" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabelTituloStress" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblPrincipal1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrincipal2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrincipal3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrincipal4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrincipal5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrincipal6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrincipal7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrincipal8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrincipal9" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrincipal10" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLEstadoThreadStress10" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress9" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabelTituloStress" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblPrincipal10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadStress10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabelTituloCalibracao" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLThread10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThread10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 1:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 2:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 3:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 4:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 5:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 6:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelTituloCalibracao">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Estado Threads de Calibragem"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 7:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 8:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 9:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLThread10">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 10:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelTituloStress">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Estado Threads La&#xe7;o Principal"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 1:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 2:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 3:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 4:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 5:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 6:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 7:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 8:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThread10">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 9:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPrincipal10">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thread 10:"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress10">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Parado"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel3">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btnExecutar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="lblScore" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="txtPontuacao" min="-2" pref="246" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtPontuacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblScore" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnExecutar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lblScore">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="SCORE:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtPontuacao">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="12" style="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnExecutar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Executar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExecutarActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel4">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="bdpCalibragem" min="-2" pref="324" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jLabelEstadoCalib" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btnSair" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="bdpPrincipal" min="-2" pref="324" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jLabelEstadoPrincipal" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="bdpCalibragem" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelEstadoCalib" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSair" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="bdpPrincipal" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelEstadoPrincipal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JProgressBar" name="bdpCalibragem">
+          <Properties>
+            <Property name="stringPainted" type="boolean" value="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JProgressBar" name="bdpPrincipal">
+          <Properties>
+            <Property name="stringPainted" type="boolean" value="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="La&#xe7;o Principal:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="La&#xe7;o de calibragem:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelEstadoCalib">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Estado"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelEstadoPrincipal">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Estado"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnSair">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sair"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>
