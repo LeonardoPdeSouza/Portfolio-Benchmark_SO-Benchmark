@@ -19,49 +19,370 @@ public class TrataThread {
         return run.availableProcessors(); //Retorna run.availableProcessors()
     }
 
-    public Calibracao threadCalibracao1; //Variável Calibracao threadCalibracao1
-    public Calibracao threadCalibracao2; //Variável Calibracao threadCalibracao2
-    public Calibracao threadCalibracao3; //Variável Calibracao threadCalibracao3
-    public Calibracao threadCalibracao4; //Variável Calibracao threadCalibracao4
-    public Calibracao threadCalibracao5; //Variável Calibracao threadCalibracao5
-    public Calibracao threadCalibracao6; //Variável Calibracao threadCalibracao6
-    public Calibracao threadCalibracao7; //Variável Calibracao threadCalibracao7
-    public Calibracao threadCalibracao8; //Variável Calibracao threadCalibracao8
-    public Calibracao threadCalibracao9; //Variável Calibracao threadCalibracao9
-    public Calibracao threadCalibracao10; //VariávelCalibracao threadCalibracao10
+    private Calibracao threadCalibracao1; //Variável Calibracao threadCalibracao1
+    private Calibracao threadCalibracao2; //Variável Calibracao threadCalibracao2
+    private Calibracao threadCalibracao3; //Variável Calibracao threadCalibracao3
+    private Calibracao threadCalibracao4; //Variável Calibracao threadCalibracao4
+    private Calibracao threadCalibracao5; //Variável Calibracao threadCalibracao5
+    private Calibracao threadCalibracao6; //Variável Calibracao threadCalibracao6
+    private Calibracao threadCalibracao7; //Variável Calibracao threadCalibracao7
+    private Calibracao threadCalibracao8; //Variável Calibracao threadCalibracao8
+    private Calibracao threadCalibracao9; //Variável Calibracao threadCalibracao9
+    private Calibracao threadCalibracao10; //VariávelCalibracao threadCalibracao10
 
-    public LacoPrincipal threadPrincipal1;//Variável LacoPrincipal threadPrincipal1
-    public LacoPrincipal threadPrincipal2;//Variável LacoPrincipal threadPrincipal2       
-    public LacoPrincipal threadPrincipal3;//Variável LacoPrincipal threadPrincipal3
-    public LacoPrincipal threadPrincipal4;//Variável LacoPrincipal threadPrincipal4
-    public LacoPrincipal threadPrincipal5;//Variável LacoPrincipal threadPrincipal5
-    public LacoPrincipal threadPrincipal6;//Variável LacoPrincipal threadPrincipal6
-    public LacoPrincipal threadPrincipal7;//Variável LacoPrincipal threadPrincipal7
-    public LacoPrincipal threadPrincipal8;//Variável LacoPrincipal threadPrincipal8
-    public LacoPrincipal threadPrincipal9;//Variável LacoPrincipal threadPrincipal9
-    public LacoPrincipal threadPrincipal10;//Variável LacoPrincipal threadPrincipal10
+    private LacoPrincipal threadPrincipal1;//Variável LacoPrincipal threadPrincipal1
+    private LacoPrincipal threadPrincipal2;//Variável LacoPrincipal threadPrincipal2       
+    private LacoPrincipal threadPrincipal3;//Variável LacoPrincipal threadPrincipal3
+    private LacoPrincipal threadPrincipal4;//Variável LacoPrincipal threadPrincipal4
+    private LacoPrincipal threadPrincipal5;//Variável LacoPrincipal threadPrincipal5
+    private LacoPrincipal threadPrincipal6;//Variável LacoPrincipal threadPrincipal6
 
-    public Thread c1; //Variável Thread c1
-    public Thread c2; //Variável Thread c2
-    public Thread c3; //Variável Thread c3
-    public Thread c4; //Variável Thread c4
-    public Thread c5; //Variável Thread c5
-    public Thread c6; //Variável Thread c6
-    public Thread c7; //Variável Thread c7
-    public Thread c8; //Variável Thread c8
-    public Thread c9; //Variável Thread c9
-    public Thread c10; //Variável Thread c10 
+    public Calibracao getThreadCalibracao1() {
+        return threadCalibracao1;
+    }
 
-    public Thread p1; //Variável Thread p1
-    public Thread p2; //Variável Thread p2
-    public Thread p3; //Variável Thread p3
-    public Thread p4; //Variável Thread p4 
-    public Thread p5; //Variável Thread p5 
-    public Thread p6; //Variável Thread p6 
-    public Thread p7; //Variável Thread p7
-    public Thread p8; //Variável Thread p8 
-    public Thread p9; //Variável Thread p9 
-    public Thread p10; //Variável Thread p10 
+    public void setThreadCalibracao1(Calibracao threadCalibracao1) {
+        this.threadCalibracao1 = threadCalibracao1;
+    }
+
+    public Calibracao getThreadCalibracao2() {
+        return threadCalibracao2;
+    }
+
+    public void setThreadCalibracao2(Calibracao threadCalibracao2) {
+        this.threadCalibracao2 = threadCalibracao2;
+    }
+
+    public Calibracao getThreadCalibracao3() {
+        return threadCalibracao3;
+    }
+
+    public void setThreadCalibracao3(Calibracao threadCalibracao3) {
+        this.threadCalibracao3 = threadCalibracao3;
+    }
+
+    public Calibracao getThreadCalibracao4() {
+        return threadCalibracao4;
+    }
+
+    public void setThreadCalibracao4(Calibracao threadCalibracao4) {
+        this.threadCalibracao4 = threadCalibracao4;
+    }
+
+    public Calibracao getThreadCalibracao5() {
+        return threadCalibracao5;
+    }
+
+    public void setThreadCalibracao5(Calibracao threadCalibracao5) {
+        this.threadCalibracao5 = threadCalibracao5;
+    }
+
+    public Calibracao getThreadCalibracao6() {
+        return threadCalibracao6;
+    }
+
+    public void setThreadCalibracao6(Calibracao threadCalibracao6) {
+        this.threadCalibracao6 = threadCalibracao6;
+    }
+
+    public Calibracao getThreadCalibracao7() {
+        return threadCalibracao7;
+    }
+
+    public void setThreadCalibracao7(Calibracao threadCalibracao7) {
+        this.threadCalibracao7 = threadCalibracao7;
+    }
+
+    public Calibracao getThreadCalibracao8() {
+        return threadCalibracao8;
+    }
+
+    public void setThreadCalibracao8(Calibracao threadCalibracao8) {
+        this.threadCalibracao8 = threadCalibracao8;
+    }
+
+    public Calibracao getThreadCalibracao9() {
+        return threadCalibracao9;
+    }
+
+    public void setThreadCalibracao9(Calibracao threadCalibracao9) {
+        this.threadCalibracao9 = threadCalibracao9;
+    }
+
+    public Calibracao getThreadCalibracao10() {
+        return threadCalibracao10;
+    }
+
+    public void setThreadCalibracao10(Calibracao threadCalibracao10) {
+        this.threadCalibracao10 = threadCalibracao10;
+    }
+
+    public LacoPrincipal getThreadPrincipal1() {
+        return threadPrincipal1;
+    }
+
+    public void setThreadPrincipal1(LacoPrincipal threadPrincipal1) {
+        this.threadPrincipal1 = threadPrincipal1;
+    }
+
+    public LacoPrincipal getThreadPrincipal2() {
+        return threadPrincipal2;
+    }
+
+    public void setThreadPrincipal2(LacoPrincipal threadPrincipal2) {
+        this.threadPrincipal2 = threadPrincipal2;
+    }
+
+    public LacoPrincipal getThreadPrincipal3() {
+        return threadPrincipal3;
+    }
+
+    public void setThreadPrincipal3(LacoPrincipal threadPrincipal3) {
+        this.threadPrincipal3 = threadPrincipal3;
+    }
+
+    public LacoPrincipal getThreadPrincipal4() {
+        return threadPrincipal4;
+    }
+
+    public void setThreadPrincipal4(LacoPrincipal threadPrincipal4) {
+        this.threadPrincipal4 = threadPrincipal4;
+    }
+
+    public LacoPrincipal getThreadPrincipal5() {
+        return threadPrincipal5;
+    }
+
+    public void setThreadPrincipal5(LacoPrincipal threadPrincipal5) {
+        this.threadPrincipal5 = threadPrincipal5;
+    }
+
+    public LacoPrincipal getThreadPrincipal6() {
+        return threadPrincipal6;
+    }
+
+    public void setThreadPrincipal6(LacoPrincipal threadPrincipal6) {
+        this.threadPrincipal6 = threadPrincipal6;
+    }
+
+    public LacoPrincipal getThreadPrincipal7() {
+        return threadPrincipal7;
+    }
+
+    public void setThreadPrincipal7(LacoPrincipal threadPrincipal7) {
+        this.threadPrincipal7 = threadPrincipal7;
+    }
+
+    public LacoPrincipal getThreadPrincipal8() {
+        return threadPrincipal8;
+    }
+
+    public void setThreadPrincipal8(LacoPrincipal threadPrincipal8) {
+        this.threadPrincipal8 = threadPrincipal8;
+    }
+
+    public LacoPrincipal getThreadPrincipal9() {
+        return threadPrincipal9;
+    }
+
+    public void setThreadPrincipal9(LacoPrincipal threadPrincipal9) {
+        this.threadPrincipal9 = threadPrincipal9;
+    }
+
+    public LacoPrincipal getThreadPrincipal10() {
+        return threadPrincipal10;
+    }
+
+    public void setThreadPrincipal10(LacoPrincipal threadPrincipal10) {
+        this.threadPrincipal10 = threadPrincipal10;
+    }
+
+    public Thread getC1() {
+        return c1;
+    }
+
+    public void setC1(Thread c1) {
+        this.c1 = c1;
+    }
+
+    public Thread getC2() {
+        return c2;
+    }
+
+    public void setC2(Thread c2) {
+        this.c2 = c2;
+    }
+
+    public Thread getC3() {
+        return c3;
+    }
+
+    public void setC3(Thread c3) {
+        this.c3 = c3;
+    }
+
+    public Thread getC4() {
+        return c4;
+    }
+
+    public void setC4(Thread c4) {
+        this.c4 = c4;
+    }
+
+    public Thread getC5() {
+        return c5;
+    }
+
+    public void setC5(Thread c5) {
+        this.c5 = c5;
+    }
+
+    public Thread getC6() {
+        return c6;
+    }
+
+    public void setC6(Thread c6) {
+        this.c6 = c6;
+    }
+
+    public Thread getC7() {
+        return c7;
+    }
+
+    public void setC7(Thread c7) {
+        this.c7 = c7;
+    }
+
+    public Thread getC8() {
+        return c8;
+    }
+
+    public void setC8(Thread c8) {
+        this.c8 = c8;
+    }
+
+    public Thread getC9() {
+        return c9;
+    }
+
+    public void setC9(Thread c9) {
+        this.c9 = c9;
+    }
+
+    public Thread getC10() {
+        return c10;
+    }
+
+    public void setC10(Thread c10) {
+        this.c10 = c10;
+    }
+
+    public Thread getP1() {
+        return getP1;
+    }
+
+    public void setP1(Thread p1) {
+        this.getP1 = p1;
+    }
+
+    public Thread getP2() {
+        return p2;
+    }
+
+    public void setP2(Thread p2) {
+        this.p2 = p2;
+    }
+
+    public Thread getP3() {
+        return p3;
+    }
+
+    public void setP3(Thread p3) {
+        this.p3 = p3;
+    }
+
+    public Thread getP4() {
+        return p4;
+    }
+
+    public void setP4(Thread p4) {
+        this.p4 = p4;
+    }
+
+    public Thread getP5() {
+        return p5;
+    }
+
+    public void setP5(Thread p5) {
+        this.p5 = p5;
+    }
+
+    public Thread getP6() {
+        return p6;
+    }
+
+    public void setP6(Thread p6) {
+        this.p6 = p6;
+    }
+
+    public Thread getP7() {
+        return p7;
+    }
+
+    public void setP7(Thread p7) {
+        this.p7 = p7;
+    }
+
+    public Thread getP8() {
+        return p8;
+    }
+
+    public void setP8(Thread p8) {
+        this.p8 = p8;
+    }
+
+    public Thread getP9() {
+        return p9;
+    }
+
+    public void setP9(Thread p9) {
+        this.p9 = p9;
+    }
+
+    public Thread getP10() {
+        return p10;
+    }
+
+    public void setP10(Thread p10) {
+        this.p10 = p10;
+    }
+    private LacoPrincipal threadPrincipal7;//Variável LacoPrincipal threadPrincipal7
+    private LacoPrincipal threadPrincipal8;//Variável LacoPrincipal threadPrincipal8
+    private LacoPrincipal threadPrincipal9;//Variável LacoPrincipal threadPrincipal9
+    private LacoPrincipal threadPrincipal10;//Variável LacoPrincipal threadPrincipal10
+
+    private Thread c1; //Variável Thread c1
+    private Thread c2; //Variável Thread c2
+    private Thread c3; //Variável Thread c3
+    private Thread c4; //Variável Thread c4
+    private Thread c5; //Variável Thread c5
+    private Thread c6; //Variável Thread c6
+    private Thread c7; //Variável Thread c7
+    private Thread c8; //Variável Thread c8
+    private Thread c9; //Variável Thread c9
+    private Thread c10; //Variável Thread c10 
+
+    private Thread getP1; //Variável Thread getP1
+    private Thread p2; //Variável Thread p2
+    private Thread p3; //Variável Thread p3
+    private Thread p4; //Variável Thread p4 
+    private Thread p5; //Variável Thread p5 
+    private Thread p6; //Variável Thread p6 
+    private Thread p7; //Variável Thread p7
+    private Thread p8; //Variável Thread p8 
+    private Thread p9; //Variável Thread p9 
+    private Thread p10; //Variável Thread p10 
+    
 
     /**
      * Método carregaCalibracao
@@ -320,26 +641,26 @@ public class TrataThread {
         switch (numeroThread()) { //Enquanto numeroThread
 
             case 1: // Caso 1
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 break;
             case 2: // Caso 2
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 p2 = new Thread(threadPrincipal2 = new LacoPrincipal(tempoCalibracao)); //p2 instacia a ThreadPrincipal2
                 p2.start();
                 break;
             case 3: // Caso 3
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 p2 = new Thread(threadPrincipal2 = new LacoPrincipal(tempoCalibracao)); //p2 instacia a ThreadPrincipal2
                 p2.start();
                 p3 = new Thread(threadPrincipal3 = new LacoPrincipal(tempoCalibracao)); //p3 instacia a ThreadPrincipal3
                 p3.start();
                 break;
             case 4: //Caso 4
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 p2 = new Thread(threadPrincipal2 = new LacoPrincipal(tempoCalibracao)); //p2 instacia a ThreadPrincipal2
                 p2.start();
                 p3 = new Thread(threadPrincipal3 = new LacoPrincipal(tempoCalibracao)); //p3 instacia a ThreadPrincipal3
@@ -348,8 +669,8 @@ public class TrataThread {
                 p4.start();
                 break;
             case 5: //Caso 5 
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao));  //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao));  //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 p2 = new Thread(threadPrincipal2 = new LacoPrincipal(tempoCalibracao));  //p2 instacia a ThreadPrincipal2
                 p2.start();
                 p3 = new Thread(threadPrincipal3 = new LacoPrincipal(tempoCalibracao));  //p3 instacia a ThreadPrincipal3
@@ -360,8 +681,8 @@ public class TrataThread {
                 p5.start();
                 break;
             case 6: // Caso 6
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 p2 = new Thread(threadPrincipal2 = new LacoPrincipal(tempoCalibracao)); //p2 instacia a ThreadPrincipal2
                 p2.start();
                 p3 = new Thread(threadPrincipal3 = new LacoPrincipal(tempoCalibracao)); //p3 instacia a ThreadPrincipal3
@@ -374,8 +695,8 @@ public class TrataThread {
                 p6.start();
                 break;
             case 7: //Caso 7
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 p2 = new Thread(threadPrincipal2 = new LacoPrincipal(tempoCalibracao)); //p2 instacia a ThreadPrincipal2
                 p2.start();
                 p3 = new Thread(threadPrincipal3 = new LacoPrincipal(tempoCalibracao)); //p3 instacia a ThreadPrincipal3
@@ -390,8 +711,8 @@ public class TrataThread {
                 p7.start();
                 break;
             case 8: // Caso 8
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 p2 = new Thread(threadPrincipal2 = new LacoPrincipal(tempoCalibracao)); //p2 instacia a ThreadPrincipal2
                 p2.start();
                 p3 = new Thread(threadPrincipal3 = new LacoPrincipal(tempoCalibracao)); //p3 instacia a ThreadPrincipal3
@@ -408,8 +729,8 @@ public class TrataThread {
                 p8.start();
                 break;
             case 9: // Caso 9
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 p2 = new Thread(threadPrincipal2 = new LacoPrincipal(tempoCalibracao)); //p2 instacia a ThreadPrincipal2
                 p2.start();
                 p3 = new Thread(threadPrincipal3 = new LacoPrincipal(tempoCalibracao)); //p3 instacia a ThreadPrincipal3
@@ -428,8 +749,8 @@ public class TrataThread {
                 p9.start();
                 break;
             case 10: // Caso 10
-                p1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
-                p1.start();
+                getP1 = new Thread(threadPrincipal1 = new LacoPrincipal(tempoCalibracao)); //p1 instacia a ThreadPrincipal1
+                getP1.start();
                 p2 = new Thread(threadPrincipal2 = new LacoPrincipal(tempoCalibracao)); //p2 instacia a ThreadPrincipal2
                 p2.start();
                 p3 = new Thread(threadPrincipal3 = new LacoPrincipal(tempoCalibracao)); //p3 instacia a ThreadPrincipal3
@@ -571,32 +892,32 @@ public class TrataThread {
     public void finalizaLacoPrincipal() {
         switch (numeroThread()) {
             case 1:
-                p1.interrupt();
+                getP1.interrupt();
                 break;
             case 2:
-                p1.interrupt();
+                getP1.interrupt();
                 p2.interrupt();
                 break;
             case 3:
-                p1.interrupt();
+                getP1.interrupt();
                 p2.interrupt();
                 p3.interrupt();
                 break;
             case 4:
-                p1.interrupt();
+                getP1.interrupt();
                 p2.interrupt();
                 p3.interrupt();
                 p4.interrupt();
                 break;
             case 5:
-                p1.interrupt();
+                getP1.interrupt();
                 p2.interrupt();
                 p3.interrupt();
                 p4.interrupt();
                 p5.interrupt();
                 break;
             case 6:
-                p1.interrupt();
+                getP1.interrupt();
                 p2.interrupt();
                 p3.interrupt();
                 p4.interrupt();
@@ -604,7 +925,7 @@ public class TrataThread {
                 p6.interrupt();
                 break;
             case 7:
-                p1.interrupt();
+                getP1.interrupt();
                 p2.interrupt();
                 p3.interrupt();
                 p4.interrupt();
@@ -613,7 +934,7 @@ public class TrataThread {
                 p7.interrupt();
                 break;
             case 8:
-                p1.interrupt();
+                getP1.interrupt();
                 p2.interrupt();
                 p3.interrupt();
                 p4.interrupt();
@@ -623,7 +944,7 @@ public class TrataThread {
                 p8.interrupt();
                 break;
             case 9:
-                p1.interrupt();
+                getP1.interrupt();
                 p2.interrupt();
                 p3.interrupt();
                 p4.interrupt();
@@ -634,7 +955,7 @@ public class TrataThread {
                 p9.interrupt();
                 break;
             case 10:
-                p1.interrupt();
+                getP1.interrupt();
                 p2.interrupt();
                 p3.interrupt();
                 p4.interrupt();
