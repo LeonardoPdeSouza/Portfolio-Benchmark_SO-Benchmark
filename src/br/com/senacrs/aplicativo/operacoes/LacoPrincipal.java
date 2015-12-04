@@ -7,13 +7,69 @@ package br.com.senacrs.aplicativo.operacoes;
  */
 public class LacoPrincipal implements Runnable{
      
-    public double l2;              // Variável double l2
-     public double lacoPrincipal;   // Variável double lacoPrincipal
-     public double tempoInicioLP;   // Variável double tempoInicioLP
-     public double tempoFinalLP;    // Variável double tempoFinalLP
-     public double tempoFinalLP2;   // Variável double tempoFinalLP2
-     public double pontuacao;       // Variável double pontuacao
-     public double tempoCalibracao; // Variável double tempoCalibracao
+    private double l2;              // Variável double l2
+     private double lacoPrincipal;   // Variável double lacoPrincipal
+     private double tempoInicioLP;   // Variável double tempoInicioLP
+     private double tempoFinalLP;    // Variável double tempoFinalLP
+     private double tempoFinalLP2;   // Variável double tempoFinalLP2
+     private double pontuacao;       // Variável double pontuacao
+     private double tempoCalibracao; // Variável double tempoCalibracao
+
+    public double getL2() {
+        return l2;
+    }
+
+    public void setL2(double l2) {
+        this.l2 = l2;
+    }
+
+    public double getLacoPrincipal() {
+        return lacoPrincipal;
+    }
+
+    public void setLacoPrincipal(double lacoPrincipal) {
+        this.lacoPrincipal = lacoPrincipal;
+    }
+
+    public double getTempoInicioLP() {
+        return tempoInicioLP;
+    }
+
+    public void setTempoInicioLP(double tempoInicioLP) {
+        this.tempoInicioLP = tempoInicioLP;
+    }
+
+    public double getTempoFinalLP() {
+        return tempoFinalLP;
+    }
+
+    public void setTempoFinalLP(double tempoFinalLP) {
+        this.tempoFinalLP = tempoFinalLP;
+    }
+
+    public double getTempoFinalLP2() {
+        return tempoFinalLP2;
+    }
+
+    public void setTempoFinalLP2(double tempoFinalLP2) {
+        this.tempoFinalLP2 = tempoFinalLP2;
+    }
+
+    public double getPontuacao() {
+        return pontuacao;
+    }
+
+    public void setPontuacao(double pontuacao) {
+        this.pontuacao = pontuacao;
+    }
+
+    public double getTempoCalibracao() {
+        return tempoCalibracao;
+    }
+
+    public void setTempoCalibracao(double tempoCalibracao) {
+        this.tempoCalibracao = tempoCalibracao;
+    }
      
   /**
    * Método construtor da classe LacoPrincipal

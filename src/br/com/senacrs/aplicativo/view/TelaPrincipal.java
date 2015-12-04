@@ -717,13 +717,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                  */
                 switch (numeroThread()) {
                     case 1:
-                        for (int i = 0; i < (carrega.getThreadCalibracao1().lacoCalibracao); i = (int) carrega.getThreadCalibracao1().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao1().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao1().getL1()) {
 
                             try {
                                 atualizaLabel();
 
                                 sleep(100);
-                                bdpCalibragem.setValue((int) (carrega.getThreadCalibracao1().l1 * 100 / carrega.getThreadCalibracao1().lacoCalibracao));
+                                bdpCalibragem.setValue((int) (carrega.getThreadCalibracao1().getL1() * 100 / carrega.getThreadCalibracao1().getLacoCalibracao()));
                                 if (bdpCalibragem.getValue() < 100) {
                                     jLabelEstadoCalib.setText("Carregando...");
                                 } else {
@@ -738,7 +738,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                          * Controla barra de prograsso Laço
                                          * Principal
                                          */
-                                        for (int j = 0; j < carrega.getThreadPrincipal1().lacoPrincipal; j = (int) carrega.getThreadPrincipal1().l2) {
+                                        for (int j = 0; j < carrega.getThreadPrincipal1().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal1().getL2()) {
 
                                             if (bdpPrincipal.getValue() <= run.availableProcessors() + 1) {
                                                 atualizaLabel();
@@ -748,7 +748,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 atualizaLabelPrincipal();
                                                 sleep(100);
 
-                                                bdpPrincipal.setValue((int) (carrega.getThreadPrincipal1().l2 * 100 / carrega.getThreadPrincipal1().lacoPrincipal));
+                                                bdpPrincipal.setValue((int) (carrega.getThreadPrincipal1().getL2() * 100 / carrega.getThreadPrincipal1().getLacoPrincipal()));
                                                 if (bdpPrincipal.getValue() < 100) {
                                                     jLabelEstadoPrincipal.setText("Carregando...");
                                                 }
@@ -779,13 +779,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         }
                         break;
                     case 2:
-                        for (int i = 0; i < (carrega.getThreadCalibracao2().lacoCalibracao); i = (int) carrega.getThreadCalibracao2().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao2().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao2().getL1()) {
 
                             try {
                                 atualizaLabel();
 
                                 sleep(100);
-                                bdpCalibragem.setValue((int) (carrega.getThreadCalibracao2().l1 * 100 / carrega.getThreadCalibracao2().lacoCalibracao));
+                                bdpCalibragem.setValue((int) (carrega.getThreadCalibracao2().getL1() * 100 / carrega.getThreadCalibracao2().getLacoCalibracao()));
                                 if (bdpCalibragem.getValue() < 100) {
                                     jLabelEstadoCalib.setText("Carregando...");
                                 } else {
@@ -801,7 +801,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                          * Controla barra de prograsso Laço
                                          * Principal
                                          */
-                                        for (int j = 0; j < carrega.getThreadPrincipal2().lacoPrincipal; j = (int) carrega.getThreadPrincipal2().l2) {
+                                        for (int j = 0; j < carrega.getThreadPrincipal2().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal2().getL2()) {
 
                                             if (bdpPrincipal.getValue() <= run.availableProcessors() + 1) {
                                                 atualizaLabel();
@@ -811,7 +811,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 atualizaLabelPrincipal();
                                                 sleep(100);
 
-                                                bdpPrincipal.setValue((int) (carrega.getThreadPrincipal2().l2 * 100 / carrega.getThreadPrincipal2().lacoPrincipal));
+                                                bdpPrincipal.setValue((int) (carrega.getThreadPrincipal2().getL2() * 100 / carrega.getThreadPrincipal2().getLacoPrincipal()));
                                                 if (bdpPrincipal.getValue() < 100) {
                                                     jLabelEstadoPrincipal.setText("Carregando...");
                                                 }
@@ -846,13 +846,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                             }
                         }
                     case 3:
-                        for (int i = 0; i < (carrega.getThreadCalibracao3().lacoCalibracao); i = (int) carrega.getThreadCalibracao3().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao3().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao3().getL1()) {
 
                             try {
                                 atualizaLabel();
 
                                 sleep(100);
-                                bdpCalibragem.setValue((int) (carrega.getThreadCalibracao3().l1 * 100 / carrega.getThreadCalibracao3().lacoCalibracao));
+                                bdpCalibragem.setValue((int) (carrega.getThreadCalibracao3().getL1() * 100 / carrega.getThreadCalibracao3().getLacoCalibracao()));
                                 if (bdpCalibragem.getValue() < 100) {
                                     jLabelEstadoCalib.setText("Carregando...");
                                 } else {
@@ -869,7 +869,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                          * Controla barra de prograsso Laço
                                          * Principal
                                          */
-                                        for (int j = 0; j < carrega.getThreadPrincipal3().lacoPrincipal; j = (int) carrega.getThreadPrincipal3().l2) {
+                                        for (int j = 0; j < carrega.getThreadPrincipal3().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal3().getL2()) {
 
                                             if (bdpPrincipal.getValue() <= run.availableProcessors() + 1) {
                                                 atualizaLabel();
@@ -879,7 +879,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 atualizaLabelPrincipal();
                                                 sleep(100);
 
-                                                bdpPrincipal.setValue((int) (carrega.getThreadPrincipal3().l2 * 100 / carrega.getThreadPrincipal3().lacoPrincipal));
+                                                bdpPrincipal.setValue((int) (carrega.getThreadPrincipal3().getL2() * 100 / carrega.getThreadPrincipal3().getLacoPrincipal()));
                                                 if (bdpPrincipal.getValue() < 100) {
                                                     jLabelEstadoPrincipal.setText("Carregando...");
                                                 }
@@ -910,13 +910,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         }
                         break;
                     case 4:
-                        for (int i = 0; i < (carrega.getThreadCalibracao4().lacoCalibracao); i = (int) carrega.getThreadCalibracao4().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao4().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao4().getL1()) {
 
                     try {
                         atualizaLabel();
 
                         sleep(100);
-                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao4().l1 * 100 / carrega.getThreadCalibracao4().lacoCalibracao));
+                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao4().getL1() * 100 / carrega.getThreadCalibracao4().getLacoCalibracao()));
                         if (bdpCalibragem.getValue() < 100) {
                             jLabelEstadoCalib.setText("Carregando...");
                         } else {
@@ -933,7 +933,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 /**
                                  * Controla barra de prograsso Laço Principal
                                  */
-                                for (int j = 0; j < carrega.getThreadPrincipal4().lacoPrincipal; j = (int) carrega.getThreadPrincipal4().l2) {
+                                for (int j = 0; j < carrega.getThreadPrincipal4().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal4().getL2()) {
 
                                     if (bdpPrincipal.getValue() <= run.availableProcessors()) {
                                         atualizaLabel();
@@ -943,7 +943,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                         atualizaLabelPrincipal();
                                         sleep(100);
 
-                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal4().l2 * 100 / carrega.getThreadPrincipal4().lacoPrincipal));
+                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal4().getL2() * 100 / carrega.getThreadPrincipal4().getLacoPrincipal()));
                                         if (bdpPrincipal.getValue() < 100) {
                                             jLabelEstadoPrincipal.setText("Carregando...");
                                         }
@@ -974,13 +974,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 }
                         break;
                     case 5:
-                        for (int i = 0; i < (carrega.getThreadCalibracao5().lacoCalibracao); i = (int) carrega.getThreadCalibracao5().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao5().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao5().getL1()) {
 
                     try {
                         atualizaLabel();
 
                         sleep(100);
-                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao5().l1 * 100 / carrega.getThreadCalibracao5().lacoCalibracao));
+                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao5().getL1() * 100 / carrega.getThreadCalibracao5().getLacoCalibracao()));
                         if (bdpCalibragem.getValue() < 100) {
                             jLabelEstadoCalib.setText("Carregando...");
                         } else {
@@ -998,7 +998,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 /**
                                  * Controla barra de prograsso Laço Principal
                                  */
-                                for (int j = 0; j < carrega.getThreadPrincipal5().lacoPrincipal; j = (int) carrega.getThreadPrincipal5().l2) {
+                                for (int j = 0; j < carrega.getThreadPrincipal5().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal5().getL2()) {
 
                                     if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
                                         atualizaLabel();
@@ -1008,7 +1008,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                         atualizaLabelPrincipal();
                                         sleep(100);
 
-                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal5().l2 * 100 / carrega.getThreadPrincipal5().lacoPrincipal));
+                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal5().getL2() * 100 / carrega.getThreadPrincipal5().getLacoPrincipal()));
                                         if (bdpPrincipal.getValue() < 100) {
                                             jLabelEstadoPrincipal.setText("Carregando...");
                                         }
@@ -1039,13 +1039,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 }
                         break;
                     case 6:
-                        for (int i = 0; i < (carrega.getThreadCalibracao6().lacoCalibracao); i = (int) carrega.getThreadCalibracao6().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao6().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao6().getL1()) {
 
                     try {
                         atualizaLabel();
 
                         sleep(100);
-                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao6().l1 * 100 / carrega.getThreadCalibracao6().lacoCalibracao));
+                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao6().getL1() * 100 / carrega.getThreadCalibracao6().getLacoCalibracao()));
                         if (bdpCalibragem.getValue() < 100) {
                             jLabelEstadoCalib.setText("Carregando...");
                         } else {
@@ -1064,7 +1064,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 /**
                                  * Controla barra de prograsso Laço Principal
                                  */
-                                for (int j = 0; j < carrega.getThreadPrincipal6().lacoPrincipal; j = (int) carrega.getThreadPrincipal6().l2) {
+                                for (int j = 0; j < carrega.getThreadPrincipal6().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal6().getL2()) {
 
                                     if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
                                         atualizaLabel();
@@ -1074,7 +1074,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                         atualizaLabelPrincipal();
                                         sleep(100);
 
-                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal6().l2 * 100 / carrega.getThreadPrincipal6().lacoPrincipal));
+                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal6().getL2() * 100 / carrega.getThreadPrincipal6().getLacoPrincipal()));
                                         if (bdpPrincipal.getValue() < 100) {
                                             jLabelEstadoPrincipal.setText("Carregando...");
                                         }
@@ -1105,13 +1105,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 }
                         break;
                     case 7:
-                        for (int i = 0; i < (carrega.getThreadCalibracao7().lacoCalibracao); i = (int) carrega.getThreadCalibracao7().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao7().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao7().getL1()) {
 
                     try {
                         atualizaLabel();
 
                         sleep(100);
-                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao7().l1 * 100 / carrega.getThreadCalibracao7().lacoCalibracao));
+                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao7().getL1() * 100 / carrega.getThreadCalibracao7().getLacoCalibracao()));
                         if (bdpCalibragem.getValue() < 100) {
                             jLabelEstadoCalib.setText("Carregando...");
                         } else {
@@ -1131,7 +1131,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 /**
                                  * Controla barra de prograsso Laço Principal
                                  */
-                                for (int j = 0; j < carrega.getThreadPrincipal7().lacoPrincipal; j = (int) carrega.getThreadPrincipal7().l2) {
+                                for (int j = 0; j < carrega.getThreadPrincipal7().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal7().getL2()) {
 
                                     if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
                                         atualizaLabel();
@@ -1141,7 +1141,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                         atualizaLabelPrincipal();
                                         sleep(100);
 
-                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal7().l2 * 100 / carrega.getThreadPrincipal7().lacoPrincipal));
+                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal7().getL2() * 100 / carrega.getThreadPrincipal7().getLacoPrincipal()));
                                         if (bdpPrincipal.getValue() < 100) {
                                             jLabelEstadoPrincipal.setText("Carregando...");
                                         }
@@ -1172,13 +1172,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 }
                         break;
                     case 8:
-                        for (int i = 0; i < (carrega.getThreadCalibracao8().lacoCalibracao); i = (int) carrega.getThreadCalibracao8().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao8().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao8().getL1()) {
 
                     try {
                         atualizaLabel();
 
                         sleep(100);
-                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao8().l1 * 100 / carrega.getThreadCalibracao8().lacoCalibracao));
+                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao8().getL1() * 100 / carrega.getThreadCalibracao8().getLacoCalibracao()));
                         if (bdpCalibragem.getValue() < 100) {
                             jLabelEstadoCalib.setText("Carregando...");
                         } else {
@@ -1199,7 +1199,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 /**
                                  * Controla barra de prograsso Laço Principal
                                  */
-                                for (int j = 0; j < carrega.getThreadPrincipal8().lacoPrincipal; j = (int) carrega.getThreadPrincipal8().l2) {
+                                for (int j = 0; j < carrega.getThreadPrincipal8().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal8().getL2()) {
 
                                     if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
                                         atualizaLabel();
@@ -1209,7 +1209,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                         atualizaLabelPrincipal();
                                         sleep(100);
 
-                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal8().l2 * 100 / carrega.getThreadPrincipal8().lacoPrincipal));
+                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal8().getL2() * 100 / carrega.getThreadPrincipal8().getLacoPrincipal()));
                                         if (bdpPrincipal.getValue() < 100) {
                                             jLabelEstadoPrincipal.setText("Carregando...");
                                         }
@@ -1240,13 +1240,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 }
                         break;
                     case 9:
-                        for (int i = 0; i < (carrega.getThreadCalibracao9().lacoCalibracao); i = (int) carrega.getThreadCalibracao9().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao9().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao9().getL1()) {
 
                     try {
                         atualizaLabel();
 
                         sleep(100);
-                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao9().l1 * 100 / carrega.getThreadCalibracao9().lacoCalibracao));
+                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao9().getL1() * 100 / carrega.getThreadCalibracao9().getLacoCalibracao()));
                         if (bdpCalibragem.getValue() < 100) {
                             jLabelEstadoCalib.setText("Carregando...");
                         } else {
@@ -1268,7 +1268,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 /**
                                  * Controla barra de prograsso Laço Principal
                                  */
-                                for (int j = 0; j < carrega.getThreadPrincipal9().lacoPrincipal; j = (int) carrega.getThreadPrincipal9().l2) {
+                                for (int j = 0; j < carrega.getThreadPrincipal9().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal9().getL2()) {
 
                                     if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
                                         atualizaLabel();
@@ -1278,7 +1278,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                         atualizaLabelPrincipal();
                                         sleep(100);
 
-                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal9().l2 * 100 / carrega.getThreadPrincipal9().lacoPrincipal));
+                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal9().getL2() * 100 / carrega.getThreadPrincipal9().getLacoPrincipal()));
                                         if (bdpPrincipal.getValue() < 100) {
                                             jLabelEstadoPrincipal.setText("Carregando...");
                                         }
@@ -1309,13 +1309,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 }
                         break;
                     case 10:
-                        for (int i = 0; i < (carrega.getThreadCalibracao10().lacoCalibracao); i = (int) carrega.getThreadCalibracao10().l1) {
+                        for (int i = 0; i < (carrega.getThreadCalibracao10().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao10().getL1()) {
 
                     try {
                         atualizaLabel();
 
                         sleep(100);
-                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao10().l1 * 100 / carrega.getThreadCalibracao10().lacoCalibracao));
+                        bdpCalibragem.setValue((int) (carrega.getThreadCalibracao10().getL1() * 100 / carrega.getThreadCalibracao10().getLacoCalibracao()));
                         if (bdpCalibragem.getValue() < 100) {
                             jLabelEstadoCalib.setText("Carregando...");
                         } else {
@@ -1338,7 +1338,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 /**
                                  * Controla barra de prograsso Laço Principal
                                  */
-                                for (int j = 0; j < carrega.getThreadPrincipal10().lacoPrincipal; j = (int) carrega.getThreadPrincipal10().l2) {
+                                for (int j = 0; j < carrega.getThreadPrincipal10().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal10().getL2()) {
 
                                     if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
                                         atualizaLabel();
@@ -1348,7 +1348,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                         atualizaLabelPrincipal();
                                         sleep(100);
 
-                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal10().l2 * 100 / carrega.getThreadPrincipal10().lacoPrincipal));
+                                        bdpPrincipal.setValue((int) (carrega.getThreadPrincipal10().getL2() * 100 / carrega.getThreadPrincipal10().getLacoPrincipal()));
                                         if (bdpPrincipal.getValue() < 100) {
                                             jLabelEstadoPrincipal.setText("Carregando...");
                                         }

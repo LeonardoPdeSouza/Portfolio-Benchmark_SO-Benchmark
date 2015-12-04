@@ -9,6 +9,7 @@ public class TrataThread {
 
     public double retornaCalibracao; //Variável double retornaCalibracao
     Runtime run = Runtime.getRuntime(); //Runtime run = Runtime.getRuntime()
+    
 
     /**
      * Método inteiro numeroThread
@@ -543,88 +544,88 @@ public class TrataThread {
 
         switch (numeroThread()) { //Enquanto numeroThread
             case 1: // Caso 1 thread
-                tempo1 = threadCalibracao1.lacoPrincipal; // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal(); // tempo1 = threadCalibracao1.lacoPrincipal;
                 retornaCalibracao = (tempo1) / numeroThread(); //retornaClibracao = tempo1/ numeroThread();
                 break;
             case 2: // Caso 2 thread 
-                tempo1 = threadCalibracao1.lacoPrincipal; // tempo1 = threadCalibracao1.lacoPrincipal;
-                tempo2 = threadCalibracao2.lacoPrincipal; // tempo2 = threadCalibracao2.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal(); // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo2 = threadCalibracao2.getLacoPrincipal(); // tempo2 = threadCalibracao2.lacoPrincipal;
                 retornaCalibracao = (tempo1 + tempo2) / numeroThread(); //retornaClibracao = tempo1 + tempo2/ numeroThread();
                 break;
             case 3: // Caso 3 thread
-                tempo1 = threadCalibracao1.lacoPrincipal; // tempo1 = threadCalibracao1.lacoPrincipal;
-                tempo2 = threadCalibracao2.lacoPrincipal; // tempo2 = threadCalibracao2.lacoPrincipal;
-                tempo3 = threadCalibracao3.lacoPrincipal; // tempo3 = threadCalibracao3.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal(); // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo2 = threadCalibracao2.getLacoPrincipal(); // tempo2 = threadCalibracao2.lacoPrincipal;
+                tempo3 = threadCalibracao3.getLacoPrincipal(); // tempo3 = threadCalibracao3.lacoPrincipal;
                 retornaCalibracao = (tempo1 + tempo2 + tempo3) / numeroThread(); //retornaClibracao = tempo1 + tempo2 + tempo3/ numeroThread();
                 break;
             case 4: //Caso 4 thread
-                tempo1 = threadCalibracao1.lacoPrincipal; // tempo1 = threadCalibracao1.lacoPrincipal;
-                tempo2 = threadCalibracao2.lacoPrincipal; // tempo2 = threadCalibracao2.lacoPrincipal;
-                tempo3 = threadCalibracao3.lacoPrincipal; // tempo3 = threadCalibracao3.lacoPrincipal;
-                tempo4 = threadCalibracao4.lacoPrincipal; // tempo4 = threadCalibracao4.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal(); // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo2 = threadCalibracao2.getLacoPrincipal(); // tempo2 = threadCalibracao2.lacoPrincipal;
+                tempo3 = threadCalibracao3.getLacoPrincipal(); // tempo3 = threadCalibracao3.lacoPrincipal;
+                tempo4 = threadCalibracao4.getLacoPrincipal(); // tempo4 = threadCalibracao4.lacoPrincipal;
                 retornaCalibracao = (tempo1 + tempo2 + tempo3 + tempo4) / numeroThread(); //retornaClibracao = tempo1 + tempo2 + tempo3 + tempo4/ numeroThread();
                 break;
             case 5: // Caso 5 thread
-                tempo1 = threadCalibracao1.lacoPrincipal; // tempo1 = threadCalibracao1.lacoPrincipal;
-                tempo2 = threadCalibracao2.lacoPrincipal; // tempo2 = threadCalibracao2.lacoPrincipal;
-                tempo3 = threadCalibracao3.lacoPrincipal; // tempo3 = threadCalibracao3.lacoPrincipal;
-                tempo4 = threadCalibracao4.lacoPrincipal; // tempo4 = threadCalibracao4.lacoPrincipal;
-                tempo5 = threadCalibracao5.lacoPrincipal; // tempo5 = threadCalibracao5.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal(); // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo2 = threadCalibracao2.getLacoPrincipal(); // tempo2 = threadCalibracao2.lacoPrincipal;
+                tempo3 = threadCalibracao3.getLacoPrincipal(); // tempo3 = threadCalibracao3.lacoPrincipal;
+                tempo4 = threadCalibracao4.getLacoPrincipal(); // tempo4 = threadCalibracao4.lacoPrincipal;
+                tempo5 = threadCalibracao5.getLacoPrincipal(); // tempo5 = threadCalibracao5.lacoPrincipal;
                 retornaCalibracao = (tempo1 + tempo2 + tempo3 + tempo4 + tempo5) / numeroThread(); //retornaClibracao = tempo1 + tempo2 + tempo3 + tempo4 + tempo5/ numeroThread();
                 break;
             case 6: // Caso 6 thread
-                tempo1 = threadCalibracao1.lacoPrincipal;  // tempo1 = threadCalibracao1.lacoPrincipal;
-                tempo2 = threadCalibracao2.lacoPrincipal;  // tempo2 = threadCalibracao2.lacoPrincipal;
-                tempo3 = threadCalibracao3.lacoPrincipal;  // tempo3 = threadCalibracao3.lacoPrincipal;
-                tempo4 = threadCalibracao4.lacoPrincipal;  // tempo4 = threadCalibracao4.lacoPrincipal;
-                tempo5 = threadCalibracao5.lacoPrincipal;  // tempo5 = threadCalibracao5.lacoPrincipal;
-                tempo6 = threadCalibracao6.lacoPrincipal;  // tempo6 = threadCalibracao6.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal();  // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo2 = threadCalibracao2.getLacoPrincipal();  // tempo2 = threadCalibracao2.lacoPrincipal;
+                tempo3 = threadCalibracao3.getLacoPrincipal();  // tempo3 = threadCalibracao3.lacoPrincipal;
+                tempo4 = threadCalibracao4.getLacoPrincipal();  // tempo4 = threadCalibracao4.lacoPrincipal;
+                tempo5 = threadCalibracao5.getLacoPrincipal();  // tempo5 = threadCalibracao5.lacoPrincipal;
+                tempo6 = threadCalibracao6.getLacoPrincipal();  // tempo6 = threadCalibracao6.lacoPrincipal;
                 retornaCalibracao = (tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6) / numeroThread();  //retornaClibracao = tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6/ numeroThread();
                 break;
             case 7: // Caso 7 thread
-                tempo1 = threadCalibracao1.lacoPrincipal;  // tempo1 = threadCalibracao1.lacoPrincipal;
-                tempo2 = threadCalibracao2.lacoPrincipal;  // tempo2 = threadCalibracao2.lacoPrincipal;
-                tempo3 = threadCalibracao3.lacoPrincipal;  // tempo3 = threadCalibracao3.lacoPrincipal;
-                tempo4 = threadCalibracao4.lacoPrincipal;  // tempo4 = threadCalibracao4.lacoPrincipal;
-                tempo5 = threadCalibracao5.lacoPrincipal;  // tempo5 = threadCalibracao5.lacoPrincipal;
-                tempo6 = threadCalibracao6.lacoPrincipal;  // tempo6 = threadCalibracao6.lacoPrincipal;
-                tempo7 = threadCalibracao7.lacoPrincipal;  // tempo7 = threadCalibracao7.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal();  // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo2 = threadCalibracao2.getLacoPrincipal();  // tempo2 = threadCalibracao2.lacoPrincipal;
+                tempo3 = threadCalibracao3.getLacoPrincipal();  // tempo3 = threadCalibracao3.lacoPrincipal;
+                tempo4 = threadCalibracao4.getLacoPrincipal();  // tempo4 = threadCalibracao4.lacoPrincipal;
+                tempo5 = threadCalibracao5.getLacoPrincipal();  // tempo5 = threadCalibracao5.lacoPrincipal;
+                tempo6 = threadCalibracao6.getLacoPrincipal();  // tempo6 = threadCalibracao6.lacoPrincipal;
+                tempo7 = threadCalibracao7.getLacoPrincipal();  // tempo7 = threadCalibracao7.lacoPrincipal;
                 retornaCalibracao = (tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6 + tempo7) / numeroThread(); //retornaClibracao = tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6 + tempo7/ numeroThread();
                 break;
             case 8: // caso 8 thread
-                tempo1 = threadCalibracao1.lacoPrincipal; // tempo1 = threadCalibracao1.lacoPrincipal;
-                tempo2 = threadCalibracao2.lacoPrincipal;  // tempo2 = threadCalibracao2.lacoPrincipal;
-                tempo3 = threadCalibracao3.lacoPrincipal;  // tempo3 = threadCalibracao3.lacoPrincipal;
-                tempo4 = threadCalibracao4.lacoPrincipal;  // tempo4 = threadCalibracao4.lacoPrincipal;
-                tempo5 = threadCalibracao5.lacoPrincipal;  // tempo5 = threadCalibracao5.lacoPrincipal;
-                tempo6 = threadCalibracao6.lacoPrincipal;  // tempo6 = threadCalibracao6.lacoPrincipal;
-                tempo7 = threadCalibracao7.lacoPrincipal;  // tempo7 = threadCalibracao7.lacoPrincipal;
-                tempo8 = threadCalibracao8.lacoPrincipal;  // tempo8 = threadCalibracao8.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal(); // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo2 = threadCalibracao2.getLacoPrincipal();  // tempo2 = threadCalibracao2.lacoPrincipal;
+                tempo3 = threadCalibracao3.getLacoPrincipal();  // tempo3 = threadCalibracao3.lacoPrincipal;
+                tempo4 = threadCalibracao4.getLacoPrincipal();  // tempo4 = threadCalibracao4.lacoPrincipal;
+                tempo5 = threadCalibracao5.getLacoPrincipal();  // tempo5 = threadCalibracao5.lacoPrincipal;
+                tempo6 = threadCalibracao6.getLacoPrincipal();  // tempo6 = threadCalibracao6.lacoPrincipal;
+                tempo7 = threadCalibracao7.getLacoPrincipal();  // tempo7 = threadCalibracao7.lacoPrincipal;
+                tempo8 = threadCalibracao8.getLacoPrincipal();  // tempo8 = threadCalibracao8.lacoPrincipal;
                 retornaCalibracao = (tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6 + tempo7 + tempo8) / numeroThread(); //retornaClibracao = tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6 + tempo7 + tempo8/ numeroThread();
                 break;
             case 9: // Caso 9 thread
-                tempo1 = threadCalibracao1.lacoPrincipal; // tempo1 = threadCalibracao1.lacoPrincipal;
-                tempo2 = threadCalibracao2.lacoPrincipal;  // tempo2 = threadCalibracao2.lacoPrincipal;
-                tempo3 = threadCalibracao3.lacoPrincipal;  // tempo3 = threadCalibracao3.lacoPrincipal;
-                tempo4 = threadCalibracao4.lacoPrincipal;  // tempo4 = threadCalibracao4.lacoPrincipal;
-                tempo5 = threadCalibracao5.lacoPrincipal;  // tempo5 = threadCalibracao5.lacoPrincipal;
-                tempo6 = threadCalibracao6.lacoPrincipal;  // tempo6 = threadCalibracao6.lacoPrincipal;
-                tempo7 = threadCalibracao7.lacoPrincipal;  // tempo7 = threadCalibracao7.lacoPrincipal;
-                tempo8 = threadCalibracao8.lacoPrincipal;  // tempo8 = threadCalibracao8.lacoPrincipal;
-                tempo9 = threadCalibracao9.lacoPrincipal;  // tempo9 = threadCalibracao9.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal(); // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo2 = threadCalibracao2.getLacoPrincipal();  // tempo2 = threadCalibracao2.lacoPrincipal;
+                tempo3 = threadCalibracao3.getLacoPrincipal();  // tempo3 = threadCalibracao3.lacoPrincipal;
+                tempo4 = threadCalibracao4.getLacoPrincipal();  // tempo4 = threadCalibracao4.lacoPrincipal;
+                tempo5 = threadCalibracao5.getLacoPrincipal();  // tempo5 = threadCalibracao5.lacoPrincipal;
+                tempo6 = threadCalibracao6.getLacoPrincipal();  // tempo6 = threadCalibracao6.lacoPrincipal;
+                tempo7 = threadCalibracao7.getLacoPrincipal();  // tempo7 = threadCalibracao7.lacoPrincipal;
+                tempo8 = threadCalibracao8.getLacoPrincipal();  // tempo8 = threadCalibracao8.lacoPrincipal;
+                tempo9 = threadCalibracao9.getLacoPrincipal();  // tempo9 = threadCalibracao9.lacoPrincipal;
                 retornaCalibracao = (tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6 + tempo7 + tempo8 + tempo9) / numeroThread(); //retornaClibracao = tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6 + tempo7 + tempo8 + tempo9/ numeroThread();
                 break;
             case 10: //Caso 10 thread
-                tempo1 = threadCalibracao1.lacoPrincipal;    // tempo1 = threadCalibracao1.lacoPrincipal;
-                tempo2 = threadCalibracao2.lacoPrincipal;  // tempo2 = threadCalibracao2.lacoPrincipal;
-                tempo3 = threadCalibracao3.lacoPrincipal;  // tempo3 = threadCalibracao3.lacoPrincipal;
-                tempo4 = threadCalibracao4.lacoPrincipal;  // tempo4 = threadCalibracao4.lacoPrincipal;
-                tempo5 = threadCalibracao5.lacoPrincipal;  // tempo5 = threadCalibracao5.lacoPrincipal;
-                tempo6 = threadCalibracao6.lacoPrincipal;  // tempo6 = threadCalibracao6.lacoPrincipal;
-                tempo7 = threadCalibracao7.lacoPrincipal;  // tempo7 = threadCalibracao7.lacoPrincipal;
-                tempo8 = threadCalibracao8.lacoPrincipal;  // tempo8 = threadCalibracao8.lacoPrincipal;
-                tempo9 = threadCalibracao9.lacoPrincipal;  // tempo9 = threadCalibracao9.lacoPrincipal;
-                tempo10 = threadCalibracao10.lacoPrincipal;// tempo10 = threadCalibracao10.lacoPrincipal;
+                tempo1 = threadCalibracao1.getLacoPrincipal();    // tempo1 = threadCalibracao1.lacoPrincipal;
+                tempo2 = threadCalibracao2.getLacoPrincipal();  // tempo2 = threadCalibracao2.lacoPrincipal;
+                tempo3 = threadCalibracao3.getLacoPrincipal();  // tempo3 = threadCalibracao3.lacoPrincipal;
+                tempo4 = threadCalibracao4.getLacoPrincipal();  // tempo4 = threadCalibracao4.lacoPrincipal;
+                tempo5 = threadCalibracao5.getLacoPrincipal();  // tempo5 = threadCalibracao5.lacoPrincipal;
+                tempo6 = threadCalibracao6.getLacoPrincipal();  // tempo6 = threadCalibracao6.lacoPrincipal;
+                tempo7 = threadCalibracao7.getLacoPrincipal();  // tempo7 = threadCalibracao7.lacoPrincipal;
+                tempo8 = threadCalibracao8.getLacoPrincipal();  // tempo8 = threadCalibracao8.lacoPrincipal;
+                tempo9 = threadCalibracao9.getLacoPrincipal();  // tempo9 = threadCalibracao9.lacoPrincipal;
+                tempo10 = threadCalibracao10.getLacoPrincipal();// tempo10 = threadCalibracao10.lacoPrincipal;
                 retornaCalibracao = (tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6 + tempo7 + tempo8 + tempo9 + tempo10) / numeroThread(); //retornaClibracao = tempo1 + tempo2 + tempo3 + tempo4 + tempo5 + tempo6 + tempo7 + tempo8 + tempo9 + tempo10/ numeroThread();
                 break;
         }
@@ -797,93 +798,93 @@ public class TrataThread {
         switch (numeroThread()) { //Enquanto numeroThread
 
             case 1: // Caso 1 thread
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
                 pontuacao = pontuacao1; //pontuacao = pontuacao1
                 break;
             case 2: // Caso 2 thread
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
-                pontuacao2 = threadPrincipal2.pontuacao; //pontuacao2 = threadPrincipal2.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao2 = threadPrincipal2.getPontuacao(); //pontuacao2 = threadPrincipal2.pontuacao;
                 pontuacao = pontuacao1 + pontuacao2; //pontuacao = pontuacao1 + pontuacao2
                 break;
             case 3: // Caso 3 thread
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
-                pontuacao2 = threadPrincipal2.pontuacao; //pontuacao2 = threadPrincipal2.pontuacao;
-                pontuacao3 = threadPrincipal3.pontuacao; //pontuacao3 = threadPrincipal3.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao2 = threadPrincipal2.getPontuacao(); //pontuacao2 = threadPrincipal2.pontuacao;
+                pontuacao3 = threadPrincipal3.getPontuacao(); //pontuacao3 = threadPrincipal3.pontuacao;
                 pontuacao = pontuacao1 + pontuacao2 + pontuacao3; //pontuacao = pontuacao1 + pontuacao2 + pontuacao3
                 break;
             case 4: // Caso 4 thread
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
-                pontuacao2 = threadPrincipal2.pontuacao; //pontuacao2 = threadPrincipal2.pontuacao;
-                pontuacao3 = threadPrincipal3.pontuacao; //pontuacao3 = threadPrincipal3.pontuacao;
-                pontuacao4 = threadPrincipal4.pontuacao; //pontuacao4 = threadPrincipal4.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao2 = threadPrincipal2.getPontuacao(); //pontuacao2 = threadPrincipal2.pontuacao;
+                pontuacao3 = threadPrincipal3.getPontuacao(); //pontuacao3 = threadPrincipal3.pontuacao;
+                pontuacao4 = threadPrincipal4.getPontuacao(); //pontuacao4 = threadPrincipal4.pontuacao;
                 pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4; //pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4
                 break;
             case 5: // Caso 5 thread
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
-                pontuacao2 = threadPrincipal2.pontuacao; //pontuacao2 = threadPrincipal2.pontuacao;
-                pontuacao3 = threadPrincipal3.pontuacao; //pontuacao3 = threadPrincipal3.pontuacao;
-                pontuacao4 = threadPrincipal4.pontuacao; //pontuacao4 = threadPrincipal4.pontuacao;
-                pontuacao5 = threadPrincipal5.pontuacao; //pontuacao5 = threadPrincipal5.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao2 = threadPrincipal2.getPontuacao(); //pontuacao2 = threadPrincipal2.pontuacao;
+                pontuacao3 = threadPrincipal3.getPontuacao(); //pontuacao3 = threadPrincipal3.pontuacao;
+                pontuacao4 = threadPrincipal4.getPontuacao(); //pontuacao4 = threadPrincipal4.pontuacao;
+                pontuacao5 = threadPrincipal5.getPontuacao(); //pontuacao5 = threadPrincipal5.pontuacao;
                 pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao5; //pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao4 + pontuacao5
                 break;
             case 6: // Caso 6 thread
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
-                pontuacao2 = threadPrincipal2.pontuacao; //pontuacao2 = threadPrincipal2.pontuacao;
-                pontuacao3 = threadPrincipal3.pontuacao; //pontuacao3 = threadPrincipal3.pontuacao;
-                pontuacao4 = threadPrincipal4.pontuacao; //pontuacao4 = threadPrincipal4.pontuacao;
-                pontuacao5 = threadPrincipal5.pontuacao; //pontuacao5 = threadPrincipal5.pontuacao;
-                pontuacao6 = threadPrincipal6.pontuacao; //pontuacao6 = threadPrincipal6.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao2 = threadPrincipal2.getPontuacao(); //pontuacao2 = threadPrincipal2.pontuacao;
+                pontuacao3 = threadPrincipal3.getPontuacao(); //pontuacao3 = threadPrincipal3.pontuacao;
+                pontuacao4 = threadPrincipal4.getPontuacao(); //pontuacao4 = threadPrincipal4.pontuacao;
+                pontuacao5 = threadPrincipal5.getPontuacao(); //pontuacao5 = threadPrincipal5.pontuacao;
+                pontuacao6 = threadPrincipal6.getPontuacao(); //pontuacao6 = threadPrincipal6.pontuacao;
                 pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao5 + pontuacao6; //pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao4 + pontuacao5 + pontuacao6
                 break;
             case 7: //Caso 7 thread
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
-                pontuacao2 = threadPrincipal2.pontuacao; //pontuacao2 = threadPrincipal2.pontuacao;
-                pontuacao3 = threadPrincipal3.pontuacao; //pontuacao3 = threadPrincipal3.pontuacao;
-                pontuacao4 = threadPrincipal4.pontuacao; //pontuacao4 = threadPrincipal4.pontuacao;
-                pontuacao5 = threadPrincipal5.pontuacao; //pontuacao5 = threadPrincipal5.pontuacao;
-                pontuacao6 = threadPrincipal6.pontuacao; //pontuacao6 = threadPrincipal6.pontuacao;
-                pontuacao7 = threadPrincipal7.pontuacao; //pontuacao7 = threadPrincipal7.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao2 = threadPrincipal2.getPontuacao(); //pontuacao2 = threadPrincipal2.pontuacao;
+                pontuacao3 = threadPrincipal3.getPontuacao(); //pontuacao3 = threadPrincipal3.pontuacao;
+                pontuacao4 = threadPrincipal4.getPontuacao(); //pontuacao4 = threadPrincipal4.pontuacao;
+                pontuacao5 = threadPrincipal5.getPontuacao(); //pontuacao5 = threadPrincipal5.pontuacao;
+                pontuacao6 = threadPrincipal6.getPontuacao(); //pontuacao6 = threadPrincipal6.pontuacao;
+                pontuacao7 = threadPrincipal7.getPontuacao(); //pontuacao7 = threadPrincipal7.pontuacao;
                 pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao5 + pontuacao6 + pontuacao7; //pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao4 + pontuacao5 + pontuacao6 + pontuacao7
                 break;
             case 8: // Caso 8
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
-                pontuacao2 = threadPrincipal2.pontuacao; //pontuacao2 = threadPrincipal2.pontuacao;
-                pontuacao3 = threadPrincipal3.pontuacao; //pontuacao3 = threadPrincipal3.pontuacao;
-                pontuacao4 = threadPrincipal4.pontuacao; //pontuacao4 = threadPrincipal4.pontuacao;
-                pontuacao5 = threadPrincipal5.pontuacao; //pontuacao5 = threadPrincipal5.pontuacao;
-                pontuacao6 = threadPrincipal6.pontuacao; //pontuacao6 = threadPrincipal6.pontuacao;
-                pontuacao7 = threadPrincipal7.pontuacao; //pontuacao7 = threadPrincipal7.pontuacao;
-                pontuacao8 = threadPrincipal8.pontuacao; //pontuacao8 = threadPrincipal8.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao2 = threadPrincipal2.getPontuacao(); //pontuacao2 = threadPrincipal2.pontuacao;
+                pontuacao3 = threadPrincipal3.getPontuacao(); //pontuacao3 = threadPrincipal3.pontuacao;
+                pontuacao4 = threadPrincipal4.getPontuacao(); //pontuacao4 = threadPrincipal4.pontuacao;
+                pontuacao5 = threadPrincipal5.getPontuacao(); //pontuacao5 = threadPrincipal5.pontuacao;
+                pontuacao6 = threadPrincipal6.getPontuacao(); //pontuacao6 = threadPrincipal6.pontuacao;
+                pontuacao7 = threadPrincipal7.getPontuacao(); //pontuacao7 = threadPrincipal7.pontuacao;
+                pontuacao8 = threadPrincipal8.getPontuacao(); //pontuacao8 = threadPrincipal8.pontuacao;
                 pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao5 + pontuacao6 + pontuacao7 + pontuacao8; //pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao4 + pontuacao5 + pontuacao6 + pontuacao7 + pontuacao8
                 break;
             case 9: // Caso 9 thread
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
-                pontuacao2 = threadPrincipal2.pontuacao; //pontuacao2 = threadPrincipal2.pontuacao;
-                pontuacao3 = threadPrincipal3.pontuacao; //pontuacao3 = threadPrincipal3.pontuacao;
-                pontuacao4 = threadPrincipal4.pontuacao; //pontuacao4 = threadPrincipal4.pontuacao;
-                pontuacao5 = threadPrincipal5.pontuacao; //pontuacao5 = threadPrincipal5.pontuacao;
-                pontuacao6 = threadPrincipal6.pontuacao; //pontuacao6 = threadPrincipal6.pontuacao;
-                pontuacao7 = threadPrincipal7.pontuacao; //pontuacao7 = threadPrincipal7.pontuacao;
-                pontuacao8 = threadPrincipal8.pontuacao; //pontuacao8 = threadPrincipal8.pontuacao;
-                pontuacao9 = threadPrincipal9.pontuacao; //pontuacao9 = threadPrincipal9.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao2 = threadPrincipal2.getPontuacao(); //pontuacao2 = threadPrincipal2.pontuacao;
+                pontuacao3 = threadPrincipal3.getPontuacao(); //pontuacao3 = threadPrincipal3.pontuacao;
+                pontuacao4 = threadPrincipal4.getPontuacao(); //pontuacao4 = threadPrincipal4.pontuacao;
+                pontuacao5 = threadPrincipal5.getPontuacao(); //pontuacao5 = threadPrincipal5.pontuacao;
+                pontuacao6 = threadPrincipal6.getPontuacao(); //pontuacao6 = threadPrincipal6.pontuacao;
+                pontuacao7 = threadPrincipal7.getPontuacao(); //pontuacao7 = threadPrincipal7.pontuacao;
+                pontuacao8 = threadPrincipal8.getPontuacao(); //pontuacao8 = threadPrincipal8.pontuacao;
+                pontuacao9 = threadPrincipal9.getPontuacao(); //pontuacao9 = threadPrincipal9.pontuacao;
                 pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao5 + pontuacao6 + pontuacao7 + pontuacao8 + pontuacao9; //pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao4 + pontuacao5 + pontuacao6 + pontuacao7 + pontuacao8 + pontuacao9
                 break;
             case 10: // Caso 10 thread
-                pontuacao1 = threadPrincipal1.pontuacao; //pontuacao1 = threadPrincipal1.pontuacao;
-                pontuacao2 = threadPrincipal2.pontuacao; //pontuacao2 = threadPrincipal2.pontuacao;
-                pontuacao3 = threadPrincipal3.pontuacao; //pontuacao3 = threadPrincipal3.pontuacao;
-                pontuacao4 = threadPrincipal4.pontuacao; //pontuacao4 = threadPrincipal4.pontuacao;
-                pontuacao5 = threadPrincipal5.pontuacao; //pontuacao5 = threadPrincipal5.pontuacao;
-                pontuacao6 = threadPrincipal6.pontuacao; //pontuacao6 = threadPrincipal6.pontuacao;
-                pontuacao7 = threadPrincipal7.pontuacao; //pontuacao7 = threadPrincipal7.pontuacao;
-                pontuacao8 = threadPrincipal8.pontuacao; //pontuacao8 = threadPrincipal8.pontuacao;
-                pontuacao9 = threadPrincipal9.pontuacao; //pontuacao9 = threadPrincipal9.pontuacao;
-                pontuacao10 = threadPrincipal10.pontuacao; //pontuacao10 = threadPrincipal10.pontuacao;
+                pontuacao1 = threadPrincipal1.getPontuacao(); //pontuacao1 = threadPrincipal1.pontuacao;
+                pontuacao2 = threadPrincipal2.getPontuacao(); //pontuacao2 = threadPrincipal2.pontuacao;
+                pontuacao3 = threadPrincipal3.getPontuacao(); //pontuacao3 = threadPrincipal3.pontuacao;
+                pontuacao4 = threadPrincipal4.getPontuacao(); //pontuacao4 = threadPrincipal4.pontuacao;
+                pontuacao5 = threadPrincipal5.getPontuacao(); //pontuacao5 = threadPrincipal5.pontuacao;
+                pontuacao6 = threadPrincipal6.getPontuacao(); //pontuacao6 = threadPrincipal6.pontuacao;
+                pontuacao7 = threadPrincipal7.getPontuacao(); //pontuacao7 = threadPrincipal7.pontuacao;
+                pontuacao8 = threadPrincipal8.getPontuacao(); //pontuacao8 = threadPrincipal8.pontuacao;
+                pontuacao9 = threadPrincipal9.getPontuacao(); //pontuacao9 = threadPrincipal9.pontuacao;
+                pontuacao10 = threadPrincipal10.getPontuacao(); //pontuacao10 = threadPrincipal10.pontuacao;
                 pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao5 + pontuacao6 + pontuacao7 + pontuacao8 + pontuacao9 + pontuacao10; //pontuacao = pontuacao1 + pontuacao2 + pontuacao3 + pontuacao4 + pontuacao4 + pontuacao5 + pontuacao6 + pontuacao7 + pontuacao8 + pontuacao9 + pontuacao10
                 break;
         }
 
-        pontuacaoFinal = pontuacao / 1000; // pontuacaoFinal = pontuacao/1000
+        pontuacaoFinal = pontuacao; // pontuacaoFinal
 
         return pontuacaoFinal; //retorna a pontuacaoFinal
 
