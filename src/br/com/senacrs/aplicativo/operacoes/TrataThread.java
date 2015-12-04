@@ -567,5 +567,85 @@ public class TrataThread {
         return pontuacaoFinal; //retorna a pontuacaoFinal
 
     }
+    
+    public void finalizaLacoPrincipal() {
+        switch (numeroThread()) {
+            case 1:
+                p1.interrupt();
+                break;
+            case 2:
+                p1.interrupt();
+                p2.interrupt();
+                break;
+            case 3:
+                p1.interrupt();
+                p2.interrupt();
+                p3.interrupt();
+                break;
+            case 4:
+                p1.interrupt();
+                p2.interrupt();
+                p3.interrupt();
+                p4.interrupt();
+                break;
+            case 5:
+                p1.interrupt();
+                p2.interrupt();
+                p3.interrupt();
+                p4.interrupt();
+                p5.interrupt();
+                break;
+            case 6:
+                p1.interrupt();
+                p2.interrupt();
+                p3.interrupt();
+                p4.interrupt();
+                p5.interrupt();
+                p6.interrupt();
+                break;
+            case 7:
+                p1.interrupt();
+                p2.interrupt();
+                p3.interrupt();
+                p4.interrupt();
+                p5.interrupt();
+                p6.interrupt();
+                p7.interrupt();
+                break;
+            case 8:
+                p1.interrupt();
+                p2.interrupt();
+                p3.interrupt();
+                p4.interrupt();
+                p5.interrupt();
+                p6.interrupt();
+                p7.interrupt();
+                p8.interrupt();
+                break;
+            case 9:
+                p1.interrupt();
+                p2.interrupt();
+                p3.interrupt();
+                p4.interrupt();
+                p5.interrupt();
+                p6.interrupt();
+                p7.interrupt();
+                p8.interrupt();
+                p9.interrupt();
+                break;
+            case 10:
+                p1.interrupt();
+                p2.interrupt();
+                p3.interrupt();
+                p4.interrupt();
+                p5.interrupt();
+                p6.interrupt();
+                p7.interrupt();
+                p8.interrupt();
+                p9.interrupt();
+                p10.interrupt();
+                break;
+        }
+    }
 
 }

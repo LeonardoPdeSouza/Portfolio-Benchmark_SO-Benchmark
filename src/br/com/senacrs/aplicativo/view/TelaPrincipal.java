@@ -706,7 +706,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
      * @param evt
      */
     private void btnExecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecutarActionPerformed
-        // Aqui é iniciado laço de calibração
+        // Inicia laço de calibração
         carrega.carregaCalibracao();
 
         new Thread() {
@@ -714,55 +714,253 @@ public class TelaPrincipal extends javax.swing.JFrame {
             public void run() {
 
                 /**
-                 * For que cOntrola barra de progresso e atualizações, primeiro
-                 * for barra de calibração
+                 * COntrola barra de progresso e atualizações, primeiro for
+                 * barra de calibração
                  */
-                for (int i = 0; i < (carrega.threadCalibracao1.lacoCalibracao); i = (int) carrega.threadCalibracao1.l1) {
+                switch (numeroThread()) {
+                    case 1:
+                        for (int i = 0; i < (carrega.threadCalibracao1.lacoCalibracao); i = (int) carrega.threadCalibracao1.l1) {
+
+                            try {
+                                atualizaLabel();
+
+                                sleep(100);
+                                bdpCalibragem.setValue((int) (carrega.threadCalibracao1.l1 * 100 / carrega.threadCalibracao1.lacoCalibracao));
+                                if (bdpCalibragem.getValue() < 100) {
+                                    jLabelEstadoCalib.setText("Carregando...");
+                                } else {
+                                    if (bdpCalibragem.getValue() == 100) {
+                                        jLabelEstadoCalib.setText("Concluido !");
+                                        carrega.c1.interrupt();
+                                        double tempo = carrega.retornaCalibracao();
+                                        carrega.carregaLacoPrincipal(tempo);
+                                        atualizaLabel();
+
+                                        /**
+                                         * Controla barra de prograsso Laço
+                                         * Principal
+                                         */
+                                        for (int j = 0; j < carrega.threadPrincipal1.lacoPrincipal; j = (int) carrega.threadPrincipal1.l2) {
+
+                                            if (bdpPrincipal.getValue() <= run.availableProcessors() + 1) {
+                                                atualizaLabel();
+                                            }
+                                            try {
+
+                                                atualizaLabelPrincipal();
+                                                sleep(100);
+
+                                                bdpPrincipal.setValue((int) (carrega.threadPrincipal1.l2 * 100 / carrega.threadPrincipal1.lacoPrincipal));
+                                                if (bdpPrincipal.getValue() < 100) {
+                                                    jLabelEstadoPrincipal.setText("Carregando...");
+                                                }
+                                                if (bdpPrincipal.getValue() == 100) {
+                                                    jLabelEstadoPrincipal.setText("Concluido !");
+
+                                                    run.availableProcessors();
+                                                    while (numeroThread() == run.availableProcessors()) {
+
+                                                        NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+                                                        txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                        atualizaLabel();
+                                                        atualizaLabelPrincipal();
+                                                        carrega.finalizaLacoPrincipal();
+
+                                                    }
+                                                }
+
+                                            } catch (Exception e) {
+                                                System.out.println(e);
+                                            }
+                                        }
+                                    }
+                                }
+                            } catch (Exception e) {
+                                System.out.println(e);
+                            }
+                        }
+                        break;
+                    case 2:
+                        for (int i = 0; i < (carrega.threadCalibracao2.lacoCalibracao); i = (int) carrega.threadCalibracao2.l1) {
+
+                            try {
+                                atualizaLabel();
+
+                                sleep(100);
+                                bdpCalibragem.setValue((int) (carrega.threadCalibracao2.l1 * 100 / carrega.threadCalibracao2.lacoCalibracao));
+                                if (bdpCalibragem.getValue() < 100) {
+                                    jLabelEstadoCalib.setText("Carregando...");
+                                } else {
+                                    if (bdpCalibragem.getValue() == 100) {
+                                        jLabelEstadoCalib.setText("Concluido !");
+                                        carrega.c1.interrupt();
+                                        carrega.c2.interrupt();
+                                        double tempo = carrega.retornaCalibracao();
+                                        carrega.carregaLacoPrincipal(tempo);
+                                        atualizaLabel();
+
+                                        /**
+                                         * Controla barra de prograsso Laço
+                                         * Principal
+                                         */
+                                        for (int j = 0; j < carrega.threadPrincipal2.lacoPrincipal; j = (int) carrega.threadPrincipal2.l2) {
+
+                                            if (bdpPrincipal.getValue() <= run.availableProcessors() + 1) {
+                                                atualizaLabel();
+                                            }
+                                            try {
+
+                                                atualizaLabelPrincipal();
+                                                sleep(100);
+
+                                                bdpPrincipal.setValue((int) (carrega.threadPrincipal2.l2 * 100 / carrega.threadPrincipal2.lacoPrincipal));
+                                                if (bdpPrincipal.getValue() < 100) {
+                                                    jLabelEstadoPrincipal.setText("Carregando...");
+                                                }
+                                                if (bdpPrincipal.getValue() == 100) {
+                                                    jLabelEstadoPrincipal.setText("Concluido !");
+
+                                                    run.availableProcessors();
+//        System.out.println(""+run.availableProcessors());
+                                                    while (numeroThread() == run.availableProcessors()) {
+//            carrega.pontuacao();
+//            System.out.println(""+run.availableProcessors());
+
+                                                        NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+//                                            double valor = 78945;
+                                                        //System.out.println("" + nf.format(carrega.pontuacao()));
+                                                        txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                        atualizaLabel();
+                                                        atualizaLabelPrincipal();
+                                                        carrega.finalizaLacoPrincipal();
+
+                                                    }
+                                                }
+
+                                            } catch (Exception e) {
+                                                System.out.println(e);
+                                            }
+                                        }
+                                    }
+                                }
+                            } catch (Exception e) {
+                                System.out.println(e);
+                            }
+                        }
+                    case 3:
+                        for (int i = 0; i < (carrega.threadCalibracao3.lacoCalibracao); i = (int) carrega.threadCalibracao3.l1) {
+
+                            try {
+                                atualizaLabel();
+
+                                sleep(100);
+                                bdpCalibragem.setValue((int) (carrega.threadCalibracao3.l1 * 100 / carrega.threadCalibracao3.lacoCalibracao));
+                                if (bdpCalibragem.getValue() < 100) {
+                                    jLabelEstadoCalib.setText("Carregando...");
+                                } else {
+                                    if (bdpCalibragem.getValue() == 100) {
+                                        jLabelEstadoCalib.setText("Concluido !");
+                                        carrega.c1.interrupt();
+                                        carrega.c2.interrupt();
+                                        carrega.c3.interrupt();
+                                        double tempo = carrega.retornaCalibracao();
+                                        carrega.carregaLacoPrincipal(tempo);
+                                        atualizaLabel();
+
+                                        /**
+                                         * Controla barra de prograsso Laço
+                                         * Principal
+                                         */
+                                        for (int j = 0; j < carrega.threadPrincipal3.lacoPrincipal; j = (int) carrega.threadPrincipal3.l2) {
+
+                                            if (bdpPrincipal.getValue() <= run.availableProcessors() + 1) {
+                                                atualizaLabel();
+                                            }
+                                            try {
+
+                                                atualizaLabelPrincipal();
+                                                sleep(100);
+
+                                                bdpPrincipal.setValue((int) (carrega.threadPrincipal3.l2 * 100 / carrega.threadPrincipal3.lacoPrincipal));
+                                                if (bdpPrincipal.getValue() < 100) {
+                                                    jLabelEstadoPrincipal.setText("Carregando...");
+                                                }
+                                                if (bdpPrincipal.getValue() == 100) {
+                                                    jLabelEstadoPrincipal.setText("Concluido !");
+
+                                                    run.availableProcessors();
+                                                    while (numeroThread() == run.availableProcessors()) {
+
+                                                        NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+                                                        txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                        atualizaLabel();
+                                                        atualizaLabelPrincipal();
+                                                        carrega.finalizaLacoPrincipal();
+
+                                                    }
+                                                }
+
+                                            } catch (Exception e) {
+                                                System.out.println(e);
+                                            }
+                                        }
+                                    }
+                                }
+                            } catch (Exception e) {
+                                System.out.println(e);
+                            }
+                        }
+                        break;
+                    case 4:
+                        for (int i = 0; i < (carrega.threadCalibracao4.lacoCalibracao); i = (int) carrega.threadCalibracao4.l1) {
 
                     try {
-                        atualizaLabel(); //Método atualizaLabel.
+                        atualizaLabel();
 
-                        sleep(100); //sleep(100)
-                        bdpCalibragem.setValue((int) (carrega.threadCalibracao1.l1 * 100 / carrega.threadCalibracao1.lacoCalibracao));
-                        if (bdpCalibragem.getValue() < 100) { // Se bdpCalibragem.getValue() < 100 
-                            jLabelEstadoCalib.setText("Carregando..."); // jLabelEstadoCalib igual Carregando.
+                        sleep(100);
+                        bdpCalibragem.setValue((int) (carrega.threadCalibracao4.l1 * 100 / carrega.threadCalibracao4.lacoCalibracao));
+                        if (bdpCalibragem.getValue() < 100) {
+                            jLabelEstadoCalib.setText("Carregando...");
                         } else {
-                            if (bdpCalibragem.getValue() == 100) { // Se bdpCalibragem.getValue() = 100 
-                                jLabelEstadoCalib.setText("Concluido !");  // jLabelEstadoCalib igual Concluido.
-//                                carrega.finalizaCalibracao();
-                                double tempo = carrega.retornaCalibracao(); // Variável double tempo = carrega.retornaCalibracao.
-                                carrega.carregaLacoPrincipal(tempo); // carrega.carregaLacoPrincipal(tempo); 
-                                atualizaLabel(); // Método atualizaLabel()
+                            if (bdpCalibragem.getValue() == 100) {
+                                jLabelEstadoCalib.setText("Concluido !");
+                                carrega.c1.interrupt();
+                                carrega.c2.interrupt();
+                                carrega.c3.interrupt();
+                                carrega.c4.interrupt();
+                                double tempo = carrega.retornaCalibracao();
+                                carrega.carregaLacoPrincipal(tempo);
+                                atualizaLabel();
 
                                 /**
-                                 * Controla barra de progresso Stress
+                                 * Controla barra de prograsso Laço Principal
                                  */
-                                for (int j = 0; j < carrega.threadPrincipal1.lacoPrincipal; j = (int) carrega.threadPrincipal1.l2) {
+                                for (int j = 0; j < carrega.threadPrincipal4.lacoPrincipal; j = (int) carrega.threadPrincipal4.l2) {
 
-                                    if (bdpPrincipal.getValue() <= run.availableProcessors() + 1) { //Se bdpPrincipal.getValue() <= run.availableProcessors() + 1)
-                                        atualizaLabel(); // Método atualizaLabel()
+                                    if (bdpPrincipal.getValue() <= run.availableProcessors()) {
+                                        atualizaLabel();
                                     }
                                     try {
 
-                                        atualizaLabelPrincipal();  // Método atualizaLabel()
-                                        sleep(100); // sleep(100)
+                                        atualizaLabelPrincipal();
+                                        sleep(100);
 
-                                        bdpPrincipal.setValue((int) (carrega.threadPrincipal1.l2 * 100 / carrega.threadPrincipal1.lacoPrincipal)); // bdpPrincipal.setValue((int) (carrega.threadPrincipal1.l2 * 100 / carrega.threadPrincipal1.lacoPrincipal))
-                                        if (bdpPrincipal.getValue() < 100) { // Se bdpPrincipal < 100
-                                            jLabelEstadoPrincipal.setText("Carregando..."); // jLabelEstadoPrincipal = carregando
+                                        bdpPrincipal.setValue((int) (carrega.threadPrincipal4.l2 * 100 / carrega.threadPrincipal4.lacoPrincipal));
+                                        if (bdpPrincipal.getValue() < 100) {
+                                            jLabelEstadoPrincipal.setText("Carregando...");
                                         }
-                                        if (bdpPrincipal.getValue() == 100) {  // Se bdpPrincipal < 100
-                                            jLabelEstadoPrincipal.setText("Concluido !"); // jLabelEstadoPrincipal = concluido
+                                        if (bdpPrincipal.getValue() == 100) {
+                                            jLabelEstadoPrincipal.setText("Concluido !");
 
-                                            run.availableProcessors(); //  run.availableProcessors()
-                                            while (numeroThread() == run.availableProcessors()) { // Enquanto numeroThread ==  run.availableProcessors())
+                                            run.availableProcessors();
+                                            while (numeroThread() == run.availableProcessors()) {
 
-                                                NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); //  NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));  
-                                                //double valor = 78945;
-                                                //System.out.println("" + nf.format(carrega.pontuacao()));
-                                                txtPontuacao.setText("" + nf.format(carrega.pontuacao())); // txtPontuacao = nf.format(carrega.pontuacao())
-                                                atualizaLabel(); // Método atualizaLabel()
-                                                atualizaLabelPrincipal(); // Método atualizaLabelPrincipal()
+                                                NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+                                                txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                atualizaLabel();
+                                                atualizaLabelPrincipal();
+                                                carrega.finalizaLacoPrincipal();
+
                                             }
                                         }
 
@@ -776,9 +974,417 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         System.out.println(e);
                     }
                 }
+                        break;
+                    case 5:
+                        for (int i = 0; i < (carrega.threadCalibracao5.lacoCalibracao); i = (int) carrega.threadCalibracao5.l1) {
 
+                    try {
+                        atualizaLabel();
+
+                        sleep(100);
+                        bdpCalibragem.setValue((int) (carrega.threadCalibracao5.l1 * 100 / carrega.threadCalibracao5.lacoCalibracao));
+                        if (bdpCalibragem.getValue() < 100) {
+                            jLabelEstadoCalib.setText("Carregando...");
+                        } else {
+                            if (bdpCalibragem.getValue() == 100) {
+                                jLabelEstadoCalib.setText("Concluido !");
+                                carrega.c1.interrupt();
+                                carrega.c2.interrupt();
+                                carrega.c3.interrupt();
+                                carrega.c4.interrupt();
+                                carrega.c5.interrupt();
+                                double tempo = carrega.retornaCalibracao();
+                                carrega.carregaLacoPrincipal(tempo);
+                                atualizaLabel();
+
+                                /**
+                                 * Controla barra de prograsso Laço Principal
+                                 */
+                                for (int j = 0; j < carrega.threadPrincipal5.lacoPrincipal; j = (int) carrega.threadPrincipal5.l2) {
+
+                                    if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
+                                        atualizaLabel();
+                                    }
+                                    try {
+
+                                        atualizaLabelPrincipal();
+                                        sleep(100);
+
+                                        bdpPrincipal.setValue((int) (carrega.threadPrincipal5.l2 * 100 / carrega.threadPrincipal5.lacoPrincipal));
+                                        if (bdpPrincipal.getValue() < 100) {
+                                            jLabelEstadoPrincipal.setText("Carregando...");
+                                        }
+                                        if (bdpPrincipal.getValue() == 100) {
+                                            jLabelEstadoPrincipal.setText("Concluido !");
+
+                                            run.availableProcessors();
+                                            while (numeroThread() == run.availableProcessors()) {
+
+                                                NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+                                                txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                atualizaLabel();
+                                                atualizaLabelPrincipal();
+                                                carrega.finalizaLacoPrincipal();
+
+                                            }
+                                        }
+
+                                    } catch (Exception e) {
+                                        System.out.println(e);
+                                    }
+                                }
+                            }
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                }
+                        break;
+                    case 6:
+                        for (int i = 0; i < (carrega.threadCalibracao6.lacoCalibracao); i = (int) carrega.threadCalibracao6.l1) {
+
+                    try {
+                        atualizaLabel();
+
+                        sleep(100);
+                        bdpCalibragem.setValue((int) (carrega.threadCalibracao6.l1 * 100 / carrega.threadCalibracao6.lacoCalibracao));
+                        if (bdpCalibragem.getValue() < 100) {
+                            jLabelEstadoCalib.setText("Carregando...");
+                        } else {
+                            if (bdpCalibragem.getValue() == 100) {
+                                jLabelEstadoCalib.setText("Concluido !");
+                                carrega.c1.interrupt();
+                                carrega.c2.interrupt();
+                                carrega.c3.interrupt();
+                                carrega.c4.interrupt();
+                                carrega.c5.interrupt();
+                                carrega.c6.interrupt();
+                                double tempo = carrega.retornaCalibracao();
+                                carrega.carregaLacoPrincipal(tempo);
+                                atualizaLabel();
+
+                                /**
+                                 * Controla barra de prograsso Laço Principal
+                                 */
+                                for (int j = 0; j < carrega.threadPrincipal6.lacoPrincipal; j = (int) carrega.threadPrincipal6.l2) {
+
+                                    if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
+                                        atualizaLabel();
+                                    }
+                                    try {
+
+                                        atualizaLabelPrincipal();
+                                        sleep(100);
+
+                                        bdpPrincipal.setValue((int) (carrega.threadPrincipal6.l2 * 100 / carrega.threadPrincipal6.lacoPrincipal));
+                                        if (bdpPrincipal.getValue() < 100) {
+                                            jLabelEstadoPrincipal.setText("Carregando...");
+                                        }
+                                        if (bdpPrincipal.getValue() == 100) {
+                                            jLabelEstadoPrincipal.setText("Concluido !");
+
+                                            run.availableProcessors();
+                                            while (numeroThread() == run.availableProcessors()) {
+
+                                                NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+                                                txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                atualizaLabel();
+                                                atualizaLabelPrincipal();
+                                                carrega.finalizaLacoPrincipal();
+
+                                            }
+                                        }
+
+                                    } catch (Exception e) {
+                                        System.out.println(e);
+                                    }
+                                }
+                            }
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                }
+                        break;
+                    case 7:
+                        for (int i = 0; i < (carrega.threadCalibracao7.lacoCalibracao); i = (int) carrega.threadCalibracao7.l1) {
+
+                    try {
+                        atualizaLabel();
+
+                        sleep(100);
+                        bdpCalibragem.setValue((int) (carrega.threadCalibracao7.l1 * 100 / carrega.threadCalibracao7.lacoCalibracao));
+                        if (bdpCalibragem.getValue() < 100) {
+                            jLabelEstadoCalib.setText("Carregando...");
+                        } else {
+                            if (bdpCalibragem.getValue() == 100) {
+                                jLabelEstadoCalib.setText("Concluido !");
+                                carrega.c1.interrupt();
+                                carrega.c2.interrupt();
+                                carrega.c3.interrupt();
+                                carrega.c4.interrupt();
+                                carrega.c5.interrupt();
+                                carrega.c6.interrupt();
+                                carrega.c7.interrupt();
+                                double tempo = carrega.retornaCalibracao();
+                                carrega.carregaLacoPrincipal(tempo);
+                                atualizaLabel();
+
+                                /**
+                                 * Controla barra de prograsso Laço Principal
+                                 */
+                                for (int j = 0; j < carrega.threadPrincipal7.lacoPrincipal; j = (int) carrega.threadPrincipal7.l2) {
+
+                                    if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
+                                        atualizaLabel();
+                                    }
+                                    try {
+
+                                        atualizaLabelPrincipal();
+                                        sleep(100);
+
+                                        bdpPrincipal.setValue((int) (carrega.threadPrincipal7.l2 * 100 / carrega.threadPrincipal7.lacoPrincipal));
+                                        if (bdpPrincipal.getValue() < 100) {
+                                            jLabelEstadoPrincipal.setText("Carregando...");
+                                        }
+                                        if (bdpPrincipal.getValue() == 100) {
+                                            jLabelEstadoPrincipal.setText("Concluido !");
+
+                                            run.availableProcessors();
+                                            while (numeroThread() == run.availableProcessors()) {
+
+                                                NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+                                                txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                atualizaLabel();
+                                                atualizaLabelPrincipal();
+                                                carrega.finalizaLacoPrincipal();
+
+                                            }
+                                        }
+
+                                    } catch (Exception e) {
+                                        System.out.println(e);
+                                    }
+                                }
+                            }
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                }
+                        break;
+                    case 8:
+                        for (int i = 0; i < (carrega.threadCalibracao8.lacoCalibracao); i = (int) carrega.threadCalibracao8.l1) {
+
+                    try {
+                        atualizaLabel();
+
+                        sleep(100);
+                        bdpCalibragem.setValue((int) (carrega.threadCalibracao8.l1 * 100 / carrega.threadCalibracao8.lacoCalibracao));
+                        if (bdpCalibragem.getValue() < 100) {
+                            jLabelEstadoCalib.setText("Carregando...");
+                        } else {
+                            if (bdpCalibragem.getValue() == 100) {
+                                jLabelEstadoCalib.setText("Concluido !");
+                                carrega.c1.interrupt();
+                                carrega.c2.interrupt();
+                                carrega.c3.interrupt();
+                                carrega.c4.interrupt();
+                                carrega.c5.interrupt();
+                                carrega.c6.interrupt();
+                                carrega.c7.interrupt();
+                                carrega.c8.interrupt();
+                                double tempo = carrega.retornaCalibracao();
+                                carrega.carregaLacoPrincipal(tempo);
+                                atualizaLabel();
+
+                                /**
+                                 * Controla barra de prograsso Laço Principal
+                                 */
+                                for (int j = 0; j < carrega.threadPrincipal8.lacoPrincipal; j = (int) carrega.threadPrincipal8.l2) {
+
+                                    if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
+                                        atualizaLabel();
+                                    }
+                                    try {
+
+                                        atualizaLabelPrincipal();
+                                        sleep(100);
+
+                                        bdpPrincipal.setValue((int) (carrega.threadPrincipal8.l2 * 100 / carrega.threadPrincipal8.lacoPrincipal));
+                                        if (bdpPrincipal.getValue() < 100) {
+                                            jLabelEstadoPrincipal.setText("Carregando...");
+                                        }
+                                        if (bdpPrincipal.getValue() == 100) {
+                                            jLabelEstadoPrincipal.setText("Concluido !");
+
+                                            run.availableProcessors();
+                                            while (numeroThread() == run.availableProcessors()) {
+
+                                                NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+                                                txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                atualizaLabel();
+                                                atualizaLabelPrincipal();
+                                                carrega.finalizaLacoPrincipal();
+
+                                            }
+                                        }
+
+                                    } catch (Exception e) {
+                                        System.out.println(e);
+                                    }
+                                }
+                            }
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                }
+                        break;
+                    case 9:
+                        for (int i = 0; i < (carrega.threadCalibracao9.lacoCalibracao); i = (int) carrega.threadCalibracao9.l1) {
+
+                    try {
+                        atualizaLabel();
+
+                        sleep(100);
+                        bdpCalibragem.setValue((int) (carrega.threadCalibracao9.l1 * 100 / carrega.threadCalibracao9.lacoCalibracao));
+                        if (bdpCalibragem.getValue() < 100) {
+                            jLabelEstadoCalib.setText("Carregando...");
+                        } else {
+                            if (bdpCalibragem.getValue() == 100) {
+                                jLabelEstadoCalib.setText("Concluido !");
+                                carrega.c1.interrupt();
+                                carrega.c2.interrupt();
+                                carrega.c3.interrupt();
+                                carrega.c4.interrupt();
+                                carrega.c5.interrupt();
+                                carrega.c6.interrupt();
+                                carrega.c7.interrupt();
+                                carrega.c8.interrupt();
+                                carrega.c9.interrupt();
+                                double tempo = carrega.retornaCalibracao();
+                                carrega.carregaLacoPrincipal(tempo);
+                                atualizaLabel();
+
+                                /**
+                                 * Controla barra de prograsso Laço Principal
+                                 */
+                                for (int j = 0; j < carrega.threadPrincipal9.lacoPrincipal; j = (int) carrega.threadPrincipal9.l2) {
+
+                                    if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
+                                        atualizaLabel();
+                                    }
+                                    try {
+
+                                        atualizaLabelPrincipal();
+                                        sleep(100);
+
+                                        bdpPrincipal.setValue((int) (carrega.threadPrincipal9.l2 * 100 / carrega.threadPrincipal9.lacoPrincipal));
+                                        if (bdpPrincipal.getValue() < 100) {
+                                            jLabelEstadoPrincipal.setText("Carregando...");
+                                        }
+                                        if (bdpPrincipal.getValue() == 100) {
+                                            jLabelEstadoPrincipal.setText("Concluido !");
+
+                                            run.availableProcessors();
+                                            while (numeroThread() == run.availableProcessors()) {
+
+                                                NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+                                                txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                atualizaLabel();
+                                                atualizaLabelPrincipal();
+                                                carrega.finalizaLacoPrincipal();
+
+                                            }
+                                        }
+
+                                    } catch (Exception e) {
+                                        System.out.println(e);
+                                    }
+                                }
+                            }
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                }
+                        break;
+                    case 10:
+                        for (int i = 0; i < (carrega.threadCalibracao10.lacoCalibracao); i = (int) carrega.threadCalibracao10.l1) {
+
+                    try {
+                        atualizaLabel();
+
+                        sleep(100);
+                        bdpCalibragem.setValue((int) (carrega.threadCalibracao10.l1 * 100 / carrega.threadCalibracao10.lacoCalibracao));
+                        if (bdpCalibragem.getValue() < 100) {
+                            jLabelEstadoCalib.setText("Carregando...");
+                        } else {
+                            if (bdpCalibragem.getValue() == 100) {
+                                jLabelEstadoCalib.setText("Concluido !");
+                                carrega.c1.interrupt();
+                                carrega.c2.interrupt();
+                                carrega.c3.interrupt();
+                                carrega.c4.interrupt();
+                                carrega.c5.interrupt();
+                                carrega.c6.interrupt();
+                                carrega.c7.interrupt();
+                                carrega.c8.interrupt();
+                                carrega.c9.interrupt();
+                                carrega.c10.interrupt();
+                                double tempo = carrega.retornaCalibracao();
+                                carrega.carregaLacoPrincipal(tempo);
+                                atualizaLabel();
+
+                                /**
+                                 * Controla barra de prograsso Laço Principal
+                                 */
+                                for (int j = 0; j < carrega.threadPrincipal10.lacoPrincipal; j = (int) carrega.threadPrincipal10.l2) {
+
+                                    if (bdpPrincipal.getValue() <= run.availableProcessors()+1) {
+                                        atualizaLabel();
+                                    }
+                                    try {
+
+                                        atualizaLabelPrincipal();
+                                        sleep(100);
+
+                                        bdpPrincipal.setValue((int) (carrega.threadPrincipal10.l2 * 100 / carrega.threadPrincipal10.lacoPrincipal));
+                                        if (bdpPrincipal.getValue() < 100) {
+                                            jLabelEstadoPrincipal.setText("Carregando...");
+                                        }
+                                        if (bdpPrincipal.getValue() == 100) {
+                                            jLabelEstadoPrincipal.setText("Concluido !");
+
+                                            run.availableProcessors();
+                                            while (numeroThread() == run.availableProcessors()) {
+
+                                                NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR")));
+                                                txtPontuacao.setText("" + nf.format(carrega.pontuacao()));
+                                                atualizaLabel();
+                                                atualizaLabelPrincipal();
+                                                carrega.finalizaLacoPrincipal();
+
+                                            }
+                                        }
+
+                                    } catch (Exception e) {
+                                        System.out.println(e);
+                                    }
+                                }
+                            }
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                }
+                        break;
+                }
             }
         }.start();
+
+
     }//GEN-LAST:event_btnExecutarActionPerformed
 
     /**
