@@ -7,7 +7,7 @@ package br.com.senacrs.aplicativo.operacoes;
  */
 public class LacoPrincipal implements Runnable{
      
-    private double l2;              // Variável double l2
+     private double l2;              // Variável double l2
      private double lacoPrincipal;   // Variável double lacoPrincipal
      private double tempoInicioLP;   // Variável double tempoInicioLP
      private double tempoFinalLP;    // Variável double tempoFinalLP
@@ -15,6 +15,7 @@ public class LacoPrincipal implements Runnable{
      private double pontuacao;       // Variável double pontuacao
      private double tempoCalibracao; // Variável double tempoCalibracao
 
+   // Métodos gets e sets  
     public double getL2() {
         return l2;
     }
@@ -84,7 +85,8 @@ public class LacoPrincipal implements Runnable{
         this.tempoInicioLP = System.currentTimeMillis();
        
         for (l2 = 0; l2 < lacoPrincipal; l2++) {
-           double log = Math.log(37.71);
+            //Equações passadas pelo professor
+            double log = Math.log(37.71);
             double sin = Math.sin(2.46);
             double cos = Math.cos(0.27);
             double raiz = Math.sqrt(7.35);
