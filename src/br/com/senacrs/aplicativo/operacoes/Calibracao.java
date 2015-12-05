@@ -121,10 +121,7 @@ public class Calibracao implements Runnable {
         System.out.println("Laço Calibraçao: " + lacoCalibracao); //Escreve o lacoCalibracao
         this.calculaTempoLacoPrincipal = (this.lacoCalibracao / this.tempoFinalCalibracao) * 240;
         this.lacoPrincipal = ((calculaTempoLacoPrincipal));
-//        this.lacoPrincipal = ((lacoCalibracao * 12)); //lacoPrincipal = lacoCalibracao * 12)
         System.out.println(String.format("%.2f segundos", this.tempoFinalCalibracao % 60)); //Escreve o tempoFinalCalibracao
-        
-        
         System.out.println("----------------------------------");
 
     }
