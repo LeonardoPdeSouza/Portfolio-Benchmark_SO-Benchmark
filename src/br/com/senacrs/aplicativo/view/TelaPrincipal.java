@@ -36,7 +36,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
-
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
