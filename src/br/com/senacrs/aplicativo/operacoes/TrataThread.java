@@ -9,7 +9,6 @@ public class TrataThread {
 
     public double retornaCalibracao; //Variável double retornaCalibracao
     Runtime run = Runtime.getRuntime(); //Runtime run = Runtime.getRuntime()
-    
 
     /**
      * Método inteiro numeroThread
@@ -384,7 +383,6 @@ public class TrataThread {
     private Thread p8; //Variável Thread p8 
     private Thread p9; //Variável Thread p9 
     private Thread p10; //Variável Thread p10 
-    
 
     /**
      * Método carregaCalibracao
@@ -890,14 +888,14 @@ public class TrataThread {
         return pontuacaoFinal; //retorna a pontuacaoFinal
 
     }
-    
+
     /**
      * Método void finalizaLacoPrincipal
      */
     public void finalizaLacoPrincipal() {
         switch (numeroThread()) { //Enquanto numeroThread
             case 1: // Caso 1 thread
-                 p1.interrupt();//p1.interrupt() - Interrompe a thread p1 do laço principal
+                p1.interrupt();//p1.interrupt() - Interrompe a thread p1 do laço principal
                 break;
             case 2: // Caso 2 threads
                 p1.interrupt();//p1.interrupt() - Interrompe a thread p1 do laço principal

@@ -5,17 +5,17 @@ package br.com.senacrs.aplicativo.operacoes;
  *
  * @author Leonardo Fabio
  */
-public class LacoPrincipal implements Runnable{
-     
-     private double l2;              // Variável double l2
-     private double lacoPrincipal;   // Variável double lacoPrincipal
-     private double tempoInicioLP;   // Variável double tempoInicioLP
-     private double tempoFinalLP;    // Variável double tempoFinalLP
-     private double tempoFinalLP2;   // Variável double tempoFinalLP2
-     private double pontuacao;       // Variável double pontuacao
-     private double tempoCalibracao; // Variável double tempoCalibracao
+public class LacoPrincipal implements Runnable {
 
-   // Métodos gets e sets  
+    private double l2;              // Variável double l2
+    private double lacoPrincipal;   // Variável double lacoPrincipal
+    private double tempoInicioLP;   // Variável double tempoInicioLP
+    private double tempoFinalLP;    // Variável double tempoFinalLP
+    private double tempoFinalLP2;   // Variável double tempoFinalLP2
+    private double pontuacao;       // Variável double pontuacao
+    private double tempoCalibracao; // Variável double tempoCalibracao
+
+    // Métodos gets e sets  
     public double getL2() {
         return l2;
     }
@@ -71,19 +71,20 @@ public class LacoPrincipal implements Runnable{
     public void setTempoCalibracao(double tempoCalibracao) {
         this.tempoCalibracao = tempoCalibracao;
     }
-     
-  /**
-   * Método construtor da classe LacoPrincipal
-   * @param lacoPrincipal 
-   */   
-   public LacoPrincipal(double lacoPrincipal){
-       this.lacoPrincipal = lacoPrincipal;
+
+    /**
+     * Método construtor da classe LacoPrincipal
+     *
+     * @param lacoPrincipal
+     */
+    public LacoPrincipal(double lacoPrincipal) {
+        this.lacoPrincipal = lacoPrincipal;
     }
 
-     @Override
-   public void run(){
+    @Override
+    public void run() {
         this.tempoInicioLP = System.currentTimeMillis();
-       
+
         for (l2 = 0; l2 < lacoPrincipal; l2++) {
             //Equações passadas pelo professor
             double log = Math.log(37.71);
@@ -94,10 +95,10 @@ public class LacoPrincipal implements Runnable{
             double exp = Math.exp(3.95);
 
         }
-        this.tempoFinalLP= ((System.currentTimeMillis() - tempoInicioLP) * 0.001); //tempoFinalLP= ((System.currentTimeMillis() - tempoInicioLP) * 0.001)
-        this.pontuacao = lacoPrincipal/tempoFinalLP; //pontuacao = lacoPrincipal/tempoFinalLP;
-        System.out.println(String.format("%.2f minutos  e %.2f segundos", this.tempoFinalLP /60, this.tempoFinalLP % 60)); //Escreve o tempoFinalLP
-                      System.out.println("----------------------------------");
-   }
-   
+        this.tempoFinalLP = ((System.currentTimeMillis() - tempoInicioLP) * 0.001); //tempoFinalLP= ((System.currentTimeMillis() - tempoInicioLP) * 0.001)
+        this.pontuacao = lacoPrincipal / tempoFinalLP; // laços por segundos
+        System.out.println(String.format("%.2f minutos  e %.2f segundos", this.tempoFinalLP / 60, this.tempoFinalLP % 60)); //Escreve o tempoFinalLP
+        System.out.println("----------------------------------");
+    }
+
 }

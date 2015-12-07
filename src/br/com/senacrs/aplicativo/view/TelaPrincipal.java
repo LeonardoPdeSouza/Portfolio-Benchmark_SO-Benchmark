@@ -27,9 +27,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     LacoPrincipal lacoPrincipal; // LacoPrincipal lacoPrincipal;
 
     Runtime run = Runtime.getRuntime(); // run = Runtime.getRuntime()
+    int numeroProcessador = run.availableProcessors(); // Variável inteira 
 
     /**
-     * Método construtor da classe TelaPrincipal
+     * Método int numeroThread
      *
      * @return
      */
@@ -133,85 +134,87 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     /**
-     * Método void atualizaLabelPrincipal - Atualiza nome e estado das label do Laço Principal
-     *      */
+     * Método void atualizaLabelPrincipal - Atualiza nome e estado das label do
+     * Laço Principal
+     *
+     */
     public void atualizaLabelPrincipal() {
         switch (numeroThread()) { //Equanto numeroThread
 
             case 1: // Caso igual a 1
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
                 break;
             case 2: // Caso igual a 2
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
-                jLEstadoThreadStress2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
                 break;
             case 3: // Caso igual a 3
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
-                jLEstadoThreadStress2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
-                jLEstadoThreadStress3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadPrincipal3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
                 break;
             case 4: // Caso igual a 4
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
-                jLEstadoThreadStress2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
-                jLEstadoThreadStress3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
-                jLEstadoThreadStress4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadPrincipal3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadPrincipal4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
                 break;
             case 5: // Caso igual a 5
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
-                jLEstadoThreadStress2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
-                jLEstadoThreadStress3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
-                jLEstadoThreadStress4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
-                jLEstadoThreadStress5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadPrincipal3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadPrincipal4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadPrincipal5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
                 break;
             case 6: // Caso igual a 6
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
-                jLEstadoThreadStress2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
-                jLEstadoThreadStress3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
-                jLEstadoThreadStress4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
-                jLEstadoThreadStress5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
-                jLEstadoThreadStress6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadPrincipal3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadPrincipal4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadPrincipal5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadPrincipal6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
                 break;
             case 7: // Caso igual a 7
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
-                jLEstadoThreadStress2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
-                jLEstadoThreadStress3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
-                jLEstadoThreadStress4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
-                jLEstadoThreadStress5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
-                jLEstadoThreadStress6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
-                jLEstadoThreadStress7.setText("" + carrega.getP7().getState()); //jLEstadoThreadStress7.setText("" + carrega.p7.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadPrincipal3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadPrincipal4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadPrincipal5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadPrincipal6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                jLEstadoThreadPrincipal7.setText("" + carrega.getP7().getState()); //jLEstadoThreadStress7.setText("" + carrega.p7.getState());
                 break;
             case 8: // Caso igual a 8
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
-                jLEstadoThreadStress2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
-                jLEstadoThreadStress3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
-                jLEstadoThreadStress4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
-                jLEstadoThreadStress5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
-                jLEstadoThreadStress6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
-                jLEstadoThreadStress7.setText("" + carrega.getP7().getState()); //jLEstadoThreadStress7.setText("" + carrega.p7.getState());
-                jLEstadoThreadStress8.setText("" + carrega.getP8().getState()); //jLEstadoThreadStress8.setText("" + carrega.p8.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadPrincipal3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadPrincipal4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadPrincipal5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadPrincipal6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                jLEstadoThreadPrincipal7.setText("" + carrega.getP7().getState()); //jLEstadoThreadStress7.setText("" + carrega.p7.getState());
+                jLEstadoThreadPrincipal8.setText("" + carrega.getP8().getState()); //jLEstadoThreadStress8.setText("" + carrega.p8.getState());
                 break;
             case 9: // Caso igual a 9
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
-                jLEstadoThreadStress2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
-                jLEstadoThreadStress3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
-                jLEstadoThreadStress4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
-                jLEstadoThreadStress5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
-                jLEstadoThreadStress6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
-                jLEstadoThreadStress7.setText("" + carrega.getP7().getState()); //jLEstadoThreadStress7.setText("" + carrega.p7.getState());
-                jLEstadoThreadStress8.setText("" + carrega.getP8().getState()); //jLEstadoThreadStress8.setText("" + carrega.p8.getState());
-                jLEstadoThreadStress9.setText("" + carrega.getP9().getState()); //jLEstadoThreadStress9.setText("" + carrega.p9.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadPrincipal3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadPrincipal4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadPrincipal5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadPrincipal6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                jLEstadoThreadPrincipal7.setText("" + carrega.getP7().getState()); //jLEstadoThreadStress7.setText("" + carrega.p7.getState());
+                jLEstadoThreadPrincipal8.setText("" + carrega.getP8().getState()); //jLEstadoThreadStress8.setText("" + carrega.p8.getState());
+                jLEstadoThreadPrincipal9.setText("" + carrega.getP9().getState()); //jLEstadoThreadStress9.setText("" + carrega.p9.getState());
                 break;
             case 10: // Caso igual a 10
-                jLEstadoThreadStress1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
-                jLEstadoThreadStress2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
-                jLEstadoThreadStress3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
-                jLEstadoThreadStress4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
-                jLEstadoThreadStress5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
-                jLEstadoThreadStress6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
-                jLEstadoThreadStress7.setText("" + carrega.getP7().getState()); //jLEstadoThreadStress7.setText("" + carrega.p7.getState());
-                jLEstadoThreadStress8.setText("" + carrega.getP8().getState()); //jLEstadoThreadStress8.setText("" + carrega.p8.getState());
-                jLEstadoThreadStress9.setText("" + carrega.getP9().getState()); //jLEstadoThreadStress9.setText("" + carrega.p9.getState());
-                jLEstadoThreadStress10.setText("" + carrega.getP10().getState()); //jLEstadoThreadStress10.setText("" + carrega.p10.getState());
+                jLEstadoThreadPrincipal1.setText("" + carrega.getP1().getState()); //jLEstadoThreadStress1.setText("" + carrega.p1.getState());
+                jLEstadoThreadPrincipal2.setText("" + carrega.getP2().getState()); //jLEstadoThreadStress2.setText("" + carrega.p2.getState());
+                jLEstadoThreadPrincipal3.setText("" + carrega.getP3().getState()); //jLEstadoThreadStress3.setText("" + carrega.p3.getState());
+                jLEstadoThreadPrincipal4.setText("" + carrega.getP4().getState()); //jLEstadoThreadStress4.setText("" + carrega.p4.getState());
+                jLEstadoThreadPrincipal5.setText("" + carrega.getP5().getState()); //jLEstadoThreadStress5.setText("" + carrega.p5.getState());
+                jLEstadoThreadPrincipal6.setText("" + carrega.getP6().getState()); //jLEstadoThreadStress6.setText("" + carrega.p6.getState());
+                jLEstadoThreadPrincipal7.setText("" + carrega.getP7().getState()); //jLEstadoThreadStress7.setText("" + carrega.p7.getState());
+                jLEstadoThreadPrincipal8.setText("" + carrega.getP8().getState()); //jLEstadoThreadStress8.setText("" + carrega.p8.getState());
+                jLEstadoThreadPrincipal9.setText("" + carrega.getP9().getState()); //jLEstadoThreadStress9.setText("" + carrega.p9.getState());
+                jLEstadoThreadPrincipal10.setText("" + carrega.getP10().getState()); //jLEstadoThreadStress10.setText("" + carrega.p10.getState());
                 break;
         }
     }
@@ -248,27 +251,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLThread10 = new javax.swing.JLabel();
         jLabelTituloStress = new javax.swing.JLabel();
         lblPrincipal1 = new javax.swing.JLabel();
-        jLEstadoThreadStress1 = new javax.swing.JLabel();
-        jLEstadoThreadStress2 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal1 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal2 = new javax.swing.JLabel();
         lblPrincipal2 = new javax.swing.JLabel();
         lblPrincipal3 = new javax.swing.JLabel();
-        jLEstadoThreadStress3 = new javax.swing.JLabel();
-        jLEstadoThreadStress4 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal3 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal4 = new javax.swing.JLabel();
         lblPrincipal4 = new javax.swing.JLabel();
         lblPrincipal5 = new javax.swing.JLabel();
         lblPrincipal6 = new javax.swing.JLabel();
-        jLEstadoThreadStress5 = new javax.swing.JLabel();
-        jLEstadoThreadStress6 = new javax.swing.JLabel();
-        jLEstadoThreadStress7 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal5 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal6 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal7 = new javax.swing.JLabel();
         lblPrincipal7 = new javax.swing.JLabel();
         lblPrincipal8 = new javax.swing.JLabel();
-        jLEstadoThreadStress8 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal8 = new javax.swing.JLabel();
         jLEstadoThread9 = new javax.swing.JLabel();
         jLEstadoThread10 = new javax.swing.JLabel();
         lblPrincipal9 = new javax.swing.JLabel();
-        jLEstadoThreadStress9 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal9 = new javax.swing.JLabel();
         lblPrincipal10 = new javax.swing.JLabel();
-        jLEstadoThreadStress10 = new javax.swing.JLabel();
+        jLEstadoThreadPrincipal10 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         lblScore = new javax.swing.JLabel();
         txtPontuacao = new javax.swing.JTextField();
@@ -351,11 +354,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         lblPrincipal1.setText("Thread 1:");
         lblPrincipal1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress1.setText("Parado");
-        jLEstadoThreadStress1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal1.setText("Parado");
+        jLEstadoThreadPrincipal1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress2.setText("Parado");
-        jLEstadoThreadStress2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal2.setText("Parado");
+        jLEstadoThreadPrincipal2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         lblPrincipal2.setText("Thread 2:");
         lblPrincipal2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -363,11 +366,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         lblPrincipal3.setText("Thread 3:");
         lblPrincipal3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress3.setText("Parado");
-        jLEstadoThreadStress3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal3.setText("Parado");
+        jLEstadoThreadPrincipal3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress4.setText("Parado");
-        jLEstadoThreadStress4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal4.setText("Parado");
+        jLEstadoThreadPrincipal4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         lblPrincipal4.setText("Thread 4:");
         lblPrincipal4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -378,14 +381,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         lblPrincipal6.setText("Thread 6:");
         lblPrincipal6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress5.setText("Parado");
-        jLEstadoThreadStress5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal5.setText("Parado");
+        jLEstadoThreadPrincipal5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress6.setText("Parado");
-        jLEstadoThreadStress6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal6.setText("Parado");
+        jLEstadoThreadPrincipal6.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress7.setText("Parado");
-        jLEstadoThreadStress7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal7.setText("Parado");
+        jLEstadoThreadPrincipal7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         lblPrincipal7.setText("Thread 7:");
         lblPrincipal7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -393,8 +396,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         lblPrincipal8.setText("Thread 8:");
         lblPrincipal8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress8.setText("Parado");
-        jLEstadoThreadStress8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal8.setText("Parado");
+        jLEstadoThreadPrincipal8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jLEstadoThread9.setText("Parado");
         jLEstadoThread9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -405,14 +408,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         lblPrincipal9.setText("Thread 9:");
         lblPrincipal9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress9.setText("Parado");
-        jLEstadoThreadStress9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal9.setText("Parado");
+        jLEstadoThreadPrincipal9.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         lblPrincipal10.setText("Thread 10:");
         lblPrincipal10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLEstadoThreadStress10.setText("Parado");
-        jLEstadoThreadStress10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLEstadoThreadPrincipal10.setText("Parado");
+        jLEstadoThreadPrincipal10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -467,16 +470,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
                             .addComponent(lblPrincipal10))
                         .addGap(21, 21, 21)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLEstadoThreadStress10)
-                            .addComponent(jLEstadoThreadStress9)
-                            .addComponent(jLEstadoThreadStress8)
-                            .addComponent(jLEstadoThreadStress7)
-                            .addComponent(jLEstadoThreadStress6)
-                            .addComponent(jLEstadoThreadStress5)
-                            .addComponent(jLEstadoThreadStress4)
-                            .addComponent(jLEstadoThreadStress3)
-                            .addComponent(jLEstadoThreadStress2)
-                            .addComponent(jLEstadoThreadStress1))))
+                            .addComponent(jLEstadoThreadPrincipal10)
+                            .addComponent(jLEstadoThreadPrincipal9)
+                            .addComponent(jLEstadoThreadPrincipal8)
+                            .addComponent(jLEstadoThreadPrincipal7)
+                            .addComponent(jLEstadoThreadPrincipal6)
+                            .addComponent(jLEstadoThreadPrincipal5)
+                            .addComponent(jLEstadoThreadPrincipal4)
+                            .addComponent(jLEstadoThreadPrincipal3)
+                            .addComponent(jLEstadoThreadPrincipal2)
+                            .addComponent(jLEstadoThreadPrincipal1))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -489,43 +492,43 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal1)
-                            .addComponent(jLEstadoThreadStress1))
+                            .addComponent(jLEstadoThreadPrincipal1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal2)
-                            .addComponent(jLEstadoThreadStress2))
+                            .addComponent(jLEstadoThreadPrincipal2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal3)
-                            .addComponent(jLEstadoThreadStress3))
+                            .addComponent(jLEstadoThreadPrincipal3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal4)
-                            .addComponent(jLEstadoThreadStress4))
+                            .addComponent(jLEstadoThreadPrincipal4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal5)
-                            .addComponent(jLEstadoThreadStress5))
+                            .addComponent(jLEstadoThreadPrincipal5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal6)
-                            .addComponent(jLEstadoThreadStress6))
+                            .addComponent(jLEstadoThreadPrincipal6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal7)
-                            .addComponent(jLEstadoThreadStress7))
+                            .addComponent(jLEstadoThreadPrincipal7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal8)
-                            .addComponent(jLEstadoThreadStress8))
+                            .addComponent(jLEstadoThreadPrincipal8))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal9)
-                            .addComponent(jLEstadoThreadStress9))
+                            .addComponent(jLEstadoThreadPrincipal9))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblPrincipal10)
-                            .addComponent(jLEstadoThreadStress10)))
+                            .addComponent(jLEstadoThreadPrincipal10)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabelTituloCalibracao)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -717,7 +720,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
             public void run() {
 
-                
                 switch (numeroThread()) { //Enquanto numeroThread
                     case 1: // Caso igual a 1
                         for (int i = 0; i < (carrega.getThreadCalibracao1().getLacoCalibracao()); i = (int) carrega.getThreadCalibracao1().getL1()) {
@@ -737,8 +739,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); // Chama o método atualizaLabel();
 
                                     /**
-                                     * For que controla barra de progresso do Laço Principal
-                                     * 
+                                     * For que controla barra de progresso do
+                                     * Laço Principal
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal1().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal1().getL2()) {
 
@@ -758,15 +761,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 jLabelEstadoPrincipal.setText("Concluido !"); // Seta o status para Concluido
 
                                                 run.availableProcessors(); //run.availableProcessors();
-                                                while (numeroThread() == run.availableProcessors()) { //Enquanto  numeroThread()==run.availableProcessors()
+                                                while (numeroThread() == numeroProcessador) { //Enquanto  numeroThread()==run.availableProcessors()
 
                                                     NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); //Formata a pontuaçao
                                                     txtPontuacao.setText("" + nf.format(carrega.pontuacao())); //Seta o texto da pontuação
                                                     atualizaLabel(); // Chama o método atualizaLabel();
                                                     atualizaLabelPrincipal(); //Chama o método atualizaLabelPrincipal();
                                                     carrega.finalizaLacoPrincipal(); //Chama o método finalizaLacoPrincipal
+                                                    break;
 
                                                 }
+//                                                criaTxt(txtPontuacao.getText());
                                             }
 
                                         } catch (Exception e) {
@@ -798,8 +803,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); //Chama o método atualizaLabel(); 
 
                                     /**
-                                     * for que controla barra de prograsso Laço Principal
-                                     * 
+                                     * for que controla barra de prograsso Laço
+                                     * Principal
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal2().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal2().getL2()) {
 
@@ -820,7 +826,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
                                                 run.availableProcessors(); // Chama o método availableProcessors() da classe Run
 //        System.out.println(""+run.availableProcessors());
-                                                while (numeroThread() == run.availableProcessors()) { //Enquanto numeroThread() == run.availableProcessors()
+                                                while (numeroThread() == numeroProcessador) { //Enquanto numeroThread() == run.availableProcessors()
 //            carrega.pontuacao();
 //            System.out.println(""+run.availableProcessors());
 
@@ -831,8 +837,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                     atualizaLabel(); // Chama o método atualizaLabel();
                                                     atualizaLabelPrincipal(); // Chama o método atualizaLabelPrincpal();
                                                     carrega.finalizaLacoPrincipal(); // Chama o método finalizaLacoPrincipal()
+                                                    break;
 
                                                 }
+//                                                criaTxt(txtPontuacao.getText());
                                             }
 
                                         } catch (Exception e) {
@@ -864,8 +872,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); // Chama o método  atualizaLabel();
 
                                     /**
-                                     * For que controla barra de progresso Laço Principal
-                                     * 
+                                     * For que controla barra de progresso Laço
+                                     * Principal
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal3().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal3().getL2()) {
 
@@ -885,15 +894,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 jLabelEstadoPrincipal.setText("Concluido !"); //Seta o texto do jLabelEstadoPricinpal para concluído
 
                                                 run.availableProcessors();  //Chama o método availableProcessors() da classe Run
-                                                while (numeroThread() == run.availableProcessors()) { // Enquanto numeroThread() = run.availableProcessors()
+                                                while (numeroThread() == numeroProcessador) { // Enquanto numeroThread() = run.availableProcessors()
 
                                                     NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); // Formata o nf
                                                     txtPontuacao.setText("" + nf.format(carrega.pontuacao())); //Seta o texto do nf
                                                     atualizaLabel(); //Chama o método atualizaLabel();
                                                     atualizaLabelPrincipal(); //Chama o método  atualizaLabelPrincipal();
                                                     carrega.finalizaLacoPrincipal(); // Chama o método  atualizaLabelPrincipal();
-
+                                                    break;
                                                 }
+//                                                criaTxt(txtPontuacao.getText());
                                             }
 
                                         } catch (Exception e) {
@@ -927,8 +937,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); // Chama o método atualizaLabel();
 
                                     /**
-                                     * For que ontrola barra de progresso Laço Principal
-                                     * 
+                                     * For que controla barra de progresso Laço
+                                     * Principal
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal4().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal4().getL2()) {
 
@@ -948,21 +959,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 jLabelEstadoPrincipal.setText("Concluido !"); // Seta o status da label para Concluido!
 
                                                 run.availableProcessors(); // Chama o método availableProcessors() da classe Run
-                                                while (numeroThread() == run.availableProcessors()) { // Enquanto numeroThread() == run.availableProcessors()
+                                                while (numeroThread() == numeroProcessador) { // Enquanto numeroThread() == run.availableProcessors()
 
                                                     NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); // Formata nf para o formato decimal
                                                     txtPontuacao.setText("" + nf.format(carrega.pontuacao())); // Seta o texto da pontuação
                                                     atualizaLabel(); // Chama o método atualizaLabel() 
                                                     atualizaLabelPrincipal(); // Chama o método atualizaLabelPrincipal();
                                                     carrega.finalizaLacoPrincipal(); // Chama o método finalizaLacoPrincipal();
-
+                                                    break;
                                                 }
+
                                             }
 
                                         } catch (Exception e) {
                                             System.out.println(e);
                                         }
                                     }
+
                                 }
                             } catch (Exception e) {
                                 System.out.println(e);
@@ -991,8 +1004,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); // Chama o método atualizaLabel(); 
 
                                     /**
-                                     * For que Controla barra de progresso Laço Principal
-                                     * 
+                                     * For que Controla barra de progresso Laço
+                                     * Principal
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal5().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal5().getL2()) {
 
@@ -1012,15 +1026,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 jLabelEstadoPrincipal.setText("Concluido !"); // Seta o status da label para Concluid!.
 
                                                 run.availableProcessors(); // Chama o método availableProcessors() da classe Run
-                                                while (numeroThread() == run.availableProcessors()) { // Enquanto numeroThread() == run.availableProcessors()
+                                                while (numeroThread() == numeroProcessador) { // Enquanto numeroThread() == run.availableProcessors()
 
                                                     NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); // Formata nf para decimal
                                                     txtPontuacao.setText("" + nf.format(carrega.pontuacao())); // Seta o texto da pontuação
                                                     atualizaLabel(); // Chama o método atualizaLabel()
                                                     atualizaLabelPrincipal(); // Chama o método atualizaLabelPrincipal()
                                                     carrega.finalizaLacoPrincipal(); // Chama o método finalizaLacoPrincipal();
-
+                                                    break;
                                                 }
+//                                                criaTxt(txtPontuacao.getText());
                                             }
 
                                         } catch (Exception e) {
@@ -1056,8 +1071,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); // Chama o método atualizaLabel();
 
                                     /**
-                                     * For que Controla barra de progresso Laço Principal
-                                     * 
+                                     * For que Controla barra de progresso Laço
+                                     * Principal
+                                     *
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal6().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal6().getL2()) {
 
@@ -1077,15 +1094,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 jLabelEstadoPrincipal.setText("Concluido !"); // Seta o status da label para Concluido !
 
                                                 run.availableProcessors(); // Chama o método avaibleProcessors() da classe Run
-                                                while (numeroThread() == run.availableProcessors()) { // Enquanto numeroThread() == run.availableProcessors() 
+                                                while (numeroThread() == numeroProcessador) { // Enquanto numeroThread() == run.availableProcessors() 
 
                                                     NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); // Formata nf para decimal
                                                     txtPontuacao.setText("" + nf.format(carrega.pontuacao())); // Seta o texto da pontuação
                                                     atualizaLabel(); // Chama o método atualizaLabel()
                                                     atualizaLabelPrincipal(); // Chama o método  atualizaLabelPrincipal();
                                                     carrega.finalizaLacoPrincipal(); // Chama o método  finalizaLacoPrincipal();
-
+                                                    break;
                                                 }
+//                                                criaTxt(txtPontuacao.getText());
                                             }
 
                                         } catch (Exception e) {
@@ -1122,8 +1140,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); // Chama o método  atualizaLabel();
 
                                     /**
-                                     * For que controla barra de progresso Laço Principal
-                                     * 
+                                     * For que controla barra de progresso Laço
+                                     * Principal
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal7().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal7().getL2()) {
 
@@ -1143,15 +1162,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 jLabelEstadoPrincipal.setText("Concluido !"); // Seta o status da label para Concluido!
 
                                                 run.availableProcessors(); //Chama o método avaibleProcessors() da classe Run
-                                                while (numeroThread() == run.availableProcessors()) { // Enquanto numeroThread() == run.availableProcessors()
+                                                while (numeroThread() == numeroProcessador) { // Enquanto numeroThread() == run.availableProcessors()
 
                                                     NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); // Formata nf para formato decimal
                                                     txtPontuacao.setText("" + nf.format(carrega.pontuacao())); // Seta o texto da Pontuação
                                                     atualizaLabel(); // Chama o método atualizaLabel(); 
                                                     atualizaLabelPrincipal(); // Chama o método atualizaLabelPrincipal(); 
                                                     carrega.finalizaLacoPrincipal(); // Chama o método finalizaLacoPrincipal();
-
+                                                    break;
                                                 }
+//                                                criaTxt(txtPontuacao.getText());
                                             }
 
                                         } catch (Exception e) {
@@ -1189,8 +1209,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); // Chama o método atualizaLabel();
 
                                     /**
-                                     * For que controla barra de progresso Laço Principal
-                                     * 
+                                     * For que controla barra de progresso Laço
+                                     * Principal
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal8().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal8().getL2()) {
 
@@ -1210,15 +1231,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 jLabelEstadoPrincipal.setText("Concluido !"); // Seta o status da label para Concluido!
 
                                                 run.availableProcessors(); // Chama o método availableProcessors() da classe Run
-                                                while (numeroThread() == run.availableProcessors()) { // Enquanto numeroThread() == run.availableProcessors()
+                                                while (numeroThread() == numeroProcessador) { // Enquanto numeroThread() == run.availableProcessors()
 
                                                     NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); // Formata nf para o formato decimal
                                                     txtPontuacao.setText("" + nf.format(carrega.pontuacao())); // Seta o txtPontuacao
                                                     atualizaLabel(); // Chama o método atualizaLabel();
                                                     atualizaLabelPrincipal(); // Chama o método atualizaLabelPrincipal();
-                                                    carrega.finalizaLacoPrincipal(); // Chama o método finalizaLacoPrincipal(); 
-
+                                                    carrega.finalizaLacoPrincipal(); // Chama o método finalizaLacoPrincipal();
+//                                                    criaTxt(txtPontuacao.getText());
+                                                    break;
                                                 }
+//                                                criaTxt(txtPontuacao.getText());
                                             }
 
                                         } catch (Exception e) {
@@ -1257,8 +1280,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); // Chama atualizaLabel();
 
                                     /**
-                                     * For que controla barra de prograsso Laço Principal
-                                     * 
+                                     * For que controla barra de prograsso Laço
+                                     * Principal
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal9().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal9().getL2()) {
 
@@ -1278,15 +1302,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 jLabelEstadoPrincipal.setText("Concluido !"); // Seta o status da label para Concluido!
 
                                                 run.availableProcessors(); //Chama o método availableProcessors()da classe Run
-                                                while (numeroThread() == run.availableProcessors()) { // Enquanto numeroThread() = run.availableProcessors()
+                                                while (numeroThread() == numeroProcessador) { // Enquanto numeroThread() = run.availableProcessors()
 
                                                     NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); // Formata nf para o formato Decimal
                                                     txtPontuacao.setText("" + nf.format(carrega.pontuacao())); // Seta o txtPontuacao
                                                     atualizaLabel(); // Chama o método atualizaLabel()
                                                     atualizaLabelPrincipal(); // Chama o método atualizaLabelPrincipal()
                                                     carrega.finalizaLacoPrincipal(); // Chama o método finalizaLabelPrincipal()
-
+                                                    break;
                                                 }
+//                                                criaTxt(txtPontuacao.getText());
                                             }
 
                                         } catch (Exception e) {
@@ -1326,8 +1351,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                     atualizaLabel(); // Chama o metodo  atualizaLabel();
 
                                     /**
-                                     * For que controla barra de progresso do Laço Principal
-                                     * 
+                                     * For que controla barra de progresso do
+                                     * Laço Principal
+                                     *
                                      */
                                     for (int j = 0; j < carrega.getThreadPrincipal10().getLacoPrincipal(); j = (int) carrega.getThreadPrincipal10().getL2()) {
 
@@ -1347,15 +1373,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                                 jLabelEstadoPrincipal.setText("Concluido !"); // Seta o status da label para Concluido!
 
                                                 run.availableProcessors(); // Método availableProcessors() da classe Run
-                                                while (numeroThread() == run.availableProcessors()) { // Enquanto  numeroThread() = run.availableProcessors() 
+                                                while (numeroThread() == numeroProcessador) { // Enquanto  numeroThread() = run.availableProcessors() 
 
                                                     NumberFormat nf = new DecimalFormat("#,##0.000", new DecimalFormatSymbols(new Locale("pt", "BR"))); // Formata o numero nf para decimal
                                                     txtPontuacao.setText("" + nf.format(carrega.pontuacao())); // Seta o texto da txtPontuacao
                                                     atualizaLabel(); // Chama o metodo atualizaLabel(); 
                                                     atualizaLabelPrincipal(); // Chama o metodo atualizaLabelPrincipal();
                                                     carrega.finalizaLacoPrincipal(); // Chama o método finalizaLacoPrincipal();
-
+                                                    break;
                                                 }
+//                                                criaTxt(txtPontuacao.getText());
                                             }
 
                                         } catch (Exception e) {
@@ -1369,11 +1396,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         }
                         break;
                 }
-                try {
-                    criarRanking(txtPontuacao.getText()); //É chamado o método criarRanking
-
-                } catch (IOException ex) {
-                    Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+                if (numeroProcessador == numeroProcessador) {
+                    try {
+                        criarRanking(txtPontuacao.getText());
+                    } catch (IOException ex) {
+                        Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }
         }.start();
@@ -1389,14 +1417,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
-/**
- * Método para criar o ranking
- * @param pontuacao
- * @throws IOException 
- */
+    /**
+     * Método para criar o ranking
+     *
+     * @param pontuacao
+     * @throws IOException
+     */
     public void criarRanking(String pontuacao) throws IOException {
         String arquivo = ""; //Caminho do arquivo
-        BufferedWriter bw = new BufferedWriter(new FileWriter(arquivo+"ranking.txt", true));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(arquivo + "ranking.txt", true));
         String usuario = InetAddress.getLocalHost().getHostName(); //Variável String usuario - Pega o nome do computador.
         String pontos = pontuacao; // Variável String pontos
 
@@ -1404,7 +1433,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         bw.newLine(); // Nova linha
         bw.close(); // Fecha o arquivo .txt
     }
-    
+
     /**
      * Método estático void main.
      *
@@ -1446,7 +1475,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JProgressBar bdpCalibragem;
     private javax.swing.JProgressBar bdpPrincipal;
@@ -1462,16 +1491,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLEstadoThread7;
     private javax.swing.JLabel jLEstadoThread8;
     private javax.swing.JLabel jLEstadoThread9;
-    private javax.swing.JLabel jLEstadoThreadStress1;
-    private javax.swing.JLabel jLEstadoThreadStress10;
-    private javax.swing.JLabel jLEstadoThreadStress2;
-    private javax.swing.JLabel jLEstadoThreadStress3;
-    private javax.swing.JLabel jLEstadoThreadStress4;
-    private javax.swing.JLabel jLEstadoThreadStress5;
-    private javax.swing.JLabel jLEstadoThreadStress6;
-    private javax.swing.JLabel jLEstadoThreadStress7;
-    private javax.swing.JLabel jLEstadoThreadStress8;
-    private javax.swing.JLabel jLEstadoThreadStress9;
+    private javax.swing.JLabel jLEstadoThreadPrincipal1;
+    private javax.swing.JLabel jLEstadoThreadPrincipal10;
+    private javax.swing.JLabel jLEstadoThreadPrincipal2;
+    private javax.swing.JLabel jLEstadoThreadPrincipal3;
+    private javax.swing.JLabel jLEstadoThreadPrincipal4;
+    private javax.swing.JLabel jLEstadoThreadPrincipal5;
+    private javax.swing.JLabel jLEstadoThreadPrincipal6;
+    private javax.swing.JLabel jLEstadoThreadPrincipal7;
+    private javax.swing.JLabel jLEstadoThreadPrincipal8;
+    private javax.swing.JLabel jLEstadoThreadPrincipal9;
     private javax.swing.JLabel jLThread1;
     private javax.swing.JLabel jLThread10;
     private javax.swing.JLabel jLThread2;

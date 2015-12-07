@@ -130,16 +130,16 @@
                           </Group>
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLEstadoThreadStress10" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress9" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal10" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal9" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -157,52 +157,52 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal5" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal6" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal7" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal8" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal9" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lblPrincipal10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLEstadoThreadStress10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLEstadoThreadPrincipal10" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -391,13 +391,13 @@
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress1">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress2">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
@@ -415,13 +415,13 @@
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress3">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress4">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal4">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
@@ -445,19 +445,19 @@
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress5">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress6">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal6">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress7">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal7">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
@@ -475,7 +475,7 @@
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress8">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal8">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
@@ -499,7 +499,7 @@
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress9">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal9">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
@@ -511,7 +511,7 @@
             <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLEstadoThreadStress10">
+        <Component class="javax.swing.JLabel" name="jLEstadoThreadPrincipal10">
           <Properties>
             <Property name="text" type="java.lang.String" value="Parado"/>
             <Property name="verticalAlignment" type="int" value="1"/>
