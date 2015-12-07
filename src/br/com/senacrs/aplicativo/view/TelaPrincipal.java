@@ -3,11 +3,17 @@ package br.com.senacrs.aplicativo.view;
 import br.com.senacrs.aplicativo.operacoes.Calibracao;
 import br.com.senacrs.aplicativo.operacoes.TrataThread;
 import br.com.senacrs.aplicativo.operacoes.LacoPrincipal;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import static java.lang.Thread.sleep;
+import java.net.InetAddress;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Classe TelaPrincipal extends javax.swing.JFrame
@@ -1363,6 +1369,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         }
                         break;
                 }
+                try {
+                    criarRanking(txtPontuacao.getText()); //É chamado o método criarRanking
+
+                } catch (IOException ex) {
+                    Logger.getLogger(TelaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }.start();
 
@@ -1377,7 +1389,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
+/**
+ * Método para criar o ranking
+ * @param pontuacao
+ * @throws IOException 
+ */
+    public void criarRanking(String pontuacao) throws IOException {
+        String arquivo = ""; //Caminho do arquivo
+        BufferedWriter bw = new BufferedWriter(new FileWriter(arquivo+"ranking.txt", true));
+        String usuario = InetAddress.getLocalHost().getHostName(); //Variável String usuario - Pega o nome do computador.
+        String pontos = pontuacao; // Variável String pontos
 
+        bw.append(usuario + ";" + pontos); // Adiciona o usuário e sua pontuação
+        bw.newLine(); // Nova linha
+        bw.close(); // Fecha o arquivo .txt
+    }
+    
     /**
      * Método estático void main.
      *
@@ -1419,7 +1446,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JProgressBar bdpCalibragem;
     private javax.swing.JProgressBar bdpPrincipal;
